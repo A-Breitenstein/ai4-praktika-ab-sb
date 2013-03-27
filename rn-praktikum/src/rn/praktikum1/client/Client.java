@@ -1,8 +1,7 @@
 package rn.praktikum1.client;
 
+import java.io.DataOutputStream;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
 import java.net.Socket;
 
 /**
@@ -12,14 +11,15 @@ import java.net.Socket;
  */
 public class Client {
    public static void connect(String ip,int port) {
+
        try {
            Socket socket = new Socket(ip,port);
-           schreibeNachricht(socket,"USER QWE123");
 
-           Thread.sleep(1000000);
+           schreibeNachricht(socket,"USER QWE123"+'\n');
+           schreibeNachricht(socket,"quit"+'\n');
+           socket.close();
+
        } catch (IOException e) {
-           e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-       } catch (InterruptedException e) {
            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
        }
    }
@@ -27,8 +27,8 @@ public class Client {
     public static void main(String[] args) {
           connect("127.0.0.1",55555);
     }
-    static void  schreibeNachricht(java.net.Socket socket, String nachricht) throws IOException {
-        PrintWriter writer = new PrintWriter(socket.getOutputStream());
-        writer.print(nachricht);
+    static void  schreibeNachricht(Socket socket, String nachricht) throws IOException {
+        DataOutputStream outToServer = new DataOutputStream(socket.getOutputStream());
+        outToServer.writeBytes(nachricht);
     }
 }

@@ -52,22 +52,42 @@ public class Server implements Runnable{
     @Override
     public void run() {
         String input = "",line="";
+        boolean quit = false;
         while (Thread.currentThread().isAlive() && !clientSocket.isClosed()) {
-//            input = readInputstream();
-            // Get input from the client
+
             try {
-                InputStreamReader streamReader = new InputStreamReader(clientSocket.getInputStream());
-                BufferedReader reader = new BufferedReader(streamReader);
-                System.out.println(reader.readLine());
-                reader.close();
+                BufferedReader inFromClient =
+                        new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+
+                while(inFromClient.ready()) {
+                    line = inFromClient.readLine();
+
+                    if(line.toLowerCase().equals("quit")) quit = !quit;
+
+                    System.out.println(line);
+                }
+
             } catch (IOException e) {
                 e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             }
 
-
+            if (quit) {
+                try {
+                    Thread.sleep(15000);
+                    clientSocket.close();
+                } catch (IOException e) {
+                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                } catch (InterruptedException e) {
+                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                }
+            }
 
 //            serverState.evaluate(this,input);
-            System.out.println(input);
+//            System.out.println(input);
+        }
+        Thread.currentThread().interrupt();
+        if (Thread.currentThread().isInterrupted()) {
+            System.out.println(Thread.currentThread().getName() + " : id: " +Thread.currentThread().getId() + " : is interrupted");
         }
     }
 
