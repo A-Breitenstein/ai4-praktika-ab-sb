@@ -9,24 +9,29 @@ import rn.praktikum1.server.mails.Message;
  * Date: 26.03.13
  * Time: 07:41
  */
-public enum ServerState implements ServerStateTransitions{
+public enum ServerState implements ServerStateTransitions,Evaluator{
 
     //AUTHORIZATION - STATE
 
     AUTHORIZATION{
         @Override
-        public void changeServerStateToAUTHORIZATION(Server serverInstant) {
-            serverInstant.setServerState(AUTHORIZATION);
+        public void changeServerStateToAUTHORIZATION(Server serverInstance) {
+            serverInstance.setServerState(AUTHORIZATION);
         }
 
         @Override
-        public void changeServerStateToTRANSACTION(Server serverInstant) {
-            serverInstant.setServerState(TRANSACTION);
+        public void changeServerStateToTRANSACTION(Server serverInstance) {
+            serverInstance.setServerState(TRANSACTION);
         }
 
         @Override
-        public void changeServerStateToUPDATE(Server serverInstant) {
-            serverInstant.setServerState(UPDATE);
+        public void changeServerStateToUPDATE(Server serverInstance) {
+            serverInstance.setServerState(UPDATE);
+        }
+
+        @Override
+        public void evaluate(Server serverInstance, String input) {
+
         }
     },
 
@@ -34,52 +39,55 @@ public enum ServerState implements ServerStateTransitions{
 
     TRANSACTION{
 
-        public void commandIn(Server serverInstant, String input) {
+        @Override
+        public void changeServerStateToAUTHORIZATION(Server serverInstance) {
+            serverInstance.setServerState(AUTHORIZATION);
+        }
+
+        @Override
+        public void changeServerStateToTRANSACTION(Server serverInstance) {
+            serverInstance.setServerState(TRANSACTION);
+        }
+
+        @Override
+        public void changeServerStateToUPDATE(Server serverInstance) {
+            serverInstance.setServerState(UPDATE);
+        }
 
 
-            try {
-                final Command commandIn = Command.valueOf(input);
+        @Override
+        public void evaluate(Server serverInstance, String input) {
+            {
 
-                switch (commandIn) {
-                    case STAT : {} break;
-                    case LIST : {} break;
-                    case RETR : {} break;
-                    case DELE : {} break;
-                    case NOOP : {} break;
-                    case RSET : {} break;
-                }
-            }catch (IllegalArgumentException iAE){
 
                 try {
-                    final Integer mailNumber = Integer.valueOf(input);
+                    final Command commandIn = Command.valueOf(input);
 
-                    Message message = serverInstant.getUser().getMailById(mailNumber);
+                    switch (commandIn) {
+                        case STAT : {} break;
+                        case LIST : {} break;
+                        case RETR : {} break;
+                        case DELE : {} break;
+                        case NOOP : {} break;
+                        case RSET : {} break;
+                    }
+                }catch (IllegalArgumentException iAE){
 
-                    serverInstant.tellToClient(message);
+                    try {
+                        final Integer mailNumber = Integer.valueOf(input);
 
-                }catch (NumberFormatException nFE){
-                    changeServerStateToUPDATE(serverInstant);
+                        Message message = serverInstance.getUser().getMailById(mailNumber);
+
+                        serverInstance.tellToClient(message);
+
+                    }catch (NumberFormatException nFE){
+                        changeServerStateToUPDATE(serverInstance);
+                    }
                 }
+
+
+
             }
-
-
-
-        }
-
-
-        @Override
-        public void changeServerStateToAUTHORIZATION(Server serverInstant) {
-            serverInstant.setServerState(AUTHORIZATION);
-        }
-
-        @Override
-        public void changeServerStateToTRANSACTION(Server serverInstant) {
-            serverInstant.setServerState(TRANSACTION);
-        }
-
-        @Override
-        public void changeServerStateToUPDATE(Server serverInstant) {
-            serverInstant.setServerState(UPDATE);
         }
     },
 
@@ -87,18 +95,23 @@ public enum ServerState implements ServerStateTransitions{
 
     UPDATE{
         @Override
-        public void changeServerStateToAUTHORIZATION(Server serverInstant) {
-            serverInstant.setServerState(AUTHORIZATION);
+        public void changeServerStateToAUTHORIZATION(Server serverInstance) {
+            serverInstance.setServerState(AUTHORIZATION);
         }
 
         @Override
-        public void changeServerStateToTRANSACTION(Server serverInstant) {
-            serverInstant.setServerState(TRANSACTION);
+        public void changeServerStateToTRANSACTION(Server serverInstance) {
+            serverInstance.setServerState(TRANSACTION);
         }
 
         @Override
-        public void changeServerStateToUPDATE(Server serverInstant) {
-            serverInstant.setServerState(UPDATE);
+        public void changeServerStateToUPDATE(Server serverInstance) {
+            serverInstance.setServerState(UPDATE);
+        }
+
+        @Override
+        public void evaluate(Server serverInstance, String input) {
+            //To change body of implemented methods use File | Settings | File Templates.
         }
     };
 
