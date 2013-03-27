@@ -61,6 +61,9 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
 
 
                 try {
+
+                    //TODO:TOP Befehl da dreizeilig durch: "T".equals("T ".replace(" ","")) les- und als Enum erstellbar
+
                     final Command commandIn = Command.valueOf(input);
 
                     switch (commandIn) {
