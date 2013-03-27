@@ -12,21 +12,21 @@ public interface ServerStateTransitions {
     /**
      * Wechselt den Zustand des Automaten der Übergeben wird in AUTHORIZATION
      *
-     * @param serverInstant instant of a Running Server
+     * @param serverInstance instant of a Running Server
      */
-    public void changeServerStateToAUTHORIZATION(Server serverInstant);
+    public void changeServerStateToAUTHORIZATION(Server serverInstance);
 
     /**
      * Wechselt den Zustand des Automaten der Übergeben wird in TRANSACTION
      *
-     * @param serverInstant instant of a Running Server
+     * @param serverInstance instant of a Running Server
      */
-    public void changeServerStateToTRANSACTION(Server serverInstant);
+    public void changeServerStateToTRANSACTION(Server serverInstance);
 
     /**
      * Wechselt den Zustand des Automaten der Übergeben wird in UPDATE
      *
-     * @param serverInstant instant of a Running Server
+     * @param serverInstance instant of a Running Server
      */
-    public void changeServerStateToUPDATE(Server serverInstant);
+    public void changeServerStateToUPDATE(Server serverInstance);
 }
