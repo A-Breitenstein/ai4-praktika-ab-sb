@@ -8,4 +8,9 @@ package rn.praktikum1.server.mails;
 public class Message {
 
     private String content;
+    private int size;
+
+    public int getSize() {
+        return size;
+    }
 }
