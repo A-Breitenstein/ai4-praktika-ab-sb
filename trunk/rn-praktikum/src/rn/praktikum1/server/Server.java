@@ -1,11 +1,18 @@
 package rn.praktikum1.server;
 
+import rn.helperlein.Communication;
 import rn.praktikum1.server.mails.Message;
 import rn.praktikum1.server.mails.User;
 import rn.praktikum1.server.states.ServerState;
 
+import static rn.helperlein.Communication.warteNachricht;
+import static rn.praktikum1.server.states.Messages.*;
+
 import java.io.*;
 import java.net.Socket;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * User: Alex
@@ -21,9 +28,12 @@ public class Server implements Runnable{
 
     private Socket clientSocket;
 
+    Logger logger;
+
     private Server(Socket clientSocket) {
         this.clientSocket = clientSocket;
         serverState = ServerState.AUTHORIZATION;
+        this.logger = Logger.getLogger(clientSocket.toString());
     }
 
 
@@ -45,50 +55,36 @@ public class Server implements Runnable{
         this.user = user;
     }
 
-    public void tellToClient(Message message) {
-        //To change body of created methods use File | Settings | File Templates.
+    public void tellToClient(String message) {
+        try {
+            Communication.schreibeNachricht(clientSocket,message);
+        } catch (IOException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
     }
 
     @Override
     public void run() {
-        String input = "",line="";
-        boolean quit = false;
-        while (Thread.currentThread().isAlive() && !clientSocket.isClosed()) {
+        String line="";
+
+        responseOK();
+        while (!clientSocket.isClosed() && !Thread.currentThread().isInterrupted()) {
 
             try {
-                BufferedReader inFromClient =
-                        new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 
-                while(inFromClient.ready()) {
-                    line = inFromClient.readLine();
+                line = warteNachricht(clientSocket);
 
-                    if(line.toLowerCase().equals("quit")) quit = !quit;
-
-                    System.out.println(line);
-                }
+                serverState.evaluate(this,line);
 
             } catch (IOException e) {
                 e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+
             }
 
-            if (quit) {
-                try {
-                    Thread.sleep(15000);
-                    clientSocket.close();
-                } catch (IOException e) {
-                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-                } catch (InterruptedException e) {
-                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-                }
-            }
+        }
 
-//            serverState.evaluate(this,input);
-//            System.out.println(input);
-        }
-        Thread.currentThread().interrupt();
-        if (Thread.currentThread().isInterrupted()) {
-            System.out.println(Thread.currentThread().getName() + " : id: " +Thread.currentThread().getId() + " : is interrupted");
-        }
+
+            System.out.println(Thread.currentThread().getName() + " : id: " +Thread.currentThread().getId() + " : beendet Serverinstanz: " + this);
     }
 
     private String readInputstream() {
@@ -107,5 +103,61 @@ public class Server implements Runnable{
 
     public static Server create(Socket clientSocket) {
         return new Server(clientSocket);
+    }
+
+    public void changeServerStateToAUTHORIZATION() {
+        this.getServerState().changeServerStateToAUTHORIZATION(this);
+    }
+
+    public void changeServerStateToTRANSACTION() {
+        this.getServerState().changeServerStateToTRANSACTION(this);
+    }
+
+    public void changeServerStateToUPDATE() {
+        this.getServerState().changeServerStateToUPDATE(this);
+    }
+
+    public void responseOK() {
+        tellToClient(OK+CRLF);
+    }
+
+    public void responseOK(int... parameters) {
+        String response = OK;
+
+        for (int parameter : parameters) {
+            response += WhiteSpace + parameter;
+        }
+
+        response += CRLF;
+
+        tellToClient(response);
+    }
+    public void responseError() {
+        tellToClient(ERR+CRLF);
+    }
+
+    public void responseLISTOK(List<Message> messageList) {
+        String response = "";
+        int indexOfMessage = 1;
+
+        for (Message message : messageList) {
+            response += String.valueOf(indexOfMessage++) + message.getSize() + '\n';
+        }
+
+        response += TerminationOctet + '\n' + CRLF;
+
+        tellToClient(response);
+    }
+
+    public void closeSocket() {
+        try {
+            this.clientSocket.close();
+        } catch (IOException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+    }
+
+    public void responseLIST_MESSAGE_OK(Message message) {
+        //To change body of created methods use File | Settings | File Templates.
     }
 }
