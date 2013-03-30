@@ -17,10 +17,12 @@ public class Communication {
     public static void  schreibeNachricht(Socket socket, String nachricht) throws IOException {
         DataOutputStream outToServer = new DataOutputStream(socket.getOutputStream());
         outToServer.writeBytes(nachricht);
+        System.out.println("Server -> Client: " +nachricht);
     }
     public static String  warteNachricht(Socket socket) throws IOException {
         BufferedReader inFromClient =  new BufferedReader(new InputStreamReader(socket.getInputStream()));
         final String line = inFromClient.readLine();
+        System.out.println("Client -> Server: "+line);
         return line;
     }
 }
