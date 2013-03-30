@@ -11,6 +11,8 @@ import java.util.Map;
  */
 public class User {
 
+    private int id;
+
     private String username;
 
     private String password;
@@ -75,5 +77,19 @@ public class User {
         final Message message = getUserMails().get(mailNumberIndex);
 
         return message;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        final String print = "" + this.getId() + " : " + this.getUsername() + " : " +this.getPassword();
+        return print;
     }
 }

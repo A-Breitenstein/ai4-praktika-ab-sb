@@ -50,7 +50,7 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
                 switch (commandIn) {
                     case USER: {
 
-                        User user = UserProvider.findUser(strContentIn);
+                        User user = UserProvider.getUserByUsername(strContentIn);
 
                         if (user != null && serverInstance.getUser() == null) {
                             Log.log("Der "+user.getUsername()+" versucht sich anzumelden");
@@ -153,7 +153,7 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
                     switch (commandIn) {
                         case STAT : {
 
-                            MailProvider.addUsersMailsToUser(user);
+                            MailProvider.addMessagesToUser(user);
 
                             final int numberOfMailsOfUser = user.getNumberOfMails(),
                                       sumOfMailsize = user.getMessagesSize();
@@ -175,7 +175,7 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
 
                                     //TODO:Problem "..." == CRLF : eher nicht, sieht aus wie 3*TerminationOctet
                                     //TODO:Log
-                                    Log.log("nochmerh inhalt..............");
+                                    Log.log("nochmehr inhalt..............");
                                     serverInstance.responseLIST_MESSAGE_OK(message);
 
                                 } catch (NumberFormatException nFE) {
