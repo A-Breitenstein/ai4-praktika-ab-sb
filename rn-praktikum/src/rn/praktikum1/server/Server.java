@@ -76,8 +76,8 @@ public class Server implements Runnable{
 
                 serverState.evaluate(this,line);
 
-                System.out.println("output " +clientSocket.isOutputShutdown() + " input: "+clientSocket.isInputShutdown());
-                System.out.println("connected " + clientSocket.isConnected());
+//                System.out.println("output " +clientSocket.isOutputShutdown() + " input: "+clientSocket.isInputShutdown());
+//                System.out.println("connected " + clientSocket.isConnected());
 
             } catch (IOException e) {
                 e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
@@ -136,7 +136,7 @@ public class Server implements Runnable{
         tellToClient(response);
     }
     public void responseError() {
-        tellToClient(ERR+CRLF);
+        tellToClient(ERR);
     }
 
     public void responseLISTOK(List<Message> messageList) {
