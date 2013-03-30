@@ -18,20 +18,13 @@ import java.util.concurrent.Executors;
 public class Dispatcher {
     ExecutorService threadPool;
     ServerSocket serverSocket;
-    int port = 55555;
+    int port = 110;
 
     public Dispatcher() {
 
         try {
             serverSocket = new ServerSocket(port);
             threadPool = Executors.newCachedThreadPool();
-
-//            new Thread(new Runnable() {
-//                @Override
-//                public void run() {
-//                    Client.main(null);
-//                }
-//            }).start();
 
             looper();
         } catch (IOException e) {

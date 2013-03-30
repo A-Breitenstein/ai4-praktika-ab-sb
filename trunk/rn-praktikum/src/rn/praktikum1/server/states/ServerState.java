@@ -160,23 +160,29 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
 
                                 final int intParameterArray[] = {numberOfMailsOfUser, sumOfMailsize};
 
-                                //TODO:Log
-                                Log.log("inhalt............");
+                                Log.log("STAT für User " +user.getUsername()+ " mit "+numberOfMailsOfUser+" emails, insgesamt " +sumOfMailsize+ " Zeichen");
                                 serverInstance.responseOK(intParameterArray);
 
                         } break;
+
                         case LIST : {
                             if (!strContentIn.isEmpty()) {
                                 try {
-                                    Integer mailNumber = Integer.valueOf(strContentIn);
-                                    //blablabla keine lust mehr schon so spät und kann nicht mehr denken
-                                    //bessere lösung für das response überlegen, momentan unschön
-                                    Message message = serverInstance.getUser().getMailById(mailNumber);
+                                    int mailNumber = Integer.valueOf(strContentIn).intValue();
 
-                                    //TODO:Problem "..." == CRLF : eher nicht, sieht aus wie 3*TerminationOctet
-                                    //TODO:Log
-                                    Log.log("nochmehr inhalt..............");
-                                    serverInstance.responseLIST_MESSAGE_OK(message);
+                                    if (mailNumber < 0 && mailNumber > user.getNumberOfMails()) {
+
+                                        Log.log("Der vom User " +user.getUsername()+ " gewählte index liegt ausserhalb des bereiches der vorhandenen NAchrichten");
+                                        serverInstance.responseError();
+
+                                    } else {
+
+                                        Message message = serverInstance.getUser().getMailById(mailNumber);
+
+                                        Log.log("User "+user.getUsername()+" ruft Mail mit index "+mailNumber+" ab");
+                                        serverInstance.responseLIST_MESSAGE_OK(mailNumber,message);
+                                    }
+
 
                                 } catch (NumberFormatException nFE) {
                                     Log.log("Fehler: Format der Eingabe nicht korrekt: " + input);
@@ -186,6 +192,7 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
                                 serverInstance.responseLISTOK(user.getUserMails());
                             }
                         } break;
+
                         case RETR : {} break;
                         case DELE : {} break;
                         case NOOP : {} break;

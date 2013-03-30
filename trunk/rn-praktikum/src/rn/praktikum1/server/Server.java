@@ -76,6 +76,9 @@ public class Server implements Runnable{
 
                 serverState.evaluate(this,line);
 
+                System.out.println("output " +clientSocket.isOutputShutdown() + " input: "+clientSocket.isInputShutdown());
+                System.out.println("connected " + clientSocket.isConnected());
+
             } catch (IOException e) {
                 e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
 
@@ -157,7 +160,9 @@ public class Server implements Runnable{
         }
     }
 
-    public void responseLIST_MESSAGE_OK(Message message) {
-        //To change body of created methods use File | Settings | File Templates.
+    public void responseLIST_MESSAGE_OK(int mailnumber, Message message) {
+        String response = OK +" "+mailnumber+" "+message.getSize()+CRLF;
+
+        tellToClient(response);
     }
 }
