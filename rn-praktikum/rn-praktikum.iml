@@ -10,7 +10,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="sqlitejdbc-v056" level="project" />
+    <orderEntry type="library" exported="" name="sqlitejdbc-v056" level="project" />
   </component>
 </module>
 
