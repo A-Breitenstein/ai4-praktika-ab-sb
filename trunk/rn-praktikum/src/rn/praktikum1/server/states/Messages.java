@@ -15,6 +15,7 @@ public class Messages {
         OK = "+OK",
         ERR = "-ERR",
         WhiteSpace = " ",
+        Point = ".",
         TerminationOctet = CRLF+"."+CRLF;
 
 }

@@ -75,7 +75,9 @@ public class Server implements Runnable{
 
                 line = warteNachricht(clientSocket);
 
+
                 serverState.evaluate(this,line);
+
 
 //                System.out.println("output " +clientSocket.isOutputShutdown() + " input: "+clientSocket.isInputShutdown());
 //                System.out.println("connected " + clientSocket.isConnected());
@@ -122,7 +124,7 @@ public class Server implements Runnable{
     }
 
     public void responseOK() {
-        tellToClient(OK+TerminationOctet);
+        tellToClient(OK+CRLF);
     }
 
     public void responseOK(int... parameters) {
@@ -132,12 +134,12 @@ public class Server implements Runnable{
             response += WhiteSpace + parameter;
         }
 
-        response += TerminationOctet;
+        response += CRLF;
 
         tellToClient(response);
     }
     public void responseError() {
-        tellToClient(ERR+TerminationOctet);
+        tellToClient(ERR+CRLF);
     }
 
     public void responseLISTOK(List<Message> messageList) {
@@ -145,10 +147,10 @@ public class Server implements Runnable{
         int indexOfMessage = 1;
 
         for (Message message : messageList) {
-            response += String.valueOf(indexOfMessage++) + message.getSize() + CRLF;
+            response += String.valueOf(indexOfMessage++) + WhiteSpace + message.getSize() + CRLF;
         }
 
-        response += TerminationOctet;
+        response += Point + CRLF;
 
         tellToClient(response);
     }
@@ -165,5 +167,28 @@ public class Server implements Runnable{
         String response = OK +" "+mailnumber+" "+message.getSize()+TerminationOctet;
 
         tellToClient(response);
+    }
+
+    public void responseUIDL(List<Message> messageList) {
+        String response = "";
+        int indexOfMessage = 1;
+
+        for (Message message : messageList) {
+            response += String.valueOf(indexOfMessage++) + WhiteSpace + message.getContent().hashCode() + CRLF;
+        }
+
+        response += Point + CRLF;
+
+        tellToClient(response);
+    }
+
+    public void responseRETR(int mailId) {
+
+        Message message = user.getMailById(mailId);
+
+        final String response = message.getContent();
+
+        tellToClient(response + TerminationOctet);
+
     }
 }
