@@ -5,14 +5,15 @@ import rn.praktikum1.server.mails.Message;
 import rn.praktikum1.server.mails.User;
 import rn.praktikum1.server.states.ServerState;
 
-import static rn.helperlein.Communication.warteNachricht;
-import static rn.praktikum1.server.states.Messages.*;
-
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.Socket;
 import java.util.List;
-import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import static rn.helperlein.Communication.warteNachricht;
+import static rn.praktikum1.server.states.Messages.*;
 
 /**
  * User: Alex
@@ -121,7 +122,7 @@ public class Server implements Runnable{
     }
 
     public void responseOK() {
-        tellToClient(OK+CRLF);
+        tellToClient(OK+TerminationOctet);
     }
 
     public void responseOK(int... parameters) {
@@ -131,12 +132,12 @@ public class Server implements Runnable{
             response += WhiteSpace + parameter;
         }
 
-        response += CRLF;
+        response += TerminationOctet;
 
         tellToClient(response);
     }
     public void responseError() {
-        tellToClient(ERR);
+        tellToClient(ERR+TerminationOctet);
     }
 
     public void responseLISTOK(List<Message> messageList) {
@@ -144,10 +145,10 @@ public class Server implements Runnable{
         int indexOfMessage = 1;
 
         for (Message message : messageList) {
-            response += String.valueOf(indexOfMessage++) + message.getSize() + '\n';
+            response += String.valueOf(indexOfMessage++) + message.getSize() + CRLF;
         }
 
-        response += TerminationOctet + '\n' + CRLF;
+        response += TerminationOctet;
 
         tellToClient(response);
     }
@@ -161,7 +162,7 @@ public class Server implements Runnable{
     }
 
     public void responseLIST_MESSAGE_OK(int mailnumber, Message message) {
-        String response = OK +" "+mailnumber+" "+message.getSize()+CRLF;
+        String response = OK +" "+mailnumber+" "+message.getSize()+TerminationOctet;
 
         tellToClient(response);
     }

@@ -1,7 +1,5 @@
 package rn.praktikum1.server.states;
 
-import com.sun.xml.internal.bind.WhiteSpaceProcessor;
-
 /**
  * Created with IntelliJ IDEA.
  * User: abg628
@@ -17,6 +15,6 @@ public class Messages {
         OK = "+OK",
         ERR = "-ERR",
         WhiteSpace = " ",
-        TerminationOctet = ".";
+        TerminationOctet = CRLF+"."+CRLF;
 
 }
