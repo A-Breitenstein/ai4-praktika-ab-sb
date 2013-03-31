@@ -101,7 +101,7 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
                     break;
 
                     default:{
-                        Log.log("Kein zulässiger Befehl im Zustand"+AUTHORIZATION.name());
+                        Log.log("Kein zulässiger Befehl '" + strCommandIn + "' im Zustand "+AUTHORIZATION.name());
                         serverInstance.responseError();
                     }
 
@@ -147,7 +147,7 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
 
                 try {
 
-                    final Command commandIn = Command.valueOf(input);
+                    final Command commandIn = Command.valueOf(strCommandIn);
                     final User user = serverInstance.getUser();
 
                     switch (commandIn) {
@@ -189,14 +189,36 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
                                     serverInstance.responseError();
                                 }
                             }else{
+                                serverInstance.responseOK();
                                 serverInstance.responseLISTOK(user.getUserMails());
                             }
                         } break;
 
-                        case RETR : {} break;
+                        case RETR : {
+
+                            int mailId = Integer.valueOf(strContentIn).intValue();
+
+                            serverInstance.responseOK();
+                            serverInstance.responseRETR(mailId);
+                        } break;
                         case DELE : {} break;
                         case NOOP : {} break;
                         case RSET : {} break;
+                        case UIDL : {
+                            serverInstance.responseOK();
+                            serverInstance.responseUIDL(user.getUserMails());
+                        } break;
+
+                        case QUIT: {
+                            serverInstance.responseOK();
+                            serverInstance.closeSocket();
+                        } break;
+
+
+                        default:{
+                            Log.log("Kein zulässiger Befehl '" + strCommandIn + "' im Zustand "+TRANSACTION.name());
+                            serverInstance.responseError();
+                        }
                     }
                 }catch (IllegalArgumentException iAE){
 

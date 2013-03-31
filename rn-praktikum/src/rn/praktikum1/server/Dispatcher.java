@@ -37,6 +37,7 @@ public class Dispatcher {
             try {
                 Socket clientSocket = serverSocket.accept();
                 threadPool.execute(Server.create(clientSocket));
+//                Server.create(clientSocket).run();
             } catch (IOException e) {
                 e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             }

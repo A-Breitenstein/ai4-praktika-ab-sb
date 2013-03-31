@@ -70,6 +70,12 @@ public class User {
         return messagesSize;
     }
 
+    /**
+     * function already subtracts 1 vom mailNumber, no need for index correction
+     *
+     * @param mailNumber
+     * @return
+     */
     public Message getMailById(Integer mailNumber) {
 
         final int mailNumberIndex = mailNumber -1;

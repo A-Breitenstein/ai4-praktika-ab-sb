@@ -21,7 +21,12 @@ public class Communication {
     }
     public static String  warteNachricht(Socket socket) throws IOException {
         BufferedReader inFromClient =  new BufferedReader(new InputStreamReader(socket.getInputStream()));
-        final String line = inFromClient.readLine();
+
+        String line = null;
+
+        while(line == null)
+            line = inFromClient.readLine();
+
         Log.log("Client -> Server: " +line);
         return line;
     }
