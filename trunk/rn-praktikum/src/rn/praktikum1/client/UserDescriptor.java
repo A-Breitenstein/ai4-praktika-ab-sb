@@ -16,15 +16,15 @@ public class UserDescriptor {
     private int serverPort;
     private Socket socket;
 
-    private UserDescriptor(User user, String serverIp, int serverPort, Socket socket) {
+    private UserDescriptor(User user, String serverIp, int serverPort) {
         this.user = user;
         this.serverIp = serverIp;
         this.serverPort = serverPort;
         this.socket = socket;
     }
 
-    public static UserDescriptor create(User user, String serverIp, int serverPort, Socket socket) {
-        return new UserDescriptor(user, serverIp, serverPort, socket);
+    public static UserDescriptor create(User user, String serverIp, int serverPort) {
+        return new UserDescriptor(user, serverIp, serverPort);
     }
 
     public User getUser() {

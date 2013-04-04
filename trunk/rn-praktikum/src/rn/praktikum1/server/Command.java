@@ -27,6 +27,7 @@ public enum Command {
 
     //CLIENT only
 
+    MAKE,
     CNFG
 
 }
