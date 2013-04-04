@@ -1,11 +1,13 @@
 package rn.praktikum1.server.mails;
 
+import java.io.Serializable;
+
 /**
  * User: Alex
  * Date: 26.03.13
  * Time: 07:41
  */
-public class Message {
+public class Message implements Serializable {
 
     private int id;
     private String content;

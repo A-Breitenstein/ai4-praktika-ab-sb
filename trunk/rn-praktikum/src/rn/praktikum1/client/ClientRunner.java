@@ -9,7 +9,12 @@ import rn.praktikum1.server.mails.User;
  */
 public class ClientRunner implements Runnable {
 
-    User user;
+    UserDescriptor userDescriptor;
+
+
+    public ClientRunner(UserDescriptor userDescriptor) {
+        this.userDescriptor = userDescriptor;
+    }
 
     @Override
     public void run() {

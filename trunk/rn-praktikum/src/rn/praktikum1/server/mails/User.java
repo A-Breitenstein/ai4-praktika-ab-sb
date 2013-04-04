@@ -1,5 +1,6 @@
 package rn.praktikum1.server.mails;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -7,7 +8,7 @@ import java.util.List;
  * Date: 26.03.13
  * Time: 07:41
  */
-public class User {
+public class User implements Serializable {
 
     private int id;
 
