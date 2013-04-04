@@ -283,8 +283,6 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
 
                             Log.log("User "+ user.getUsername() + " hat den QUIT Befehl gesendet, SERVER wechselt in den Zustand: "+UPDATE.name());
 
-                            serverInstance.responseOK();
-
                             serverInstance.changeServerStateToUPDATE();
                         } break;
 
