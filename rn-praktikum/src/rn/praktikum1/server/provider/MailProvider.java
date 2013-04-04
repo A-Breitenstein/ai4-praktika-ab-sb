@@ -80,7 +80,7 @@ public class MailProvider {
 
         //precondition blablabla
 
-        String sql = "delete message where mailid = "+message.getId()+";";
+        String sql = "DELETE FROM mail WHERE mailid = "+message.getId()+";";
 
         try {
             getStatement().execute(sql);

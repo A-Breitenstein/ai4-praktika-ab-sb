@@ -275,6 +275,10 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
 
                             Log.log("Hash's für Nachrichten von User "+user.getUsername()+" werden erstellt und gesendet");
 
+                            if (user.getUserMails() == null) {
+                                MailProvider.addMessagesToUser(user);
+                            }
+
                             serverInstance.responseOK();
                             serverInstance.responseUIDL(user.getUserMails());
                         } break;
