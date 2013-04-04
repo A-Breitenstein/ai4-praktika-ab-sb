@@ -114,9 +114,8 @@ public class UserProvider {
     }
 
     public static void main(String[] args) {
-        String user = "user";
-        for (int i = 0; i < 20; i++) {
-            System.out.println(getUserByUsername(user + i));
+        for (User user : getAllUsers()) {
+            System.out.println(user);
         }
     }
 
@@ -136,7 +135,7 @@ public class UserProvider {
     }
 
     public static void createUser(User user) {
-        String sql = "SELECT MAX(user) as 'maxid' FROM user;";
+        String sql = "SELECT MAX(userid) as 'maxid' FROM user;";
 
         ResultSet resultSet = null;
         int number = 10000;
@@ -146,6 +145,8 @@ public class UserProvider {
 
             resultSet.next();
             number = resultSet.getInt("maxid");
+
+            number++;
 
             sql = "INSERT INTO user (userid, username, password)VALUES ("+number+",'"+user.getUsername()+"','"+user.getPassword()+"');";
 

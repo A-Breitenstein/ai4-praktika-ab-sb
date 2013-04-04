@@ -253,8 +253,8 @@ public class Client {
                         String userStrings[] = in.split(",");
 
                         User user = User.create(userStrings[0], userStrings[1]);
-                        // TODO SVEN sagt funzt bei mir nicht deshalb auskommentiert
-//                        UserProvider.createUser(user);
+                        // TODO: SVEN sagt funzt bei mir nicht deshalb auskommentiert
+                        UserProvider.createUser(user);
                         UserDescriptor userDescriptor = UserDescriptor.create(user, userStrings[2], Integer.valueOf(userStrings[3]));
 
                         userDescriptors.add(userDescriptor);
