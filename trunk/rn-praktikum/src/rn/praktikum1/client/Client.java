@@ -1,6 +1,5 @@
 package rn.praktikum1.client;
 
-import com.sun.jndi.toolkit.url.UrlUtil;
 import rn.praktikum1.server.Command;
 import rn.praktikum1.server.mails.User;
 import rn.praktikum1.server.provider.UserProvider;
@@ -65,7 +64,7 @@ public class Client {
         while (running) {
 
             //START BACKGROUND-UPDATER
-            System.out.println("Befehl eingabe: LOGO,CNFG,QUIT");
+            System.out.println("Befehl eingabe: CNFG,QUIT");
 
             try {
                 input = getInput();
@@ -109,12 +108,12 @@ public class Client {
 
             for (int i = 0; i < userDescriptors.size(); i++) {
                 User user = userDescriptors.get(i).getUser();
-                System.out.println("userID: " + i + " Username: " + user.getUsername() + " internalID: " + user.getId());
+                System.out.println("userID: " + (i+1) + " Username: " + user.getUsername() + " internalID: " + user.getId());
             }
 
             System.out.println("userID '#' für configuration des users oder 'EXIT' zum zurückkehren ins hauptmenü:");
 
-            System.out.println("USER 'IDNummer' für bearbeitung, MAKE für üser erstellung");
+            System.out.println("USER 'IDNummer' für bearbeitung, MAKE für üser erstellung, EXIT zum beenden");
 
 
             try {
@@ -136,11 +135,11 @@ public class Client {
                         try {
                             int userid = Integer.valueOf(strContentIn);
 
-                            if (userid > 0 && userid < userDescriptors.size()) {
+                            if (userid >= 0 && userid < userDescriptors.size()) {
                                 UserDescriptor userDescriptor = userDescriptors.get(userid - 1);
                                 User user = userDescriptor.getUser();
 
-                                String username, password, ip, port;
+                                String username, password, ip, port="";
                                 int intPort = 0;
 
                                 System.out.println("User: " + user.getUsername() + " Id: " + user.getId());
@@ -169,41 +168,65 @@ public class Client {
                                     //port
                                     System.out.println("Neuer Server-port:");
                                     port = getInput();
-
-                                    try {
-                                        intPort = Integer.valueOf(port);
+                                    if (!port.isEmpty()) {
+                                        try {
+                                            intPort = Integer.valueOf(port);
+                                            portIsInt = !portIsInt;
+                                        } catch (IllegalArgumentException iAE) {
+                                            System.out.println("server-Port ist kein gültiger Int wert!!!!!");
+                                        }
+                                    } else {
                                         portIsInt = !portIsInt;
-                                    } catch (IllegalArgumentException iAE) {
-                                        System.out.println("server-Port ist kein gültiger Int wert!!!!!");
                                     }
                                 }
 
-                                System.out.println("Neu -> Username, Passwort, ip, port");
-                                System.out.println("Neu -> " + username + ", " + password + ", " + ip + ", " + intPort);
+                                if(!username.isEmpty() || !password.isEmpty() || !ip.isEmpty() || !port.isEmpty()) {
 
-                                System.out.println("übernehmen? Ja:j, Nein:n");
-                                in = System.console().readLine().toLowerCase();
+                                    if (username.isEmpty()) {
+                                        username = user.getUsername();
+                                    }
 
-                                if (in.equals("ja")) {
+                                    if (password.isEmpty()) {
+                                        password = user.getPassword();
+                                    }
 
-                                    System.out.println("Neue Werte werden übernommen!");
+                                    if (ip.isEmpty()) {
+                                        ip = userDescriptor.getServerIp();
+                                    }
 
-                                    user.setUsername(username);
-                                    user.setPassword(password);
+                                    if (port.isEmpty()) {
+                                        intPort = userDescriptor.getServerPort();
+                                    }
 
-                                    UserProvider.updateUser(user);
+                                    System.out.println("Neu -> Username, Passwort, ip, port");
+                                    System.out.println("Neu -> " + username + ", " + password + ", " + ip + ", " + intPort);
 
-                                    userDescriptor.setServerIp(ip);
-                                    userDescriptor.setServerPort(intPort);
+                                    System.out.println("übernehmen? Ja:j, Nein:n");
+                                    in = getInput();
 
-                                    saveUsers(userDescriptors);
+                                    if (in.equals("j")) {
 
-                                } else if (in.equals("nein")) {
+                                        System.out.println("Neue Werte werden übernommen!");
 
-                                    System.out.println("Neue Werte werden verworfen");
+                                        user.setUsername(username);
+                                        user.setPassword(password);
 
-                                } else {
-                                    System.out.println("Eingabe nicht erkannt, neue Werte werden verworfen");
+                                        UserProvider.updateUser(user);
+
+                                        userDescriptor.setServerIp(ip);
+                                        userDescriptor.setServerPort(intPort);
+
+                                        saveUsers(userDescriptors);
+
+                                    } else if (in.equals("n")) {
+
+                                        System.out.println("Neue Werte werden verworfen");
+
+                                    } else {
+                                        System.out.println("Eingabe nicht erkannt, neue Werte werden verworfen");
+                                    }
+                                }else{
+                                    System.out.println("Werte sind alle leer, keine änderung vorgenommen");
                                 }
 
                             } else {
