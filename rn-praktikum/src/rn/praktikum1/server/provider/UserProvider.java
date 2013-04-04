@@ -7,6 +7,8 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -40,6 +42,40 @@ public class UserProvider {
         }
 
         return statement;
+    }
+
+    public static List<User> getAllUsers() {
+
+        String sql = "SELECT * FROM user;";
+
+        ResultSet resultSet = null;
+
+        List<User> users = new ArrayList<User>();
+
+        try {
+            resultSet = getStatement().executeQuery(sql);
+
+            User user;
+            int userid;
+            String username,password;
+
+            while (resultSet.next()) {
+                userid = resultSet.getInt("userid");
+                username = resultSet.getString("username");
+                password = resultSet.getString("password");
+
+                user = User.create(username, password);
+                user.setId(userid);
+
+                users.add(user);
+
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+
+        return users;
     }
 
     public static User getUserByUsername(String username) {
