@@ -3,10 +3,12 @@ package rn.praktikum1.server.states;
 import rn.helperlein.Log;
 import rn.praktikum1.server.Command;
 import rn.praktikum1.server.Server;
-import rn.praktikum1.server.provider.MailProvider;
-import rn.praktikum1.server.provider.UserProvider;
 import rn.praktikum1.server.mails.Message;
 import rn.praktikum1.server.mails.User;
+import rn.praktikum1.server.provider.MailProvider;
+import rn.praktikum1.server.provider.UserProvider;
+
+import java.util.List;
 
 /**
  * User: Alex
@@ -172,7 +174,7 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
 
                                     if (mailNumber < 0 && mailNumber > user.getNumberOfMails()) {
 
-                                        Log.log("Der vom User " +user.getUsername()+ " gewählte index liegt ausserhalb des bereiches der vorhandenen NAchrichten");
+                                        Log.log("Der vom User " +user.getUsername()+ " gewählte index liegt ausserhalb des bereiches der vorhandenen Nachrichten");
                                         serverInstance.responseError();
 
                                     } else {
@@ -201,17 +203,89 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
                             serverInstance.responseOK();
                             serverInstance.responseRETR(mailId);
                         } break;
-                        case DELE : {} break;
-                        case NOOP : {} break;
-                        case RSET : {} break;
+                        case DELE : {
+
+                        if (!strContentIn.isEmpty()) {
+                            try {
+                                int mailNumber = Integer.valueOf(strContentIn).intValue();
+                                
+                                if (mailNumber < 0 && mailNumber > user.getNumberOfMails()) {
+
+                                    Log.log("Der vom User " +user.getUsername()+ " gewählte index liegt ausserhalb des bereiches der vorhandenen Nachrichten");
+                                    serverInstance.responseError();
+
+                                } else {
+                                    
+                                    user.setDelete(true);
+                                    
+                                    Message message = serverInstance.getUser().getMailById(mailNumber);
+
+                                    message.setInvalid();
+                                    
+                                    Log.log("User "+user.getUsername()+" setzt Mail mit index "+mailNumber+" auf gelöscht");
+                                    serverInstance.responseLIST_MESSAGE_OK(mailNumber,message);
+                                }
+
+
+                            } catch (NumberFormatException nFE) {
+                                Log.log("Fehler: Format der Eingabe nicht korrekt: " + input);
+                                serverInstance.responseError();
+                            }
+                        }else{
+                            Log.log("DELE hat keinen parameter: " +input);
+                            serverInstance.responseError();
+                        }
+                            
+                        } break;
+                        case NOOP : {
+                            Log.log("NOOP Befehl erhalten, antworte mit +OK");
+                            serverInstance.responseOK();
+                        } break;
+                        case RSET : {
+
+                            if (user.isDelete()) {
+
+                                List<Message> messageList = user.getUserMails();
+
+                                int restoredMessages = 0;
+
+                                for (int i = 0; i < messageList.size(); i++) {
+
+                                    Message message = messageList.get(i);
+
+                                    if (!message.isValid()) {
+
+                                        message.setValid();
+
+                                        Log.log("Message mit Id "+message.getId()+" wiederhergestellt");
+
+                                        restoredMessages++;
+                                    }
+                                }
+
+                                Log.log("User "+ user.getUsername() + " hat " + restoredMessages + " Nachrichten wiederhergestellt");
+
+                            }else {
+                                Log.log("User " + user.getUsername() + " versucht Nachrichten wiederherzustellen, keine gelöschten vorhanden");
+                                serverInstance.responseError();
+                            }
+
+                        } break;
                         case UIDL : {
+
+                            Log.log("Hash's für Nachrichten von User "+user.getUsername()+" werden erstellt und gesendet");
+
                             serverInstance.responseOK();
                             serverInstance.responseUIDL(user.getUserMails());
                         } break;
 
                         case QUIT: {
+
+                            Log.log("User "+ user.getUsername() + " hat den QUIT Befehl gesendet, SERVER wechselt in den Zustand: "+UPDATE.name());
+
                             serverInstance.responseOK();
-                            serverInstance.closeSocket();
+
+                            serverInstance.changeServerStateToUPDATE();
                         } break;
 
 
@@ -221,17 +295,8 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
                         }
                     }
                 }catch (IllegalArgumentException iAE){
-
-                    try {
-                        final Integer mailNumber = Integer.valueOf(input);
-
-                        Message message = serverInstance.getUser().getMailById(mailNumber);
-
-//                        serverInstance.tellToClient(message);
-
-                    }catch (NumberFormatException nFE){
-                        changeServerStateToUPDATE(serverInstance);
-                    }
+                    Log.log("Unbekannte eingabe: " + strCommandIn);
+                    serverInstance.responseError();
                 }
 
 
@@ -260,7 +325,28 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
 
         @Override
         public void evaluate(Server serverInstance, String input) {
-            //To change body of implemented methods use File | Settings | File Templates.
+
+            User user = serverInstance.getUser();
+
+            if (user.isDelete()) {
+
+                List<Message> messages = user.getUserMails();
+
+                for (Message message : messages) {
+                    if (!message.isValid()) {
+                        Log.log("Lösche Nachricht " + message.getId() + " permanent");
+                        MailProvider.deleteMailById(message);
+                    }
+                }
+
+            }
+
+
+            Log.log("SERVER beendet Verbindung");
+
+            serverInstance.responseOK();
+            serverInstance.closeSocket();
+
         }
     };
 

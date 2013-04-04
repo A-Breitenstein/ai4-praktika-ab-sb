@@ -1,8 +1,6 @@
 package rn.praktikum1.server.mails;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 /**
  * User: Alex
@@ -19,9 +17,12 @@ public class User {
 
     private List<Message> userMails;
 
+    private boolean delete;
+
     public User(String username, String password) {
         this.username = username;
         this.password = password;
+        this.delete = false;
     }
 
     public static User create(String username, String password) {
@@ -97,5 +98,13 @@ public class User {
     public String toString() {
         final String print = "" + this.getId() + " : " + this.getUsername() + " : " +this.getPassword();
         return print;
+    }
+
+    public boolean isDelete() {
+        return delete;
+    }
+
+    public void setDelete(boolean delete) {
+        this.delete = delete;
     }
 }

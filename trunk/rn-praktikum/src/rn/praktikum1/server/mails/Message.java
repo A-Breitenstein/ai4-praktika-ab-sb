@@ -50,4 +50,12 @@ public class Message {
     public String toString() {
         return "" + this.getId() + " : " + this.getSize() + " : " + this.getContent() + " : valid: " + this.isValid();
     }
+
+    public void setInvalid() {
+        this.valid = false;
+    }
+
+    public void setValid() {
+        this.valid = true;
+    }
 }
