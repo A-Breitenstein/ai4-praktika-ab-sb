@@ -73,8 +73,8 @@ public class Server implements Runnable{
 
             try {
 
-                line = warteNachricht(clientSocket);
-
+                if(!serverState.equals(ServerState.UPDATE))
+                    line = warteNachricht(clientSocket);
 
                 serverState.evaluate(this,line);
 
@@ -191,4 +191,5 @@ public class Server implements Runnable{
         tellToClient(response + TerminationOctet);
 
     }
+
 }

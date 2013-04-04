@@ -61,10 +61,6 @@ public class Client {
 
                 switch (command) {
 
-                    case LOGO :{
-
-                    }break;
-
                     case CNFG : {
                         configureUsers(userDescriptors);
 

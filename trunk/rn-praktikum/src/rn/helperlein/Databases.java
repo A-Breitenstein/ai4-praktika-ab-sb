@@ -23,8 +23,8 @@ public class Databases {
         try {
             Class.forName("org.sqlite.JDBC");
             //Alex
-            String url = "jdbc:sqlite:D:/Alex/HAW/AI-4/RN/rn-praktikum/"+ databaseName +".db";
-//            String url = "jdbc:sqlite:"+ databaseName +".db";
+//            String url = "jdbc:sqlite:D:/Alex/HAW/AI-4/RN/rn-praktikum/"+ databaseName +".db";
+            String url = "jdbc:sqlite:"+ databaseName +".db";
 
 
             //Sven

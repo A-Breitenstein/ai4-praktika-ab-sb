@@ -27,7 +27,6 @@ public enum Command {
 
     //CLIENT only
 
-    LOGO,
     CNFG
 
 }
