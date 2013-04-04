@@ -87,4 +87,39 @@ public class UserProvider {
     public static Boolean login(User user, String password) {
         return user.getPassword().equals(password);
     }
+
+    public static void updateUser(User user) {
+        String sql = "UPDATE user SET username = '"+ user.getUsername() +"', password='"+ user.getPassword() +"' WHERE userid="+ user.getId() +";";
+
+        try {
+            getStatement().execute(sql);
+            getStatement().close();
+        } catch (SQLException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+    }
+
+    public static void createUser(User user) {
+        String sql = "SELECT MAX(user) as 'maxid' FROM user;";
+
+        ResultSet resultSet = null;
+        int number = 10000;
+
+        try {
+            resultSet = getStatement().executeQuery(sql);
+
+            resultSet.next();
+            number = resultSet.getInt("maxid");
+
+            sql = "INSERT INTO user (userid, username, password)VALUES ("+number+",'"+user.getUsername()+"','"+user.getPassword()+"');";
+
+            getStatement().execute(sql);
+
+            resultSet.close();
+            getStatement().close();
+        } catch (SQLException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+
+    }
 }
