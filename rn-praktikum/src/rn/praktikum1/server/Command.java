@@ -7,6 +7,8 @@ package rn.praktikum1.server;
  */
 public enum Command {
 
+    //SERVER
+
     QUIT,
     STAT,
     LIST,
@@ -21,5 +23,11 @@ public enum Command {
     UIDL,
     USER,
     PASS,
-    APOP
+    APOP,
+
+    //CLIENT only
+
+    LOGO,
+    CNFG
+
 }
