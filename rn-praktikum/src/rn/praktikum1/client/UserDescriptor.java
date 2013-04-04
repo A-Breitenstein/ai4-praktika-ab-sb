@@ -2,14 +2,16 @@ package rn.praktikum1.client;
 
 import rn.praktikum1.server.mails.User;
 
+import java.io.*;
 import java.net.Socket;
+import java.util.List;
 
 /**
  * User: Alex
  * Date: 04.04.13
  * Time: 14:11
  */
-public class UserDescriptor {
+public class UserDescriptor implements Serializable {
 
     private User user;
     private String serverIp;

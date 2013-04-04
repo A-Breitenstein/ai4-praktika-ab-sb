@@ -1,11 +1,15 @@
 package rn.praktikum1.client;
 
+import com.sun.jndi.toolkit.url.UrlUtil;
 import rn.praktikum1.server.Command;
 import rn.praktikum1.server.mails.User;
 import rn.praktikum1.server.provider.UserProvider;
 
-import java.io.IOException;
+import java.io.*;
 import java.net.Socket;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -17,7 +21,8 @@ public class Client {
 
 
     static List<UserDescriptor> userDescriptors;
-
+    final static String users_filename = "users.ser";
+    static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
     public static Socket connect(String ip, int port) {
 
@@ -34,44 +39,64 @@ public class Client {
         return socket;
     }
 
+    public static String getInput() {
+        String line = "";
+        try {
+            while ((line = br.readLine()) != null) {
+                return line;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return line;
+    }
 
     public static void main(String[] args) {
+
+        // loading userDescriptors
+        userDescriptors = retrieveUsers();
 
         boolean running = true;
         String input = "";
         Command command;
 
+        System.out.println("Willkommen zum RNP Mail-Client");
+
         while (running) {
 
             //START BACKGROUND-UPDATER
-
             System.out.println("Befehl eingabe: LOGO,CNFG,QUIT");
-            input = System.console().readLine();
 
             try {
+                input = getInput();
                 command = Command.valueOf(input.substring(0, 4));
 
                 switch (command) {
 
-                    case CNFG : {
+                    case CNFG: {
                         configureUsers(userDescriptors);
 
-                    }break;
+                    }
+                    break;
 
-                    case QUIT : {
+                    case QUIT: {
                         running = !running;
                         saveUsers(userDescriptors);
-                    }break;
+                    }
+                    break;
 
                     default:
                         System.out.println("BEFEHL NICHT BEIM CLIENT VORHANDEN!");
 
                 }
             } catch (IllegalArgumentException iAE) {
-                System.out.println("FALSCHE AUSGABE: "+input);
+                System.out.println("FALSCHE EINGABE: " + input);
+            } catch (StringIndexOutOfBoundsException e) {
+                System.out.println("FALSCHE EINGABE: " + input);
             }
 
         }
+
         System.out.println("Client beendet sich");
     }
 
@@ -84,17 +109,17 @@ public class Client {
 
             for (int i = 0; i < userDescriptors.size(); i++) {
                 User user = userDescriptors.get(i).getUser();
-                System.out.println("userID: " + i + " Username: "+user.getUsername()+" internalID: "+user.getId());
+                System.out.println("userID: " + i + " Username: " + user.getUsername() + " internalID: " + user.getId());
             }
 
-            System.out.println("userID '#' für configuration des users oder 'exit' zum zurückkehren ins hauptmenü:");
+            System.out.println("userID '#' für configuration des users oder 'EXIT' zum zurückkehren ins hauptmenü:");
 
             System.out.println("USER 'IDNummer' für bearbeitung, MAKE für üser erstellung");
 
 
             try {
 
-                in = System.console().readLine();
+                in = getInput();
 
                 String strCommandIn = in.substring(0, 4);
                 String strContentIn = "";
@@ -107,7 +132,7 @@ public class Client {
 
                 switch (commandIn) {
 
-                    case USER :{
+                    case USER: {
                         try {
                             int userid = Integer.valueOf(strContentIn);
 
@@ -120,7 +145,7 @@ public class Client {
 
                                 System.out.println("User: " + user.getUsername() + " Id: " + user.getId());
                                 System.out.println("Passwort: " + user.getPassword());
-                                System.out.println("Server-ip:port > "+userDescriptor.getServerIp()+":"+userDescriptor.getServerPort());
+                                System.out.println("Server-ip:port > " + userDescriptor.getServerIp() + ":" + userDescriptor.getServerPort());
 
                                 System.out.println("Eingabe hat nach Schema zu erfolgen!");
                                 System.out.println("Leere eingaben werden missachtet und der wert wird nicht verändert, leerzeichen sind nicht erlaubt");
@@ -128,22 +153,22 @@ public class Client {
 
                                 //Username
                                 System.out.println("Neuer Username:");
-                                username = System.console().readLine();
+                                username = getInput();
 
                                 //password
                                 System.out.println("Neues Passwort:");
-                                password = System.console().readLine();
+                                password = getInput();
 
                                 //ip
                                 System.out.println("Neue Server-ip:");
-                                ip = System.console().readLine();
+                                ip = getInput();
 
 
                                 boolean portIsInt = false;
                                 while (!portIsInt) {
                                     //port
                                     System.out.println("Neuer Server-port:");
-                                    port = System.console().readLine();
+                                    port = getInput();
 
                                     try {
                                         intPort = Integer.valueOf(port);
@@ -154,7 +179,7 @@ public class Client {
                                 }
 
                                 System.out.println("Neu -> Username, Passwort, ip, port");
-                                System.out.println("Neu -> "+username+", "+password+", "+ip+", "+intPort);
+                                System.out.println("Neu -> " + username + ", " + password + ", " + ip + ", " + intPort);
 
                                 System.out.println("übernehmen? Ja:j, Nein:n");
                                 in = System.console().readLine().toLowerCase();
@@ -173,16 +198,16 @@ public class Client {
 
                                     saveUsers(userDescriptors);
 
-                                }else if (in.equals("nein")) {
+                                } else if (in.equals("nein")) {
 
                                     System.out.println("Neue Werte werden verworfen");
 
-                                }else{
+                                } else {
                                     System.out.println("Eingabe nicht erkannt, neue Werte werden verworfen");
                                 }
 
-                            }else{
-                                System.out.println("UserId "+ userid +" liegt ausserhalb des legalen bereiches");
+                            } else {
+                                System.out.println("UserId " + userid + " liegt ausserhalb des legalen bereiches");
                             }
 
 
@@ -191,8 +216,9 @@ public class Client {
                             System.out.println("Eingabe ist kein gültiger integer wert!");
                         }
 
-                    }break;
-                    case MAKE :{
+                    }
+                    break;
+                    case MAKE: {
 
                         System.out.println("Benutzererstellung:");
                         System.out.println("Schema: Username,Passwort,server-ip,server-port");
@@ -200,25 +226,26 @@ public class Client {
                         System.out.println("Username,Passwort,server-ip,server-port:");
 
 
-
-                        in = System.console().readLine();
+                        in = getInput();
                         String userStrings[] = in.split(",");
 
                         User user = User.create(userStrings[0], userStrings[1]);
-
-                        UserProvider.createUser(user);
+                        // TODO SVEN sagt funzt bei mir nicht deshalb auskommentiert
+//                        UserProvider.createUser(user);
                         UserDescriptor userDescriptor = UserDescriptor.create(user, userStrings[2], Integer.valueOf(userStrings[3]));
 
                         userDescriptors.add(userDescriptor);
 
                         saveUsers(userDescriptors);
 
-                    }break;
+                    }
+                    break;
 
+
+                    case EXIT : {
+                         return;
+                    }
                 }
-
-
-
 
 
             } catch (IllegalArgumentException iAE) {
@@ -232,12 +259,41 @@ public class Client {
 
 
     static void saveUsers(List<UserDescriptor> userDescriptors) {
-        //TODO:SAVE TO FILE
+
+        try {
+            FileOutputStream fileOut = new FileOutputStream(users_filename);
+            ObjectOutputStream out = new ObjectOutputStream(fileOut);
+
+            out.writeObject(userDescriptors);
+            out.close();
+            fileOut.close();
+        } catch (IOException i) {
+            i.printStackTrace();
+        }
 
     }
 
-    static void retrieveUsers() {
-        //TODO:LOAD FROM FILE
+    static List<UserDescriptor> retrieveUsers() {
+
+        List<UserDescriptor> userDescriptors = null;
+        if (Files.exists(Paths.get(users_filename))) {
+            try {
+                FileInputStream fileIn = new FileInputStream(users_filename);
+                ObjectInputStream in = new ObjectInputStream(fileIn);
+                userDescriptors = (List<UserDescriptor>) in.readObject();
+                in.close();
+                fileIn.close();
+            } catch (IOException i) {
+                i.printStackTrace();
+            } catch (ClassNotFoundException c) {
+                System.out.println(UserDescriptor.class + " not found");
+                c.printStackTrace();
+            }
+        } else {
+            return new ArrayList<UserDescriptor>();
+        }
+
+        return userDescriptors;
     }
 
 }
