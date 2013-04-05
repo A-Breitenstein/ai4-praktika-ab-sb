@@ -1,19 +1,15 @@
 package rn.praktikum1.client;
 
-import rn.helperlein.Communication;
-import rn.praktikum1.server.mails.Message;
 import rn.praktikum1.server.mails.User;
 import rn.praktikum1.server.states.Messages;
-import sun.reflect.generics.tree.FieldTypeSignature;
 
 import java.io.*;
 import java.net.Socket;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 /**
  * User: Alex
@@ -35,69 +31,132 @@ public class ClientRunner implements Runnable {
 
     @Override
     public void run() {
-        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+
 
         while (true) {
 
             try {
                 socket = new Socket(userDescriptor.getServerIp(), userDescriptor.getServerPort());
-                outToServer = new DataOutputStream(socket.getOutputStream());
-                inFromServer = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-                fileWriter = new FileWriter(userDescriptor.getUser().getUsername() + ".txt", true);
-                Calendar cal = Calendar.getInstance();
 
-                String response = readFromServer();
-                if (response.contains(Messages.OK)) {
-                    writeToServer("USER " + userDescriptor.getUser().getUsername());
-                    response = readFromServer();
+                if(socket.isConnected()){
+
+                    outToServer = new DataOutputStream(socket.getOutputStream());
+                    inFromServer = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                    fileWriter = new FileWriter(userDescriptor.getUser().getUsername() + ".txt", true);
+
+
+                    String response = readFromServer();
                     if (response.contains(Messages.OK)) {
-                        writeToServer("PASS " + userDescriptor.getUser().getPassword());
+                        writeToServer("USER " + userDescriptor.getUser().getUsername());
                         response = readFromServer();
                         if (response.contains(Messages.OK)) {
-                            writeToServer("STAT");
+                            writeToServer("PASS " + userDescriptor.getUser().getPassword());
                             response = readFromServer();
-                            String[] parts = response.trim().split(" ");
-                            int message_count = Integer.valueOf(parts[1]);
-                            for (int i = 1; i <= message_count; i++) {
+                            if (response.contains(Messages.OK)) {
 
-                                writeToServer("RETR " + i);
+                                writeToServer("UIDL");
                                 response = readFromServer();
                                 if (response.contains(Messages.OK)) {
-                                    fileWriter.write("############ "+dateFormat.format(cal.getTime())+" ############## \r\n");
-                                    while (!response.equals(".")) {
-                                        response = readFromServer();
-                                        fileWriter.write(response+"\r\n");
-                                        fileWriter.flush();
+                                    for (String mail_id : checkUIDs()) {
+                                        saveEmail(mail_id);
+                                    }
+
+                                } else {
+
+                                    writeToServer("STAT");
+                                    response = readFromServer();
+                                    String[] parts = response.trim().split(" ");
+                                    int message_count = Integer.valueOf(parts[1]);
+                                    for (int i = 1; i <= message_count; i++) {
+                                        saveEmail(String.valueOf(i));
 
                                     }
                                 }
-                            }
 
-                            writeToServer("QUIT");
-                            response = readFromServer();
-                            if (response.contains(Messages.OK)) {
-                                outToServer.close();
-                                inFromServer.close();
-                                socket.close();
-                                fileWriter.close();
-                            }
 
+                                writeToServer("QUIT");
+                                response = readFromServer();
+                                if (response.contains(Messages.OK)) {
+                                    cleanUp();
+                                }
+
+                            }
                         }
                     }
+
+                    Thread.sleep(30000);
+                }else{
+                    System.out.println("Der Server : "+userDescriptor.getServerIp()+":"+userDescriptor.getServerPort()+" ist nicht erreichbar!");
+                    return;
                 }
 
-                Thread.sleep(30000);
 
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                cleanUp();
+                return;
             } catch (IOException e) {
-                e.printStackTrace();
+                System.out.println("Der Server: "+userDescriptor.getServerIp()+":"+userDescriptor.getServerPort()+" ist nicht erreichbar!");
+                cleanUp();
+                return;
             }
         }
     }
 
     public static void main(String[] args) {
         new ClientRunner(UserDescriptor.create(User.create("user2", "pw2"), "127.0.0.1", 11000)).run();
+    }
+
+    private void cleanUp() {
+        try {
+            if(outToServer != null)
+                outToServer.close();
+            if(inFromServer != null)
+                inFromServer.close();
+            if(socket != null)
+                socket.close();
+            if(fileWriter != null)
+                fileWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private List<String> checkUIDs() {
+        String response = "";
+        String[] strings;
+        List<String> mail_ids = new ArrayList<String>();
+
+        while (!response.equals(".")) {
+            response = readFromServer();
+            strings = response.trim().split(" ");
+            if (strings.length == 2 && userDescriptor.getUID_map().get(strings[1]) == null) {
+                userDescriptor.getUID_map().put(strings[1], strings[1]);
+                mail_ids.add(strings[0]);
+            }
+        }
+
+        return mail_ids;
+
+    }
+
+    private void saveEmail(String id) {
+        String response;
+        writeToServer("RETR " + id);
+        response = readFromServer();
+        if (response.contains(Messages.OK)) {
+            try {
+                fileWriter.write("############ " + Client.dateFormat.format(Client.cal.getTime()) + " ############## \r\n");
+
+                while (!response.equals(".")) {
+                    response = readFromServer();
+                    fileWriter.write(response + "\r\n");
+                    fileWriter.flush();
+
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     private void writeToServer(String request) {
