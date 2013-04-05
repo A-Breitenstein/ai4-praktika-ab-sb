@@ -4,7 +4,9 @@ import rn.praktikum1.server.mails.User;
 
 import java.io.*;
 import java.net.Socket;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * User: Alex
@@ -17,6 +19,8 @@ public class UserDescriptor implements Serializable {
     private String serverIp;
     private int serverPort;
     private Socket socket;
+    private Map<String, String> UID_map;
+
 
     private UserDescriptor(User user, String serverIp, int serverPort) {
         this.user = user;
@@ -59,5 +63,12 @@ public class UserDescriptor implements Serializable {
 
     public void setSocket(Socket socket) {
         this.socket = socket;
+    }
+
+    public Map<String, String> getUID_map() {
+        if (UID_map == null) {
+            UID_map = new HashMap<String, String>();
+        }
+        return UID_map;
     }
 }

@@ -8,8 +8,14 @@ import java.io.*;
 import java.net.Socket;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 /**
  * User: Alex
@@ -18,10 +24,12 @@ import java.util.List;
  */
 public class Client {
 
-
+    static DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+    static Calendar cal = Calendar.getInstance();
     static List<UserDescriptor> userDescriptors;
     final static String users_filename = "users.ser";
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    static List<Thread> running_threads = new ArrayList<Thread>();
 
     public static Socket connect(String ip, int port) {
 
@@ -55,6 +63,15 @@ public class Client {
         // loading userDescriptors
         userDescriptors = retrieveUsers();
 
+        if(userDescriptors != null) {
+            for (UserDescriptor userDescriptor : userDescriptors) {
+                running_threads.add(new Thread(new ClientRunner(userDescriptor)));
+            }
+            for (Thread running_thread : running_threads) {
+                running_thread.start();
+            }
+        }
+
         boolean running = true;
         String input = "";
         Command command;
@@ -80,7 +97,19 @@ public class Client {
 
                     case QUIT: {
                         running = !running;
+                        for (Thread running_thread : running_threads) {
+                            running_thread.interrupt();
+                        }
+                        for (Thread running_thread : running_threads) {
+                            try {
+                                running_thread.join();
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                        }
+
                         saveUsers(userDescriptors);
+
                     }
                     break;
 
@@ -253,17 +282,19 @@ public class Client {
                         String userStrings[] = in.split(",");
 
                         User user = User.create(userStrings[0], userStrings[1]);
-                        // TODO: SVEN sagt funzt bei mir nicht deshalb auskommentiert
                         UserProvider.createUser(user);
                         UserDescriptor userDescriptor = UserDescriptor.create(user, userStrings[2], Integer.valueOf(userStrings[3]));
 
                         userDescriptors.add(userDescriptor);
 
                         saveUsers(userDescriptors);
+                        Thread thread = new Thread(new ClientRunner(userDescriptor));
+                        thread.start();
+                        running_threads.add(thread);
 
                     }
                     break;
-
+                    case APOP:
 
                     case EXIT : {
                          return;
