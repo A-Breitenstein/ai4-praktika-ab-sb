@@ -11,6 +11,10 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="sqlitejdbc-v056" level="project" />
+    <orderEntry type="library" name="logback-classic-1.0.11-sources" level="project" />
+    <orderEntry type="library" name="logback-access-1.0.11" level="project" />
+    <orderEntry type="library" name="logback-core-1.0.11-sources" level="project" />
+    <orderEntry type="library" name="slf4j-api-1.6.5" level="project" />
   </component>
 </module>
 

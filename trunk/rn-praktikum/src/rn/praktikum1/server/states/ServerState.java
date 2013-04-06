@@ -55,12 +55,17 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
                         User user = UserProvider.getUserByUsername(strContentIn);
 
                         if (user != null && serverInstance.getUser() == null) {
-                            Log.log("Der "+user.getUsername()+" versucht sich anzumelden");
                             serverInstance.setUser(user);
+                            serverInstance.initLogger();
+
+                            serverInstance.getLogger().info("Der " + user.getUsername() + " versucht sich anzumelden");
+
+                            Log.log("Der " + user.getUsername() + " versucht sich anzumelden");
 
                             serverInstance.responseOK();
 
                         } else {
+                            serverInstance.getLogger().error("Der User "+strContentIn+" besitzt kein Mail Konto");
                             Log.log("Der User "+strContentIn+" besitzt kein Mail Konto");
                             serverInstance.responseError();
 
@@ -73,21 +78,25 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
                         Boolean validPassword;
 
                         if (user != null) {
+                            serverInstance.getLogger().info("Der User"+user.getUsername()+" versucht sich mit dem Passwort: "+strContentIn+" anzumelden");
                             Log.log("Der User"+user.getUsername()+" versucht sich mit dem Passwort: "+strContentIn+" anzumelden");
                             validPassword = UserProvider.login(user,strContentIn);
 
                             if (validPassword) {
+                                serverInstance.getLogger().debug("Der User "+user.getUsername()+" hat sich erfolgreich angemeldet, SERVER wechselt in den Zustand: "+TRANSACTION.name());
                                 Log.log("Der User "+user.getUsername()+" hat sich erfolgreich angemeldet, SERVER wechselt in den Zustand: "+TRANSACTION.name());
 
                                 serverInstance.responseOK();
                                 serverInstance.changeServerStateToTRANSACTION();
                             } else {
+                                serverInstance.getLogger().warn("Der User "+user.getUsername()+" hat ein falsches Passwort angegeben");
                                 Log.log("Der User "+user.getUsername()+" hat ein falsches Passwort angegeben");
                                 serverInstance.responseError();
                             }
 
 
                         } else {
+                            serverInstance.getLogger().debug("Es wurde zuerst der PASS Befehl gesendet ...");
                             Log.log("Es wurde zuerst der PASS Befehl gesendet ...");
                             serverInstance.responseError();
                         }
@@ -95,6 +104,7 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
                     }
                     break;
                     case QUIT: {
+                        serverInstance.getLogger().info("Quit befehl erhalten");
                         Log.log("Quit befehl erhalten");
                         serverInstance.responseOK();
                         serverInstance.closeSocket();
@@ -103,12 +113,14 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
                     break;
 
                     default:{
+                        serverInstance.getLogger().debug("Kein zulässiger Befehl '" + strCommandIn + "' im Zustand "+AUTHORIZATION.name());
                         Log.log("Kein zulässiger Befehl '" + strCommandIn + "' im Zustand "+AUTHORIZATION.name());
                         serverInstance.responseError();
                     }
 
                 }
             }catch (IllegalArgumentException iAE){
+                serverInstance.getLogger().warn("Unbekannte eingabe: " + strCommandIn);
                 Log.log("Unbekannte eingabe: " + strCommandIn);
                 serverInstance.responseError();
             }
@@ -162,6 +174,7 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
 
                                 final int intParameterArray[] = {numberOfMailsOfUser, sumOfMailsize};
 
+                                serverInstance.getLogger().info("STAT für User " +user.getUsername()+ " mit "+numberOfMailsOfUser+" emails, insgesamt " +sumOfMailsize+ " Zeichen");
                                 Log.log("STAT für User " +user.getUsername()+ " mit "+numberOfMailsOfUser+" emails, insgesamt " +sumOfMailsize+ " Zeichen");
                                 serverInstance.responseOK(intParameterArray);
 
@@ -174,6 +187,7 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
 
                                     if (mailNumber < 0 && mailNumber > user.getNumberOfMails()) {
 
+                                        serverInstance.getLogger().error("Der vom User " +user.getUsername()+ " gewählte index liegt ausserhalb des bereiches der vorhandenen Nachrichten");
                                         Log.log("Der vom User " +user.getUsername()+ " gewählte index liegt ausserhalb des bereiches der vorhandenen Nachrichten");
                                         serverInstance.responseError();
 
@@ -181,16 +195,19 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
 
                                         Message message = serverInstance.getUser().getMailById(mailNumber);
 
+                                        serverInstance.getLogger().info("User "+user.getUsername()+" ruft Mail mit index "+mailNumber+" ab");
                                         Log.log("User "+user.getUsername()+" ruft Mail mit index "+mailNumber+" ab");
                                         serverInstance.responseLIST_MESSAGE_OK(mailNumber,message);
                                     }
 
 
                                 } catch (NumberFormatException nFE) {
+                                    serverInstance.getLogger().warn("Fehler: Format der Eingabe nicht korrekt: " + input);
                                     Log.log("Fehler: Format der Eingabe nicht korrekt: " + input);
                                     serverInstance.responseError();
                                 }
                             }else{
+                                serverInstance.getLogger().info("LIST wurde ohne Parameter gesendet");
                                 serverInstance.responseOK();
                                 serverInstance.responseLISTOK(user.getUserMails());
                             }
@@ -200,6 +217,7 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
 
                             int mailId = Integer.valueOf(strContentIn).intValue();
 
+                            serverInstance.getLogger().info("RETR wurde gesendet, mit id: " +mailId);
                             serverInstance.responseOK();
                             serverInstance.responseRETR(mailId);
                         } break;
@@ -211,6 +229,7 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
                                 
                                 if (mailNumber < 0 && mailNumber > user.getNumberOfMails()) {
 
+                                    serverInstance.getLogger().error("Der vom User " +user.getUsername()+ " gewählte index liegt ausserhalb des bereiches der vorhandenen Nachrichten");
                                     Log.log("Der vom User " +user.getUsername()+ " gewählte index liegt ausserhalb des bereiches der vorhandenen Nachrichten");
                                     serverInstance.responseError();
 
@@ -221,23 +240,27 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
                                     Message message = serverInstance.getUser().getMailById(mailNumber);
 
                                     message.setInvalid();
-                                    
+
+                                    serverInstance.getLogger().info("User "+user.getUsername()+" setzt Mail mit index "+mailNumber+" auf gelöscht");
                                     Log.log("User "+user.getUsername()+" setzt Mail mit index "+mailNumber+" auf gelöscht");
                                     serverInstance.responseLIST_MESSAGE_OK(mailNumber,message);
                                 }
 
 
                             } catch (NumberFormatException nFE) {
+                                serverInstance.getLogger().warn("Fehler: Format der Eingabe nicht korrekt: " + input);
                                 Log.log("Fehler: Format der Eingabe nicht korrekt: " + input);
                                 serverInstance.responseError();
                             }
                         }else{
+                            serverInstance.getLogger().error("DELE hat keinen parameter: " +input);
                             Log.log("DELE hat keinen parameter: " +input);
                             serverInstance.responseError();
                         }
                             
                         } break;
                         case NOOP : {
+                            serverInstance.getLogger().info("NOOP Befehl erhalten, antworte mit +OK");
                             Log.log("NOOP Befehl erhalten, antworte mit +OK");
                             serverInstance.responseOK();
                         } break;
@@ -257,15 +280,18 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
 
                                         message.setValid();
 
+                                        serverInstance.getLogger().info("Message mit Id "+message.getId()+" wiederhergestellt");
                                         Log.log("Message mit Id "+message.getId()+" wiederhergestellt");
 
                                         restoredMessages++;
                                     }
                                 }
 
+                                serverInstance.getLogger().info("User "+ user.getUsername() + " hat " + restoredMessages + " Nachrichten wiederhergestellt");
                                 Log.log("User "+ user.getUsername() + " hat " + restoredMessages + " Nachrichten wiederhergestellt");
 
                             }else {
+                                serverInstance.getLogger().info("User " + user.getUsername() + " versucht Nachrichten wiederherzustellen, keine gelöschten vorhanden");
                                 Log.log("User " + user.getUsername() + " versucht Nachrichten wiederherzustellen, keine gelöschten vorhanden");
                                 serverInstance.responseError();
                             }
@@ -273,6 +299,7 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
                         } break;
                         case UIDL : {
 
+                            serverInstance.getLogger().info("Hash's für Nachrichten von User "+user.getUsername()+" werden erstellt und gesendet");
                             Log.log("Hash's für Nachrichten von User "+user.getUsername()+" werden erstellt und gesendet");
 
                             if (user.getUserMails() == null) {
@@ -285,18 +312,21 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
 
                         case QUIT: {
 
-                            Log.log("User "+ user.getUsername() + " hat den QUIT Befehl gesendet, SERVER wechselt in den Zustand: "+UPDATE.name());
+                            serverInstance.getLogger().debug("User " + user.getUsername() + " hat den QUIT Befehl gesendet, SERVER wechselt in den Zustand: " + UPDATE.name());
+                            Log.log("User " + user.getUsername() + " hat den QUIT Befehl gesendet, SERVER wechselt in den Zustand: " + UPDATE.name());
 
                             serverInstance.changeServerStateToUPDATE();
                         } break;
 
 
                         default:{
+                            serverInstance.getLogger().error("Kein zulässiger Befehl '" + strCommandIn + "' im Zustand "+TRANSACTION.name());
                             Log.log("Kein zulässiger Befehl '" + strCommandIn + "' im Zustand "+TRANSACTION.name());
                             serverInstance.responseError();
                         }
                     }
                 }catch (IllegalArgumentException iAE){
+                    serverInstance.getLogger().warn("Unbekannte eingabe: " + strCommandIn);
                     Log.log("Unbekannte eingabe: " + strCommandIn);
                     serverInstance.responseError();
                 }
@@ -336,6 +366,7 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
 
                 for (Message message : messages) {
                     if (!message.isValid()) {
+                        serverInstance.getLogger().info("Lösche Nachricht " + message.getId() + " permanent");
                         Log.log("Lösche Nachricht " + message.getId() + " permanent");
                         MailProvider.deleteMailById(message);
                     }
@@ -344,6 +375,7 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
             }
 
 
+            serverInstance.getLogger().debug("SERVER beendet Verbindung");
             Log.log("SERVER beendet Verbindung");
 
             serverInstance.responseOK();
