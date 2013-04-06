@@ -1,5 +1,12 @@
 package rn.praktikum1.server;
 
+import ch.qos.logback.classic.LoggerContext;
+import ch.qos.logback.classic.joran.JoranConfigurator;
+import ch.qos.logback.core.joran.spi.JoranException;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.slf4j.MDC;
 import rn.helperlein.Communication;
 import rn.praktikum1.server.mails.Message;
 import rn.praktikum1.server.mails.User;
@@ -10,7 +17,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.Socket;
 import java.util.List;
-import java.util.logging.Logger;
+
 
 import static rn.helperlein.Communication.warteNachricht;
 import static rn.praktikum1.server.states.Messages.*;
@@ -29,12 +36,28 @@ public class Server implements Runnable{
 
     private Socket clientSocket;
 
-    Logger logger;
+    private Logger logger;
 
     private Server(Socket clientSocket) {
         this.clientSocket = clientSocket;
         serverState = ServerState.AUTHORIZATION;
-        this.logger = Logger.getLogger(clientSocket.toString());
+    }
+
+    public void initLogger() {
+        LoggerContext lc = (LoggerContext) LoggerFactory.getILoggerFactory();
+        JoranConfigurator configurator = new JoranConfigurator();
+        lc.reset();
+        configurator.setContext(lc);
+        try {
+            configurator.doConfigure("D:\\Alex\\HAW\\AI-4\\RN\\rn-praktikum\\src\\rn\\praktikum1\\server\\logs\\byUserid.xml");
+        } catch (JoranException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+
+        this.logger = LoggerFactory.getLogger(Server.class);
+
+        MDC.put("userid", "user-" + user.getId());
+        this.logger.debug("#Logger start");
     }
 
 
@@ -89,8 +112,8 @@ public class Server implements Runnable{
 
         }
 
-
-            System.out.println(Thread.currentThread().getName() + " : id: " +Thread.currentThread().getId() + " : beendet Serverinstanz: " + this);
+        this.logger.debug("#"+Thread.currentThread().getName() + " : id: " +Thread.currentThread().getId() + " : beendet Serverinstanz: " + this);
+        System.out.println(Thread.currentThread().getName() + " : id: " +Thread.currentThread().getId() + " : beendet Serverinstanz: " + this);
     }
 
     private String readInputstream() {
@@ -192,4 +215,7 @@ public class Server implements Runnable{
 
     }
 
+    public Logger getLogger() {
+        return logger;
+    }
 }
