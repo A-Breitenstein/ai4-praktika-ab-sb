@@ -47,7 +47,8 @@ public class MailProvider {
         List<Message> messages = new ArrayList<Message>();
         ResultSet resultSet;
         Message message;
-        String text, id;
+        String text, hash;
+        int id;
         boolean valid = true;
 
         String sql = "SELECT * FROM mail WHERE userid = "+ user.getId() +" ;";
@@ -57,9 +58,10 @@ public class MailProvider {
 
 
             while (resultSet.next()) {
-                id = resultSet.getString("mailid");
+                id = resultSet.getInt("mailid");
                 text = resultSet.getString("message");
-                message = Message.create(id, text, text.length(), valid);
+                hash = resultSet.getString("hash");
+                message = Message.create(id, text, text.length(), hash, valid);
                 messages.add(message);
             }
 
@@ -122,7 +124,7 @@ public class MailProvider {
 
             number++;
 
-            sql = "INSERT INTO mail (mailid,userid,text) values(" + number + "," + user.getId() + ",'" + message.getContent() + "');";
+            sql = "INSERT INTO mail (mailid,userid,hash,message) values(" + number + "," + user.getId() + ",'"+ message.getHash() +"','" + message.getContent() + "');";
 
             getStatement().execute(sql);
 
@@ -140,7 +142,7 @@ public class MailProvider {
 
         try {
 
-            String sql = "INSERT INTO mail (mailid,userid,text) values('" + message.getId() + "'," + user.getId() + ",'" + message.getContent() + "');";
+            String sql = "INSERT INTO mail (mailid,userid,hash,message) values(" + message.getId() + "," + user.getId() + ",'"+ message.getHash() +"','" + message.getContent() + "');";
 
             getStatement().execute(sql);
 
@@ -153,9 +155,9 @@ public class MailProvider {
     }
 
 
-    public static boolean mailAlreadyExsists(String uid, User user) {
+    public static boolean mailAlreadyExsists(String hash, User user) {
 
-        String sql = "SELECT * FROM mail WHERE mailid = "+uid+";";
+        String sql = "SELECT * FROM mail WHERE hash = '"+hash+"';";
 
         boolean mail = false;
 
