@@ -283,6 +283,7 @@ public class Client {
 
                         User user = User.create(userStrings[0], userStrings[1]);
                         UserProvider.createUser(user);
+                        user.setId(UserProvider.getUserByUsername(user.getUsername()).getId());
                         UserDescriptor userDescriptor = UserDescriptor.create(user, userStrings[2], Integer.valueOf(userStrings[3]));
 
                         userDescriptors.add(userDescriptor);

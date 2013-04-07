@@ -113,14 +113,14 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
                     break;
 
                     default:{
-                        serverInstance.getLogger().debug("Kein zulässiger Befehl '" + strCommandIn + "' im Zustand "+AUTHORIZATION.name());
+//                        serverInstance.getLogger().debug("Kein zulässiger Befehl '" + strCommandIn + "' im Zustand "+AUTHORIZATION.name());
                         Log.log("Kein zulässiger Befehl '" + strCommandIn + "' im Zustand "+AUTHORIZATION.name());
                         serverInstance.responseError();
                     }
 
                 }
             }catch (IllegalArgumentException iAE){
-                serverInstance.getLogger().warn("Unbekannte eingabe: " + strCommandIn);
+//                serverInstance.getLogger().warn("Unbekannte eingabe: " + strCommandIn);
                 Log.log("Unbekannte eingabe: " + strCommandIn);
                 serverInstance.responseError();
             }

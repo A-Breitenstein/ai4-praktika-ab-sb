@@ -129,7 +129,8 @@ public class ClientRunner implements Runnable {
     }
 
     public static void main(String[] args) {
-        new ClientRunner(UserDescriptor.create(User.create("user2", "pw2"), "127.0.0.1", 11000)).run();
+//        new ClientRunner(UserDescriptor.create(User.create("user2", "pw2"), "127.0.0.1", 11000)).run();
+        System.out.println("012345".substring(6));
     }
 
     private void cleanUp() {
@@ -197,7 +198,7 @@ public class ClientRunner implements Runnable {
                  */
                 MailProvider.addNewMessageToUser(
                         userDescriptor.getUser(),
-                        Message.create(Integer.valueOf(hash),content,content.length(),hash,true)
+                        Message.create(0,content,content.length(),hash,true)
                 );
             } catch (IOException e) {
                 e.printStackTrace();

@@ -20,28 +20,30 @@ import java.util.List;
  */
 public class UserProvider {
 
-    static Connection connection;
-
-    static Statement statement;
+//    static Connection connection;
+//
+//    static Statement statement;
 
     static Connection getConnection() {
-        if (connection == null) {
-            connection = Databases.initializeSQLiteConnection("rnpr1");
-        }
-
-        return connection;
+//        if (connection == null) {
+//            connection = Databases.initializeSQLiteConnection("rnpr1");
+//        }
+//
+//        return connection;
+     return Databases.connection;
     }
 
     static Statement getStatement() {
-        if (statement == null) {
-            try {
-                statement = getConnection().createStatement();
-            } catch (SQLException e) {
-                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-            }
-        }
-
-        return statement;
+//        if (statement == null) {
+//            try {
+//                statement = getConnection().createStatement();
+//            } catch (SQLException e) {
+//                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+//            }
+//        }
+//
+//        return statement;
+        return  Databases.getStatement();
     }
 
     public static List<User> getAllUsers() {
