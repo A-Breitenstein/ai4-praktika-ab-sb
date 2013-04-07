@@ -44,9 +44,6 @@ public class MailProvider {
 
     public static List<Message> getMessagesByUser(User user) {
 
-        //precondition blablabla
-
-
         List<Message> messages = new ArrayList<Message>();
         ResultSet resultSet;
         Message message;
@@ -137,14 +134,45 @@ public class MailProvider {
         }
     }
 
-    public static void addNewMessagesToUser(User user, List<Message> messages) {
-        for (Message message : messages) {
-            addNewMessageToUser(user, message);
+    public static void saveMail(User user, Message message) {
+
+        ResultSet resultSet = null;
+
+        try {
+
+            String sql = "INSERT INTO mail (mailid,userid,text) values(" + message.getId() + "," + user.getId() + ",'" + message.getContent() + "');";
+
+            getStatement().execute(sql);
+
+            resultSet.close();
+            getStatement().close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 
+
     public static boolean mailAlreadyExsists(String uid, User user) {
-        // TODO ALEX diese funktion liefert true, wenn es die Mail mit der UID von dem User user in der Datenbank schon gibt
-        throw new UnsupportedOperationException("MailProvider :: mailAlreadyExsists not implemented yet");
+
+        String sql = "SELECT * FROM mail WHERE mailid = "+uid+";";
+
+        boolean mail = false;
+
+        ResultSet resultSet;
+
+        try {
+            resultSet = getStatement().executeQuery(sql);
+
+            while (resultSet.next()) {
+                mail = true;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+
+        return mail;
+
     }
 }

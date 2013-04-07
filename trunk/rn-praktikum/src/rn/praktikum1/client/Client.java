@@ -314,6 +314,8 @@ public class Client {
 
     static void saveUsers(List<UserDescriptor> userDescriptors) {
        // TODO hier sollten jetz eigentlich die user in der DB gespeichert werden
+        //TODO: Ein User wird bei erstellung bereits persistiert, es werden id, name und password gepseichert
+        //TODO: Im UserDescriptor stehen die ip und port
         try {
             FileOutputStream fileOut = new FileOutputStream(users_filename);
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
@@ -329,6 +331,9 @@ public class Client {
 
     static List<UserDescriptor> retrieveUsers() {
         // TODO hier sollten jetzt eigentlich die user aus der DB geholt werden
+
+        List<User> users = UserProvider.getAllUsers();
+
         List<UserDescriptor> userDescriptors = null;
         if (Files.exists(Paths.get(users_filename))) {
             try {
