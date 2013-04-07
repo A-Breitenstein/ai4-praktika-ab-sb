@@ -1,5 +1,11 @@
 package rn.praktikum1.client;
 
+import ch.qos.logback.classic.LoggerContext;
+import ch.qos.logback.classic.joran.JoranConfigurator;
+import ch.qos.logback.core.joran.spi.JoranException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.slf4j.MDC;
 import rn.praktikum1.server.mails.Message;
 import rn.praktikum1.server.mails.User;
 import rn.praktikum1.server.provider.MailProvider;
@@ -23,9 +29,27 @@ public class ClientRunner implements Runnable {
     private DataOutputStream outToServer; // Ausgabestream zum Server
     private BufferedReader inFromServer;  // Eingabestream vom Server
     private FileWriter fileWriter;
+    private Logger logger;
 
     public ClientRunner(UserDescriptor userDescriptor) {
         this.userDescriptor = userDescriptor;
+    }
+
+    public void initLogger() {
+        LoggerContext lc = (LoggerContext) LoggerFactory.getILoggerFactory();
+        JoranConfigurator configurator = new JoranConfigurator();
+        lc.reset();
+        configurator.setContext(lc);
+        try {
+            configurator.doConfigure("D:\\Alex\\HAW\\AI-4\\RN\\rn-praktikum\\src\\rn\\praktikum1\\server\\logs\\byUserid.xml");
+        } catch (JoranException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+
+        this.logger = LoggerFactory.getLogger(ClientRunner.class);
+
+        MDC.put("userid", "CLIENT-user-" + userDescriptor.getUser().getId());
+        this.logger.debug("#Logger start");
     }
 
 
@@ -202,4 +226,7 @@ public class ClientRunner implements Runnable {
         return reply;
     }
 
+    public Logger getLogger() {
+        return logger;
+    }
 }
