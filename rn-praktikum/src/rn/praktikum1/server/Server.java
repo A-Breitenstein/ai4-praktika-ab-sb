@@ -81,6 +81,9 @@ public class Server implements Runnable{
 
     public void tellToClient(String message) {
         try {
+            if(user != null)
+                getLogger().info("Server -> Client: "+message);
+
             Communication.schreibeNachricht(clientSocket,message);
         } catch (IOException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
@@ -98,6 +101,9 @@ public class Server implements Runnable{
 
                 if(!serverState.equals(ServerState.UPDATE))
                     line = warteNachricht(clientSocket);
+
+                if(user != null)
+                    getLogger().info("Client -> Server: "+line);
 
                 serverState.evaluate(this,line);
 
