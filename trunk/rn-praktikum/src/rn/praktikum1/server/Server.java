@@ -56,7 +56,7 @@ public class Server implements Runnable{
 
         this.logger = LoggerFactory.getLogger(Server.class);
 
-        MDC.put("userid", "user-" + user.getId());
+        MDC.put("userid", "SERVER-user-" + user.getId());
         this.logger.debug("#Logger start");
     }
 
