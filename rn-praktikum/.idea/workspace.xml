@@ -2,30 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="79e6bdfb-a409-42b3-bad2-8919505c0351" name="Default" comment="rnp: praktikum1 wt">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rnpr1.db" afterPath="$PROJECT_DIR$/rnpr1.db" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sven\IdeaProjects\rn-praktikum\lib\logback-classic-1.0.11-sources.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sven\IdeaProjects\rn-praktikum\lib\logback-classic-1.0.11.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sven\IdeaProjects\rn-praktikum\lib\logback-core-1.0.11-sources.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sven\IdeaProjects\rn-praktikum\lib\logback-core-1.0.11.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Sven\IdeaProjects\rn-praktikum\lib\slf4j-api-1.7.5.jar" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rn/praktikum1/client/Client.java" afterPath="$PROJECT_DIR$/src/rn/praktikum1/client/Client.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rn/praktikum1/client/ClientRunner.java" afterPath="$PROJECT_DIR$/src/rn/praktikum1/client/ClientRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rn/helperlein/Databases.java" afterPath="$PROJECT_DIR$/src/rn/helperlein/Databases.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rn/praktikum1/server/Dispatcher.java" afterPath="$PROJECT_DIR$/src/rn/praktikum1/server/Dispatcher.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rn/praktikum1/server/provider/MailProvider.java" afterPath="$PROJECT_DIR$/src/rn/praktikum1/server/provider/MailProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rn/praktikum1/server/states/ServerState.java" afterPath="$PROJECT_DIR$/src/rn/praktikum1/server/states/ServerState.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rn/praktikum1/server/Server.java" afterPath="$PROJECT_DIR$/src/rn/praktikum1/server/Server.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rn-praktikum.iml" afterPath="$PROJECT_DIR$/rn-praktikum.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rn-praktikum.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/" />
-    <file path="/Dummy.txt" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365079933916" ignored="false" />
+    <file path="/Dummy.txt" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365347293915" ignored="false" />
     <file path="/ServerState.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365080197534" ignored="false" />
     <file path="/Messages.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1364595863755" ignored="false" />
-    <file path="/User.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365037486519" ignored="false" />
+    <file path="/User.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365094531190" ignored="false" />
     <file path="/ServerStateTransitions.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1364289583106" ignored="false" />
     <file path="/Server.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365079785212" ignored="false" />
-    <file path="/Command.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365077858694" ignored="false" />
+    <file path="/Command.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365097441658" ignored="false" />
     <file path="$PROJECT_DIR$/../SE2/HAW-ANDROID-APP/haw_android_app/.idea/workspace.xml" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1364603375660" ignored="false" />
-    <file path="/Databases.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1364595359094" ignored="false" />
-    <file path="/Message.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365038211699" ignored="false" />
-    <file path="/Client.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365078852395" ignored="false" />
-    <file path="/ClientRunner.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365077302600" ignored="false" />
-    <file path="/fragment.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365077505083" ignored="false" />
+    <file path="/Databases.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365105560447" ignored="false" />
+    <file path="/Message.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365097857598" ignored="false" />
+    <file path="/Client.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365347135566" ignored="false" />
+    <file path="/ClientRunner.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365347272484" ignored="false" />
+    <file path="/fragment.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365116584015" ignored="false" />
     <file path="/UserDescriptors.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365078291880" ignored="false" />
     <file path="/a.dummy" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365078327127" ignored="false" />
-    <file path="/MailProvider.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365080342516" ignored="false" />
+    <file path="/MailProvider.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365346098084" ignored="false" />
+    <file path="/UserDescriptor.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365183862929" ignored="false" />
+    <file path="/AccountManager.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365094845610" ignored="false" />
+    <file path="/Communication.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365112852406" ignored="false" />
+    <file path="/user-2.log" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365251601119" ignored="false" />
+    <file path="/Dispatcher.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365343796014" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +60,7 @@
     <sortChildren value="false" />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -79,7 +95,22 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/rn/praktikum1/server/provider/MailProvider.java" line="69" class="rn.praktikum1.server.provider.MailProvider" package="rn.praktikum1.server.provider">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -89,88 +120,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Client.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/client/Client.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="46" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dispatcher.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/Dispatcher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="37" selection-start="886" selection-end="886" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Databases.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/rn/helperlein/Databases.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="22" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Command.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/Command.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="0" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDescriptor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/client/UserDescriptor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="25" selection-start="404" selection-end="404" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ClientRunner.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/client/ClientRunner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="15" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Server.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/Server.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="0" selection-start="1898" selection-end="1898" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServerState.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/states/ServerState.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="338" column="26" selection-start="12752" selection-end="12752" vertical-scroll-proportion="0.4559387">
+            <state line="62" column="79" selection-start="2316" selection-end="2316" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#4598#4612#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/mails/User.java">
+      <file leaf-file-name="Message.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/mails/Message.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="41" selection-start="940" selection-end="940" vertical-scroll-proportion="0.0">
+            <state line="29" column="26" selection-start="594" selection-end="594" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -179,7 +143,72 @@
       <file leaf-file-name="MailProvider.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/provider/MailProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="44" selection-start="2088" selection-end="2088" vertical-scroll-proportion="0.0">
+            <state line="146" column="76" selection-start="4018" selection-end="4018" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserDescriptor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/client/UserDescriptor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="40" selection-start="443" selection-end="443" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Command.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/Command.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="4" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Client.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/client/Client.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="315" column="15" selection-start="11560" selection-end="11560" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Databases.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/rn/helperlein/Databases.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="34" selection-start="620" selection-end="620" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dispatcher.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/Dispatcher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="42" column="23" selection-start="1063" selection-end="1063" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#944#1073#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Server.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/Server.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="26" selection-start="1770" selection-end="1770" vertical-scroll-proportion="0.54545456">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user-2.log" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/user-2.log">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="51" column="103" selection-start="7663" selection-end="7663" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -195,29 +224,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/rn/praktikum1/server/ServerState.java" />
-        <option value="$PROJECT_DIR$/src/rn/praktikum1/server/mails/Messages.java" />
-        <option value="$PROJECT_DIR$/src/rn/praktikum1/server/states/ServerStateTransitions.java" />
         <option value="$PROJECT_DIR$/src/rn/praktikum1/server/states/Messages.java" />
-        <option value="$PROJECT_DIR$/src/rn/praktikum1/server/mails/Message.java" />
-        <option value="$PROJECT_DIR$/src/rn/praktikum1/client/ClientRunner.java" />
         <option value="$PROJECT_DIR$/src/rn/praktikum1/client/UserDescriptors.java" />
-        <option value="$PROJECT_DIR$/src/rn/praktikum1/client/UserDescriptor.java" />
-        <option value="$PROJECT_DIR$/src/rn/praktikum1/client/Client.java" />
+        <option value="$PROJECT_DIR$/src/rn/praktikum1/server/states/ServerState.java" />
+        <option value="$PROJECT_DIR$/src/rn/praktikum1/server/mails/User.java" />
+        <option value="$PROJECT_DIR$/src/rn/praktikum1/client/AccountManager.java" />
         <option value="$PROJECT_DIR$/src/rn/praktikum1/server/Command.java" />
-        <option value="$PROJECT_DIR$/src/rn/praktikum1/server/Dispatcher.java" />
+        <option value="$PROJECT_DIR$/src/rn/praktikum1/server/mails/Message.java" />
+        <option value="$PROJECT_DIR$/src/rn/helperlein/Communication.java" />
+        <option value="$PROJECT_DIR$/src/rn/praktikum1/client/UserDescriptor.java" />
         <option value="$PROJECT_DIR$/src/rn/helperlein/Databases.java" />
         <option value="$PROJECT_DIR$/src/rn/praktikum1/server/Server.java" />
-        <option value="$PROJECT_DIR$/src/rn/praktikum1/server/mails/User.java" />
-        <option value="$PROJECT_DIR$/src/rn/praktikum1/server/states/ServerState.java" />
+        <option value="$PROJECT_DIR$/user-2.log" />
+        <option value="$PROJECT_DIR$/src/rn/praktikum1/server/Dispatcher.java" />
         <option value="$PROJECT_DIR$/src/rn/praktikum1/server/provider/MailProvider.java" />
+        <option value="$PROJECT_DIR$/src/rn/praktikum1/client/Client.java" />
+        <option value="$PROJECT_DIR$/src/rn/praktikum1/client/ClientRunner.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="415" />
-    <option name="width" value="865" />
-    <option name="height" value="994" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -359,6 +389,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -370,10 +401,6 @@
               <option name="myItemId" value="External Libraries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.7 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -448,36 +475,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rn-praktikum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rn-praktikum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="praktikum1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="states" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -508,36 +505,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="provider" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rn-praktikum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rn-praktikum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="praktikum1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mails" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -606,60 +573,152 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="true" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="project.propVCSSupport.Ignored.Files" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sqlitejdbc-v056.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/logback-1.0.11" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="Repository.Attach.Sources" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="Downloaded.Files.Path" value="E:\Projekte\IntelliJ\AI4\rn-praktikum\lib" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="Downloaded.Files.Path" value="C:\Users\Sven\IdeaProjects\rn-praktikum\lib\" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="rn.praktikum1.client" />
     </key>
   </component>
+  <component name="RestoreUpdateTree">
+    <UpdateInfo date="Moments ago" ActionInfo="_Update">
+      <UpdatedFiles>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated from server" />
+          <option name="myStatusName" value="Changed on server" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CHANGED_ON_SERVER" />
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Updated" />
+            <option name="myStatusName" value="Changed" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="UPDATED" />
+            <PATH vcs="svn" revision="34">C:\Users\Sven\IdeaProjects\rn-praktikum\src\rn\praktikum1\server\provider\MailProvider.java</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Created" />
+            <option name="myStatusName" value="Created" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="CREATED" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Deleted" />
+            <option name="myStatusName" value="Deleted" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="true" />
+            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Restored" />
+            <option name="myStatusName" value="Will be restored" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="RESTORED" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Modified" />
+          <option name="myStatusName" value="Modified" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MODIFIED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Skipped" />
+          <option name="myStatusName" value="Skipped" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SKIPPED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with conflicts" />
+          <option name="myStatusName" value="Will be merged with conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_CONFLICTS" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with tree conflicts" />
+          <option name="myStatusName" value="Merged with tree conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+          <PATH vcs="svn" revision="34">C:\Users\Sven\IdeaProjects\rn-praktikum\lib</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with property conflicts" />
+          <option name="myStatusName" value="Will be merged with property conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged" />
+          <option name="myStatusName" value="Will be merged" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED" />
+          <PATH vcs="svn" revision="34">C:\Users\Sven\IdeaProjects\rn-praktikum\src\rn\praktikum1\server\Server.java</PATH>
+          <PATH vcs="svn" revision="34">C:\Users\Sven\IdeaProjects\rn-praktikum\rn-praktikum.iml</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Not in repository" />
+          <option name="myStatusName" value="Not in repository" />
+          <option name="mySupportsDeletion" value="true" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UNKNOWN" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally added" />
+          <option name="myStatusName" value="Locally added" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_ADDED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally removed" />
+          <option name="myStatusName" value="Locally removed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_REMOVED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Switched" />
+          <option name="myStatusName" value="Switched" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SWITCHED" />
+        </FILE-GROUP>
+      </UpdatedFiles>
+    </UpdateInfo>
+  </component>
   <component name="RunManager" selected="Application.Dispatcher">
-    <configuration default="false" name="Server" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="rn.praktikum1.server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="rn.praktikum1.server.Server" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="rn-praktikum" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
     <configuration default="false" name="UserProvider" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -700,7 +759,95 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="rn-praktikum" />
       <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="UserDescriptor" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="rn.praktikum1.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="rn.praktikum1.client.UserDescriptor" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="rn-praktikum" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Client" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="rn.praktikum1.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="rn.praktikum1.client.Client" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="rn-praktikum" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ClientRunner" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="rn.praktikum1.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="rn.praktikum1.client.ClientRunner" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="rn-praktikum" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -716,19 +863,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -757,6 +891,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -795,16 +942,20 @@
       <patterns />
       <method />
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Application.Server" />
-      <item index="1" class="java.lang.String" itemvalue="Application.UserProvider" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Dispatcher" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Application.UserProvider" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Dispatcher" />
+      <item index="2" class="java.lang.String" itemvalue="Application.UserDescriptor" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Client" />
+      <item index="4" class="java.lang.String" itemvalue="Application.ClientRunner" />
     </list>
     <recent_temporary>
-      <list size="3">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.Dispatcher" />
-        <item index="1" class="java.lang.String" itemvalue="Application.UserProvider" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Server" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Client" />
+        <item index="2" class="java.lang.String" itemvalue="Application.ClientRunner" />
+        <item index="3" class="java.lang.String" itemvalue="Application.UserDescriptor" />
+        <item index="4" class="java.lang.String" itemvalue="Application.UserProvider" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -837,20 +988,20 @@
     <option name="myMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="E:\Projekte\IntelliJ\AI4\rn-praktikum" />
-          <option name="myCopyRoot" value="E:\Projekte\IntelliJ\AI4\rn-praktikum" />
+          <option name="myVcsRoot" value="C:\Users\Sven\IdeaProjects\rn-praktikum" />
+          <option name="myCopyRoot" value="C:\Users\Sven\IdeaProjects\rn-praktikum" />
         </SvnCopyRootSimple>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="E:\Projekte\IntelliJ\AI4\rn-praktikum\.idea" />
-          <option name="myCopyRoot" value="E:\Projekte\IntelliJ\AI4\rn-praktikum\.idea" />
+          <option name="myVcsRoot" value="C:\Users\Sven\IdeaProjects\rn-praktikum\.idea" />
+          <option name="myCopyRoot" value="C:\Users\Sven\IdeaProjects\rn-praktikum\.idea" />
         </SvnCopyRootSimple>
       </list>
     </option>
     <option name="myMoreRealMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="E:\Projekte\IntelliJ\AI4\rn-praktikum" />
-          <option name="myCopyRoot" value="E:\Projekte\IntelliJ\AI4\rn-praktikum" />
+          <option name="myVcsRoot" value="C:\Users\Sven\IdeaProjects\rn-praktikum" />
+          <option name="myCopyRoot" value="C:\Users\Sven\IdeaProjects\rn-praktikum" />
         </SvnCopyRootSimple>
       </list>
     </option>
@@ -881,37 +1032,85 @@
       <created>1365079950163</created>
       <updated>1365079950163</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="rnp: speichern von usern im client und consolen input fixed + exit">
+      <created>1365100379116</created>
+      <updated>1365100379116</updated>
+    </task>
+    <task id="LOCAL-00007" summary="rnp: client">
+      <created>1365117005113</created>
+      <updated>1365117005113</updated>
+    </task>
+    <task id="LOCAL-00008" summary="rnp: praktikum1 clientrunner ohne uidl">
+      <created>1365170638804</created>
+      <updated>1365170638804</updated>
+    </task>
+    <task id="LOCAL-00009" summary="rnp: praktikum1 clientRunner ohne uidl">
+      <created>1365170705117</created>
+      <updated>1365170705117</updated>
+    </task>
+    <task id="LOCAL-00010" summary="rnp: praktikum1  uidl eingebaut , nur noch mails abrufen die man noch nicht hat sowie das starten des postfach update services im client">
+      <created>1365189400637</created>
+      <updated>1365189400637</updated>
+    </task>
+    <task id="LOCAL-00011" summary="rnp: praktikum1 UIDL eingebaut + nur noch mails abrufen die man noch nicht hat sowie postfach update service im client">
+      <created>1365189500115</created>
+      <updated>1365189500115</updated>
+    </task>
+    <task id="LOCAL-00012" summary="rnp: praktikum1 kann sein das du deine users.ser löschen musst damit es funzt, da sich der userDesciptor ADT geändert hat und du musst dann mit hand einen user erstellen">
+      <created>1365189685113</created>
+      <updated>1365189685113</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="415" y="0" width="865" height="994" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44783118" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282532" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4470457" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4214047" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32887402" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893497" sideWeight="0.38351256" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5797101" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40802675" sideWeight="0.05709712" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32865497" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22853957" sideWeight="0.49786553" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37012264" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24230146" sideWeight="0.6764361" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5144988" sideWeight="0.61170846" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.61648744" sideWeight="0.99065423" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17342582" sideWeight="0.17279822" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8272018" sideWeight="0.93916756" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -953,7 +1152,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="rnp1: serverstate QUIT hotfix -&gt; SimpleMail abfrage läuft" />
+    <option name="LAST_COMMIT_MESSAGE" value="rnp: praktikum1 kann sein das du deine users.ser löschen musst damit es funzt, da sich der userDesciptor ADT geändert hat und du musst dann mit hand einen user erstellen" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -972,6 +1171,13 @@
     <MESSAGE value="rnp: praktikum1 serverstates beendet -&gt; noch zu tun: logging pro serverinstanz =&gt; 1 filechannel pro user-session, schreibt in datei &quot;username&quot;-&quot;userid&quot;-log, mit start und endzeit an die datei angehangen" />
     <MESSAGE value="rnp1: ClientCode" />
     <MESSAGE value="rnp1: serverstate QUIT hotfix -&gt; SimpleMail abfrage läuft" />
+    <MESSAGE value="rnp: speichern von usern im client und consolen input fixed + exit" />
+    <MESSAGE value="rnp: client" />
+    <MESSAGE value="rnp: praktikum1 clientrunner ohne uidl" />
+    <MESSAGE value="rnp: praktikum1 clientRunner ohne uidl" />
+    <MESSAGE value="rnp: praktikum1  uidl eingebaut , nur noch mails abrufen die man noch nicht hat sowie das starten des postfach update services im client" />
+    <MESSAGE value="rnp: praktikum1 UIDL eingebaut + nur noch mails abrufen die man noch nicht hat sowie postfach update service im client" />
+    <MESSAGE value="rnp: praktikum1 kann sein das du deine users.ser löschen musst damit es funzt, da sich der userDesciptor ADT geändert hat und du musst dann mit hand einen user erstellen" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -981,121 +1187,115 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+    <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/states/ServerState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/states/ServerStateTransitions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="784" selection-end="784" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/provider/UserProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="21" selection-start="1487" selection-end="1487" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rn/helperlein/Communication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="13" selection-start="596" selection-end="596" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/states/Messages.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/mails/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="26" selection-start="1182" selection-end="1182" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/client/UserDescriptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="25" selection-start="404" selection-end="404" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/Command.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/client/ClientRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="15" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/client/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="46" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/Dispatcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="37" selection-start="886" selection-end="886" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rn/helperlein/Databases.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="22" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0">
+        <state line="313" column="51" selection-start="14394" selection-end="14394" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/mails/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="41" selection-start="940" selection-end="940" vertical-scroll-proportion="0.0">
+        <state line="10" column="13" selection-start="158" selection-end="158" vertical-scroll-proportion="0.08934708">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/Server.java">
+    <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/states/Messages.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="0" selection-start="1898" selection-end="1898" vertical-scroll-proportion="0.0">
+        <state line="15" column="38" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_17/src.zip!/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="116" column="17" selection-start="5224" selection-end="5224" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_17/src.zip!/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="40" selection-start="5342" selection-end="5342" vertical-scroll-proportion="0.2783505" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="4" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/logs/byUserid.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-2.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="103" selection-start="7663" selection-end="7663" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rn/helperlein/Databases.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="34" selection-start="620" selection-end="620" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/client/UserDescriptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="40" selection-start="443" selection-end="443" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/provider/MailProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="44" selection-start="2088" selection-end="2088" vertical-scroll-proportion="0.0">
+        <state line="146" column="76" selection-start="4018" selection-end="4018" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/states/ServerState.java">
+    <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/mails/Message.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="338" column="26" selection-start="12752" selection-end="12752" vertical-scroll-proportion="0.4559387">
+        <state line="29" column="26" selection-start="594" selection-end="594" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/Dispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="23" selection-start="1063" selection-end="1063" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#944#1073#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/client/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="315" column="15" selection-start="11560" selection-end="11560" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/client/ClientRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="79" selection-start="2316" selection-end="2316" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#4598#4612#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="26" selection-start="1770" selection-end="1770" vertical-scroll-proportion="0.54545456">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1175,7 +1375,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>sqlitejdbc-v056</last-edited>
+          <last-edited>logback-1.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
