@@ -9,26 +9,22 @@ import java.io.Serializable;
  */
 public class Message implements Serializable {
 
-    private String id;
+    private int id;
     private String content;
     private int size;
     private boolean valid;
+    private String hash;
 
-    private Message(String id, String content, int size, boolean valid) {
+    private Message(int id, String content, int size, String hash, boolean valid) {
         this.id = id;
         this.content = content;
         this.size = size;
         this.valid = valid;
+        this.hash = hash;
     }
 
-
-    private Message(String content, int size) {
-        this.content = content;
-        this.size = size;
-    }
-
-    public static Message create(String id, String content, int size, boolean valid) {
-        return new Message(id, content, size, valid);
+    public static Message create(int id, String content,  int size, String hash, boolean valid) {
+        return new Message(id, content, size, hash, valid);
     }
 
 
@@ -40,7 +36,7 @@ public class Message implements Serializable {
         return size;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
@@ -59,5 +55,13 @@ public class Message implements Serializable {
 
     public void setValid() {
         this.valid = true;
+    }
+
+    public String getHash() {
+        return hash;
+    }
+
+    public void setHash(String hash) {
+        this.hash = hash;
     }
 }

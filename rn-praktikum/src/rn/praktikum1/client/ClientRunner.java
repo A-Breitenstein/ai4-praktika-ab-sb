@@ -168,7 +168,7 @@ public class ClientRunner implements Runnable {
 
     }
 
-    private void saveEmail(String retr_id,String uid) {
+    private void saveEmail(String retr_id,String hash) {
         String response;
         String content;
         writeToServer("RETR " + retr_id);
@@ -187,17 +187,17 @@ public class ClientRunner implements Runnable {
                 }
 
                 content = sb.toString();
-                if (uid == null) {
-                    uid = String.valueOf(content.hashCode());
+                if (hash == null) {
+                    hash = String.valueOf(content.hashCode());
                 }
 
                 //TODO:
                 /*
-                MailProvider.saveMail(userDescriptor.getUser(), Message.create(uid,content,content.length(),true));
+                MailProvider.saveMail(userDescriptor.getUser(), Message.create(hash,content,content.length(),true));
                  */
                 MailProvider.addNewMessageToUser(
                         userDescriptor.getUser(),
-                        Message.create(uid,content,content.length(),true)
+                        Message.create(Integer.valueOf(hash),content,content.length(),hash,true)
                 );
             } catch (IOException e) {
                 e.printStackTrace();
