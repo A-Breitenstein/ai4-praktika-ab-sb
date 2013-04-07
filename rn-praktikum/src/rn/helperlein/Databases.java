@@ -3,6 +3,7 @@ package rn.helperlein;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  * User: Alex
@@ -10,6 +11,18 @@ import java.sql.SQLException;
  * Time: 12:06
  */
 public class Databases {
+
+    public  static  Connection connection = Databases.initializeSQLiteConnection("rnpr1");
+
+    public static Statement getStatement() {
+        Statement statement = null;
+        try {
+            statement = Databases.connection.createStatement();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return statement;
+    }
 
     /**
      *
@@ -23,12 +36,12 @@ public class Databases {
         try {
             Class.forName("org.sqlite.JDBC");
             //Alex
-            String url = "jdbc:sqlite:D:/Alex/HAW/AI-4/RN/rn-praktikum/"+ databaseName +".db";
+//            String url = "jdbc:sqlite:D:/Alex/HAW/AI-4/RN/rn-praktikum/"+ databaseName +".db";
 //            String url = "jdbc:sqlite:"+ databaseName +".db";
 
 
             //Sven
-//            String url;
+            String url = "jdbc:sqlite:C:/Users/Sven/IdeaProjects/rn-praktikum/"+ databaseName +".db";
 
 
             //HAW

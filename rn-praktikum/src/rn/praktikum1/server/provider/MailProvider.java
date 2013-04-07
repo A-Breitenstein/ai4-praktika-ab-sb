@@ -18,28 +18,30 @@ import java.util.List;
  */
 public class MailProvider {
 
-    static Connection connection;
-
-    static Statement statement;
+//    static Connection connection;
+//
+//    static Statement statement;
 
     static Connection getConnection() {
-        if (connection == null) {
-            connection = Databases.initializeSQLiteConnection("rnpr1");
-        }
-
-        return connection;
+//        if (connection == null) {
+//            connection = Databases.initializeSQLiteConnection("rnpr1");
+//        }
+//
+//        return connection;
+        return Databases.connection;
     }
 
     static Statement getStatement() {
-        if (statement == null) {
-            try {
-                statement = getConnection().createStatement();
-            } catch (SQLException e) {
-                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-            }
-        }
-
-        return statement;
+//        if (statement == null) {
+//            try {
+//                statement = getConnection().createStatement();
+//            } catch (SQLException e) {
+//                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+//            }
+//        }
+//
+//        return statement;
+        return Databases.getStatement();
     }
 
     public static List<Message> getMessagesByUser(User user) {
@@ -124,7 +126,7 @@ public class MailProvider {
 
             number++;
 
-            sql = "INSERT INTO mail (mailid,userid,hash,message) values(" + number + "," + user.getId() + ",'"+ message.getHash() +"','" + message.getContent() + "');";
+            sql = "INSERT INTO mail (mailid,userid,hash,message) values(" + number + "," + user.getId() + ",'"+ message.getHash() +"','" + message.getContent().replace("'","\"") + "');";
 
             getStatement().execute(sql);
 
@@ -157,7 +159,7 @@ public class MailProvider {
 
     public static boolean mailAlreadyExsists(String hash, User user) {
 
-        String sql = "SELECT * FROM mail WHERE hash = '"+hash+"';";
+        String sql = "SELECT * FROM mail WHERE hash like '"+hash+"';";
 
         boolean mail = false;
 
@@ -169,6 +171,9 @@ public class MailProvider {
             while (resultSet.next()) {
                 mail = true;
             }
+
+            resultSet.close();
+            getStatement().close();
 
         } catch (SQLException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
