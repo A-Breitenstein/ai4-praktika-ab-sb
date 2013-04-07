@@ -191,9 +191,13 @@ public class ClientRunner implements Runnable {
                     uid = String.valueOf(content.hashCode());
                 }
 
+                //TODO:
+                /*
+                MailProvider.saveMail(userDescriptor.getUser(), Message.create(uid,content,content.length(),true));
+                 */
                 MailProvider.addNewMessageToUser(
                         userDescriptor.getUser(),
-                        Message.create(Integer.valueOf(uid),content,content.length(),true)
+                        Message.create(uid,content,content.length(),true)
                 );
             } catch (IOException e) {
                 e.printStackTrace();

@@ -47,8 +47,7 @@ public class MailProvider {
         List<Message> messages = new ArrayList<Message>();
         ResultSet resultSet;
         Message message;
-        String text;
-        int id;
+        String text, id;
         boolean valid = true;
 
         String sql = "SELECT * FROM mail WHERE userid = "+ user.getId() +" ;";
@@ -58,7 +57,7 @@ public class MailProvider {
 
 
             while (resultSet.next()) {
-                id = resultSet.getInt("mailid");
+                id = resultSet.getString("mailid");
                 text = resultSet.getString("message");
                 message = Message.create(id, text, text.length(), valid);
                 messages.add(message);
@@ -107,6 +106,7 @@ public class MailProvider {
         user.setUserMails(messages);
     }
 
+    @Deprecated
     public static void addNewMessageToUser(User user, Message message) {
 
         String sql = "SELECT MAX(mailid) as 'maxid' FROM mail;";
@@ -140,7 +140,7 @@ public class MailProvider {
 
         try {
 
-            String sql = "INSERT INTO mail (mailid,userid,text) values(" + message.getId() + "," + user.getId() + ",'" + message.getContent() + "');";
+            String sql = "INSERT INTO mail (mailid,userid,text) values('" + message.getId() + "'," + user.getId() + ",'" + message.getContent() + "');";
 
             getStatement().execute(sql);
 

@@ -9,12 +9,12 @@ import java.io.Serializable;
  */
 public class Message implements Serializable {
 
-    private int id;
+    private String id;
     private String content;
     private int size;
     private boolean valid;
 
-    private Message(int id, String content, int size, boolean valid) {
+    private Message(String id, String content, int size, boolean valid) {
         this.id = id;
         this.content = content;
         this.size = size;
@@ -27,7 +27,7 @@ public class Message implements Serializable {
         this.size = size;
     }
 
-    public static Message create(int id, String content, int size, boolean valid) {
+    public static Message create(String id, String content, int size, boolean valid) {
         return new Message(id, content, size, valid);
     }
 
@@ -40,7 +40,7 @@ public class Message implements Serializable {
         return size;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
