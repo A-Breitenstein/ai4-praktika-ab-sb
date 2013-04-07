@@ -109,4 +109,37 @@ public class MailProvider {
         List<Message> messages = MailProvider.getMessagesByUser(user);
         user.setUserMails(messages);
     }
+
+    public static void addNewMessageToUser(User user, Message message) {
+
+        String sql = "SELECT MAX(mailid) as 'maxid' FROM mail;";
+
+        ResultSet resultSet = null;
+        int number = 10000;
+
+        try {
+            resultSet = getStatement().executeQuery(sql);
+
+            resultSet.next();
+            number = resultSet.getInt("maxid");
+
+            number++;
+
+            sql = "INSERT INTO mail (mailid,userid,text) values(" + number + "," + user.getId() + ",'" + message.getContent() + "');";
+
+            getStatement().execute(sql);
+
+            resultSet.close();
+            getStatement().close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void addNewMessagesToUser(User user, List<Message> messages) {
+        for (Message message : messages) {
+            addNewMessageToUser(user, message);
+        }
+    }
 }
