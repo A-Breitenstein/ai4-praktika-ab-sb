@@ -142,4 +142,9 @@ public class MailProvider {
             addNewMessageToUser(user, message);
         }
     }
+
+    public static boolean mailAlreadyExsists(String uid, User user) {
+        // TODO ALEX diese funktion liefert true, wenn es die Mail mit der UID von dem User user in der Datenbank schon gibt
+        throw new UnsupportedOperationException("MailProvider :: mailAlreadyExsists not implemented yet");
+    }
 }

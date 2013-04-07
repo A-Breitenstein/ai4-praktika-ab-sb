@@ -313,7 +313,7 @@ public class Client {
 
 
     static void saveUsers(List<UserDescriptor> userDescriptors) {
-
+       // TODO hier sollten jetz eigentlich die user in der DB gespeichert werden
         try {
             FileOutputStream fileOut = new FileOutputStream(users_filename);
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
@@ -328,7 +328,7 @@ public class Client {
     }
 
     static List<UserDescriptor> retrieveUsers() {
-
+        // TODO hier sollten jetzt eigentlich die user aus der DB geholt werden
         List<UserDescriptor> userDescriptors = null;
         if (Files.exists(Paths.get(users_filename))) {
             try {

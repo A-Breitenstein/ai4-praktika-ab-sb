@@ -1,5 +1,7 @@
 package rn.praktikum1.server;
 
+import rn.praktikum1.client.Client;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -33,6 +35,14 @@ public class Dispatcher {
 
     }
     public void looper() {
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                Client.main(null);
+            }
+        }).start();
+
         while (true){
             try {
                 Socket clientSocket = serverSocket.accept();

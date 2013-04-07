@@ -1,14 +1,14 @@
 package rn.praktikum1.client;
 
+import rn.praktikum1.server.mails.Message;
 import rn.praktikum1.server.mails.User;
+import rn.praktikum1.server.provider.MailProvider;
 import rn.praktikum1.server.states.Messages;
 
 import java.io.*;
 import java.net.Socket;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -57,8 +57,10 @@ public class ClientRunner implements Runnable {
                                 writeToServer("UIDL");
                                 response = readFromServer();
                                 if (response.contains(Messages.OK)) {
-                                    for (String mail_id : checkUIDs()) {
-                                        saveEmail(mail_id);
+                                    for (List<String> mail_id : checkUIDs()) {
+                                        //mail_id.get(0) = RETR id
+                                        //mail_id.get(1) = UID
+                                        saveEmail(mail_id.get(0),mail_id.get(1));
                                     }
 
                                 } else {
@@ -68,7 +70,7 @@ public class ClientRunner implements Runnable {
                                     String[] parts = response.trim().split(" ");
                                     int message_count = Integer.valueOf(parts[1]);
                                     for (int i = 1; i <= message_count; i++) {
-                                        saveEmail(String.valueOf(i));
+                                        saveEmail(String.valueOf(i),null);
 
                                     }
                                 }
@@ -121,17 +123,20 @@ public class ClientRunner implements Runnable {
         }
     }
 
-    private List<String> checkUIDs() {
+    private List<List<String>> checkUIDs() {
         String response = "";
         String[] strings;
-        List<String> mail_ids = new ArrayList<String>();
+        List<List<String>> mail_ids = new ArrayList<List<String>>();
 
         while (!response.equals(".")) {
             response = readFromServer();
             strings = response.trim().split(" ");
-            if (strings.length == 2 && userDescriptor.getUID_map().get(strings[1]) == null) {
+
+            // strings[0] = die RETR id
+            // strings[1] = die UID der Mail
+            if (strings.length == 2 && ( !MailProvider.mailAlreadyExsists(strings[1], userDescriptor.getUser()) )) {
                 userDescriptor.getUID_map().put(strings[1], strings[1]);
-                mail_ids.add(strings[0]);
+                mail_ids.add(Arrays.asList(strings[0],strings[1]));
             }
         }
 
@@ -139,20 +144,33 @@ public class ClientRunner implements Runnable {
 
     }
 
-    private void saveEmail(String id) {
+    private void saveEmail(String retr_id,String uid) {
         String response;
-        writeToServer("RETR " + id);
+        String content;
+        writeToServer("RETR " + retr_id);
         response = readFromServer();
         if (response.contains(Messages.OK)) {
             try {
+                StringBuilder sb = new StringBuilder("");
                 fileWriter.write("############ " + Client.dateFormat.format(Client.cal.getTime()) + " ############## \r\n");
 
                 while (!response.equals(".")) {
                     response = readFromServer();
                     fileWriter.write(response + "\r\n");
+                    sb.append(response);
                     fileWriter.flush();
 
                 }
+
+                content = sb.toString();
+                if (uid == null) {
+                    uid = String.valueOf(content.hashCode());
+                }
+
+                MailProvider.addNewMessageToUser(
+                        userDescriptor.getUser(),
+                        Message.create(Integer.valueOf(uid),content,content.length(),true)
+                );
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -167,7 +185,7 @@ public class ClientRunner implements Runnable {
             System.err.println(e.toString());
 //            serviceRequested = false;
         }
-        System.out.println("TCP Client has sent the message: " + request);
+        System.out.println(userDescriptor.getUser().getUsername()+": sent the message: " + request);
     }
 
     private String readFromServer() {
@@ -180,7 +198,7 @@ public class ClientRunner implements Runnable {
             System.err.println("Connection aborted by server!");
 //            serviceRequested = false;
         }
-        System.out.println("TCP Client got from Server: " + reply);
+        System.out.println(userDescriptor.getUser().getUsername()+": got from Server: " + reply);
         return reply;
     }
 
