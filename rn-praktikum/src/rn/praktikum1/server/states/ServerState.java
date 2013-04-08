@@ -8,6 +8,7 @@ import rn.praktikum1.server.mails.User;
 import rn.praktikum1.server.provider.MailProvider;
 import rn.praktikum1.server.provider.UserProvider;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -299,6 +300,7 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
                         } break;
                         case UIDL : {
 
+
                             serverInstance.getLogger().info("Hash's für Nachrichten von User "+user.getUsername()+" werden erstellt und gesendet");
                             Log.log("Hash's für Nachrichten von User "+user.getUsername()+" werden erstellt und gesendet");
 
@@ -307,7 +309,22 @@ public enum ServerState implements ServerStateTransitions,Evaluator{
                             }
 
                             serverInstance.responseOK();
-                            serverInstance.responseUIDL(user.getUserMails());
+
+                            List<Message> usermails = new ArrayList<Message>();
+
+
+                                if (!strContentIn.isEmpty()) {
+                                    int index = Integer.valueOf(strContentIn).intValue()-1;
+                                    if (index < 0 && index > user.getNumberOfMails())
+                                        usermails.add(user.getUserMails().get(index));
+
+                                }else{
+                                    usermails = user.getUserMails();
+                                }
+
+                                serverInstance.responseUIDL(usermails);
+
+
                         } break;
 
                         case QUIT: {

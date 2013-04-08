@@ -150,6 +150,8 @@ public class UserProvider {
 
             number++;
 
+            user.setId(number);
+
             sql = "INSERT INTO user (userid, username, password)VALUES ("+number+",'"+user.getUsername()+"','"+user.getPassword()+"');";
 
             getStatement().execute(sql);
