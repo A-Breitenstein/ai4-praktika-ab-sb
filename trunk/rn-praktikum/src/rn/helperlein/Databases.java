@@ -41,11 +41,11 @@ public class Databases {
 
 
             //Sven
-            String url = "jdbc:sqlite:C:/Users/Sven/IdeaProjects/rn-praktikum/"+ databaseName +".db";
+//            String url = "jdbc:sqlite:C:/Users/Sven/IdeaProjects/rn-praktikum/"+ databaseName +".db";
 
 
             //HAW
-//            String url;
+            String url = "jdbc:sqlite:/home/stud24/abg667/AI4/rn-praktikum/"+ databaseName +".db";
 
             connection = DriverManager.getConnection(url);
 

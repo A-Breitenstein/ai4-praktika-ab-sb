@@ -283,7 +283,7 @@ public class Client {
 
                         User user = User.create(userStrings[0], userStrings[1]);
                         UserProvider.createUser(user);
-                        user.setId(UserProvider.getUserByUsername(user.getUsername()).getId());
+
                         UserDescriptor userDescriptor = UserDescriptor.create(user, userStrings[2], Integer.valueOf(userStrings[3]));
 
                         userDescriptors.add(userDescriptor);
@@ -333,7 +333,7 @@ public class Client {
     static List<UserDescriptor> retrieveUsers() {
         // TODO hier sollten jetzt eigentlich die user aus der DB geholt werden
 
-        List<User> users = UserProvider.getAllUsers();
+//        List<User> users = UserProvider.getAllUsers();
 
         List<UserDescriptor> userDescriptors = null;
         if (Files.exists(Paths.get(users_filename))) {

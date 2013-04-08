@@ -51,7 +51,8 @@ public class Server implements Runnable{
         configurator.setContext(lc);
         try {
 //            configurator.doConfigure("D:\\Alex\\HAW\\AI-4\\RN\\rn-praktikum\\src\\rn\\praktikum1\\server\\logs\\byUserid.xml");
-            configurator.doConfigure("C:\\Users\\Sven\\IdeaProjects\\rn-praktikum\\src\\rn\\praktikum1\\server\\logs\\byUserid.xml");
+             configurator.doConfigure("/home/stud24/abg667/AI4/rn-praktikum/src/rn/praktikum1/server/logs/byUserid.xml");
+//            configurator.doConfigure("C:\\Users\\Sven\\IdeaProjects\\rn-praktikum\\src\\rn\\praktikum1\\server\\logs\\byUserid.xml");
         } catch (JoranException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
@@ -218,11 +219,11 @@ public class Server implements Runnable{
         Message message = user.getMailById(mailId);
 
         final String response = message.getContent();
-        int i;
-        for (i = 0; (i+1)*498 < response.length() ; i++) {
-            tellToClient(response.substring(i*498,(i+1)*498)+ Messages.CRLF);
-        }
-        tellToClient(response.substring(i*498) + TerminationOctet);
+//        int i;
+////        for (i = 0; (i+1)*498 < response.length() ; i++) {
+//            tellToClient(response.substring(i*498,(i+1)*498)+ Messages.CRLF);
+//        }
+        tellToClient(response + TerminationOctet);
 
     }
 

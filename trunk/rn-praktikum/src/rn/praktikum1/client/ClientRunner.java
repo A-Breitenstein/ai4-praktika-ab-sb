@@ -35,22 +35,23 @@ public class ClientRunner implements Runnable {
         this.userDescriptor = userDescriptor;
     }
 
-    public void initLogger() {
-        LoggerContext lc = (LoggerContext) LoggerFactory.getILoggerFactory();
-        JoranConfigurator configurator = new JoranConfigurator();
-        lc.reset();
-        configurator.setContext(lc);
-        try {
-            configurator.doConfigure("D:\\Alex\\HAW\\AI-4\\RN\\rn-praktikum\\src\\rn\\praktikum1\\server\\logs\\byUserid.xml");
-        } catch (JoranException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
-
-        this.logger = LoggerFactory.getLogger(ClientRunner.class);
-
-        MDC.put("userid", "CLIENT-user-" + userDescriptor.getUser().getId());
-        this.logger.debug("#Logger start");
-    }
+//    public void initLogger() {
+//        LoggerContext lc = (LoggerContext) LoggerFactory.getILoggerFactory();
+//        JoranConfigurator configurator = new JoranConfigurator();
+//        lc.reset();
+//        configurator.setContext(lc);
+//        try {
+//            configurator.doConfigure("D:\\Alex\\HAW\\AI-4\\RN\\rn-praktikum\\src\\rn\\praktikum1\\server\\logs\\byUserid.xml");
+//        } catch (JoranException e) {
+//            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+//        }
+//
+//        this.logger = LoggerFactory.getLogger(ClientRunner.class);
+//
+//        MDC.put("userid", "CLIENT-user-" + userDescriptor.getUser().getId());
+//        this.logger.debug("#Logger start");
+//    punkt und  optionale args
+//    }
 
 
     @Override
@@ -71,7 +72,9 @@ public class ClientRunner implements Runnable {
 
                     String response = readFromServer();
                     if (response.contains(Messages.OK)) {
-                        writeToServer("USER " + userDescriptor.getUser().getUsername());
+                        String tmp_fix = userDescriptor.getUser().getUsername();
+                         tmp_fix = tmp_fix.split("@")[0];
+                        writeToServer("USER " +tmp_fix );
                         response = readFromServer();
                         if (response.contains(Messages.OK)) {
                             writeToServer("PASS " + userDescriptor.getUser().getPassword());
@@ -160,7 +163,6 @@ public class ClientRunner implements Runnable {
             // strings[0] = die RETR id
             // strings[1] = die UID der Mail
             if (strings.length == 2 && ( !MailProvider.mailAlreadyExsists(strings[1], userDescriptor.getUser()) )) {
-                userDescriptor.getUID_map().put(strings[1], strings[1]);
                 mail_ids.add(Arrays.asList(strings[0],strings[1]));
             }
         }
@@ -182,7 +184,7 @@ public class ClientRunner implements Runnable {
                 while (!response.equals(".")) {
                     response = readFromServer();
                     fileWriter.write(response + "\r\n");
-                    sb.append(response);
+                    sb.append(response+ "\r\n");
                     fileWriter.flush();
 
                 }
@@ -200,6 +202,9 @@ public class ClientRunner implements Runnable {
                         userDescriptor.getUser(),
                         Message.create(0,content,content.length(),hash,true)
                 );
+                writeToServer("DELE " +retr_id);
+                response = readFromServer();
+                if(response.contains(Messages.OK));
             } catch (IOException e) {
                 e.printStackTrace();
             }
