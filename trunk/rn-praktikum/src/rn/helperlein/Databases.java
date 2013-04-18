@@ -36,7 +36,7 @@ public class Databases {
         try {
             Class.forName("org.sqlite.JDBC");
             //Alex
-//            String url = "jdbc:sqlite:D:/Alex/HAW/AI-4/RN/rn-praktikum/"+ databaseName +".db";
+            String url = "jdbc:sqlite:D:/Alex/HAW/AI-4/RN/rn-praktikum/"+ databaseName +".db";
 //            String url = "jdbc:sqlite:"+ databaseName +".db";
 
 
@@ -45,7 +45,7 @@ public class Databases {
 
 
             //HAW
-            String url = "jdbc:sqlite:/home/stud24/abg667/AI4/rn-praktikum/"+ databaseName +".db";
+//            String url = "jdbc:sqlite:/home/stud24/abg667/AI4/rn-praktikum/"+ databaseName +".db";
 
             connection = DriverManager.getConnection(url);
 

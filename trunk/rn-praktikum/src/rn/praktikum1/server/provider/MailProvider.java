@@ -81,7 +81,6 @@ public class MailProvider {
         //precondition blablabla
 
         String sql = "DELETE FROM mail WHERE mailid = "+message.getId()+";";
-
         try {
             getStatement().execute(sql);
             getStatement().close();
@@ -97,11 +96,21 @@ public class MailProvider {
     }
 
     public static void main(String[] args) {
-        User user = UserProvider.getUserByUsername("user1");
-        List<Message> messages = getMessagesByUser(user);
 
-        for (Message message : messages) {
-            System.out.println(message);
+        String sql = "SELECT * FROM mail WHERE hash IS NULL";
+
+        try {
+            ResultSet resultSet = getStatement().executeQuery(sql);
+
+            while (resultSet.next()) {
+
+                sql = "UPDATE mail SET hash ='"+String.valueOf(resultSet.getString("message").hashCode())+"' WHERE mailid="+resultSet.getInt("mailid")+";";
+                getStatement().execute(sql);
+
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
     }
 
@@ -125,8 +134,7 @@ public class MailProvider {
             number = resultSet.getInt("maxid");
 
             number++;
-
-            sql = "INSERT INTO mail (mailid,userid,hash,message) values(" + number + "," + user.getId() + ",'"+ message.getHash() +"','" + message.getContent().replace("'","\"") + "');";
+            sql = "INSERT INTO mail (mailid,userid,hash,message) values(" + number + "," + user.getId() + ",'"+ message.getHash() +"','" + message.getContent().replace("'", "\"") + "');";
 
             getStatement().execute(sql);
 
