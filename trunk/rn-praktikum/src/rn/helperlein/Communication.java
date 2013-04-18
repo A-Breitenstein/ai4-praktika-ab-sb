@@ -30,4 +30,7 @@ public class Communication {
         Log.log("Client -> Server: " +line);
         return line;
     }
+
+
+
 }
