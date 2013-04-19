@@ -37,14 +37,20 @@ public class UdpSender{
     public void sendMessage(String message) {
         if (message.length() > MaxMessageSize) throw new IllegalArgumentException("message is too long");
 
-        final String outGoingMessage = String.valueOf(chatClient.getUsername());
-
-        outGoingMessage.concat(": ").concat(message);
+        final String outGoingMessage = "test: "+message;//String.valueOf(chatClient.getUsername());
 
         buffer = outGoingMessage.getBytes();
 
+        try {
+            datagramPacket = new DatagramPacket(buffer, buffer.length,InetAddress.getLocalHost(),port);
+            socket.send(datagramPacket);
+        } catch (UnknownHostException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (IOException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
 
-        List<String> addressList = chatClient.getIpList();
+        /*List<String> addressList = chatClient.getIpList();
 
         for (String targetAddress : addressList) {
             try {
@@ -55,7 +61,7 @@ public class UdpSender{
             } catch (IOException e) {
                 e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             }
-        }
+        }*/
 
     }
 }

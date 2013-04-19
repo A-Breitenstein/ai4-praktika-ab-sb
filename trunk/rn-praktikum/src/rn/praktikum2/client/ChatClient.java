@@ -17,7 +17,7 @@ public class ChatClient {
     private String username;
 
    /* public void connect() {
-        byte[] content = String.valueOf("Test String\r\n").getBytes();
+        byte[] content = String.valueOf("TestGUI String\r\n").getBytes();
 
         try {
             new Thread(new Runnable() {

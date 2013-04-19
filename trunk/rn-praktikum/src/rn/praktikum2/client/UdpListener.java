@@ -41,7 +41,7 @@ public class UdpListener implements Runnable {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
 
-        while (!Thread.interrupted() || !chatClient.tcpSocketConnected()) {
+        while (!Thread.interrupted()) {  //!Thread.interrupted() || !chatClient.tcpSocketConnected()
             try {
                 socket.receive(datagramPacket);
                 message = new String(datagramPacket.getData(), 0, datagramPacket.getLength());
