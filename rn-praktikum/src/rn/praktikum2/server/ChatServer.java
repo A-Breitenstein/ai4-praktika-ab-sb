@@ -44,6 +44,7 @@ public class ChatServer implements Runnable {
         ChatCommands command;
 
         while (!clientSocket.isClosed() && !Thread.interrupted()) {
+
             response = readFromClient();
             params = response.trim().split(" ");
 
@@ -52,7 +53,7 @@ public class ChatServer implements Runnable {
                 switch (command) {
                     case NEW:
                         final String tempUsername;
-                        if(username == null) {
+                        if (username == null) {
                             tempUsername = params[1];
                             synchronized (userMap) {
                                 if (userMap.get(tempUsername) != null) {
@@ -64,9 +65,8 @@ public class ChatServer implements Runnable {
                                     writeToClient(ChatCommands.OK.name());
                                 }
                             }
-                        }
-                        else
-                            writeToClient(ChatCommands.ERROR.name()+" schon angmeldet DUDUDU, als: " +username);
+                        } else
+                            writeToClient(ChatCommands.ERROR.name() + " schon angmeldet DUDUDU, als: " + username);
 
                         break;
                     case INFO:
@@ -74,15 +74,17 @@ public class ChatServer implements Runnable {
                         Map<String, ChatServer> userMapCopy = new HashMap<String, ChatServer>(userMap);
                         for (Map.Entry<String, ChatServer> entry : userMapCopy.entrySet()) {
                             sb.append(entry.getValue().clientSocket.getInetAddress().getHostAddress()).append(" ").append(entry.getKey()).append(" ");
+
                         }
-                        userMapCopy  = null;
+
+                        userMapCopy = null;
                         writeToClient(sb.toString());
 
                         break;
                     case BYE:
                         if (username != null)
                             if (userMap.get(username) == null) writeToClient(ChatCommands.ERROR.name());
-                            else{
+                            else {
                                 userMap.remove(username);
                                 writeToClient(ChatCommands.BYE.name());
                                 clientSocket.close();
@@ -90,7 +92,7 @@ public class ChatServer implements Runnable {
                         else
                             writeToClient(ChatCommands.ERROR.name());
                         break;
-                    
+
                     case SEND:
                         if (username != null) {
 
@@ -106,16 +108,17 @@ public class ChatServer implements Runnable {
                             for (ChatServer chatServer : chatServerMapCopy.values()) {
                                 chatServer.writeToClient(builder.toString());
                             }
-                            
+
 
                         } else {
-                            writeToClient(ChatCommands.ERROR.name()+" noch nicht angemeldet");    
+                            writeToClient(ChatCommands.ERROR.name() + " noch nicht angemeldet");
                         }
-                        
-                        
+
+
                         break;
-                    
-                    default: writeToClient(ChatCommands.ERROR.name() + " Befehl befindet sich nicht im Rahmen des Protokolls");
+
+                    default:
+                        writeToClient(ChatCommands.ERROR.name() + " Befehl befindet sich nicht im Rahmen des Protokolls");
                         break;
                 }
 
@@ -126,6 +129,8 @@ public class ChatServer implements Runnable {
             }
 
         }
+        System.out.println("Serverinstanz :" +clientSocket + " wird beendet.");
+        synchronized (userMap) {userMap.remove(username);}
     }
 
 
@@ -136,7 +141,7 @@ public class ChatServer implements Runnable {
         } catch (IOException e) {
             System.err.println(e.toString());
         }
-        System.out.println(username + ": sent from server: " + request);
+        System.out.println(((username == null) ? ("unbekannt"): (username)) + ": sent from server: " + request);
     }
 
     private String readFromClient() {
@@ -147,8 +152,13 @@ public class ChatServer implements Runnable {
             reply = inFromServer.readLine();
         } catch (IOException e) {
             System.err.println("Connection aborted by server!");
+            try {
+                clientSocket.close();
+            } catch (IOException e1) {
+                e1.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            }
         }
-        System.out.println(username +  ": got from Client: " + reply);
+        System.out.println(((username == null) ? ("unbekannt"): (username)) +  ": got from Client: " + reply);
         return reply;
     }
 }

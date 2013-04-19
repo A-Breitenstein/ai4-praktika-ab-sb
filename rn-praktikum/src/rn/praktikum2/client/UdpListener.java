@@ -46,7 +46,7 @@ public class UdpListener implements Runnable {
                 socket.receive(datagramPacket);
                 message = new String(datagramPacket.getData(), 0, datagramPacket.getLength());
 
-                System.out.println(message);
+                chatClient.displayMessage(message);
             } catch (IOException e) {
                 e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             }
