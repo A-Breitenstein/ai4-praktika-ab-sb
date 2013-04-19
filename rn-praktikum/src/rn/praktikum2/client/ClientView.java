@@ -24,6 +24,7 @@ public class ClientView extends JFrame {
     private JTextField e_editFieldChat;
     private JButton btn_send;
     private JTextArea w_userWindow;
+    private JScrollPane scrollpanel;
 
 
     public ClientView() {
@@ -52,25 +53,41 @@ public class ClientView extends JFrame {
         e_editFieldChat.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String text = e_editFieldChat.getText();
-                w_chatWindow.append(text+"\n");
-                e_editFieldChat.setText("");
+                displayMessageToTextareaFromEditfield(w_chatWindow, e_editFieldChat);
             }
         });
         btn_send.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String text = e_editFieldChat.getText();
-                w_chatWindow.append(text+"\n");
-                e_editFieldChat.setText("");
+                displayMessageToTextareaFromEditfield(w_chatWindow, e_editFieldChat);
             }
         });
     }
 
-    private void validateButton(JTextField textField){
-        String editFieldText = textField.getText();
+    private void displayMessageToTextareaFromEditfield(JTextArea textArea, JTextField textField) {
+        if (!emptyEditField(textField)) {
+            String text = textField.getText();
+            appendTextToTextarea(text, textArea);
+            clearTextfield(textField);
+        }
+    }
 
-        if (editFieldText.isEmpty() || editFieldText.replace(" ","").isEmpty())
+    private void appendTextToTextarea(String text, JTextArea textArea) {
+        textArea.append(text + "\n");
+    }
+
+    private void clearTextfield(JTextField textField) {
+        textField.setText("");
+    }
+
+    private boolean emptyEditField(JTextField textField) {
+        String editFieldText = textField.getText();
+        return editFieldText.isEmpty() || editFieldText.replace(" ", "").isEmpty();
+    }
+
+    private void validateButton(JTextField textField) {
+
+        if (emptyEditField(textField))
             btn_send.setEnabled(false);
         else
             btn_send.setEnabled(true);
@@ -85,4 +102,11 @@ public class ClientView extends JFrame {
     }
 
 
+    public JPanel getJPanelArea() {
+        return JPanelArea;
+    }
+
+    public void displayMessage(String s) {
+        w_chatWindow.append(s + "\n");
+    }
 }
