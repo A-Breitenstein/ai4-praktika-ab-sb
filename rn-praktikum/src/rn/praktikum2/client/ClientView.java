@@ -94,7 +94,7 @@ public class ClientView extends JFrame {
     }
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame("ClientView");
+        JFrame frame = new JFrame("clientView");
         frame.setContentPane(new ClientView().JPanelArea);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
