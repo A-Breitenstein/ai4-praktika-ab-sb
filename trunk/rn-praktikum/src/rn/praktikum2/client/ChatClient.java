@@ -1,8 +1,5 @@
 package rn.praktikum2.client;
 
-import java.io.IOException;
-import java.net.*;
-
 /**
  * Created with IntelliJ IDEA.
  * User: abg667
@@ -11,11 +8,11 @@ import java.net.*;
  * To change this template use File | Settings | File Templates.
  */
 public class ChatClient {
-    Socket serverCon;
-    DatagramSocket udpSender;
-    DatagramSocket udListener;
+    ServerConnection serverConnection;
+    UdpSender sender;
+    UdpListener listener;
 
-    public void connect() {
+   /* public void connect() {
         byte[] content = String.valueOf("Test String\r\n").getBytes();
 
         try {
@@ -53,9 +50,13 @@ public class ChatClient {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-    }
+    }*/
 
     public static void main(String[] args) {
-        new ChatClient().connect();
+//        new ChatClient().connect();
+    }
+
+    public boolean tcpSocketConnected() {
+        return serverConnection.isSocketClosed();
     }
 }
