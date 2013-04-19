@@ -1,5 +1,8 @@
 package rn.praktikum2.client;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: abg667
@@ -11,6 +14,7 @@ public class ChatClient {
     ServerConnection serverConnection;
     UdpSender sender;
     UdpListener listener;
+    private String username;
 
    /* public void connect() {
         byte[] content = String.valueOf("Test String\r\n").getBytes();
@@ -57,6 +61,14 @@ public class ChatClient {
     }
 
     public boolean tcpSocketConnected() {
-        return serverConnection.isSocketClosed();
+        return !serverConnection.isSocketClosed();
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public List<String> getIpList() {
+        return new ArrayList<String>(serverConnection.getUserToIp().values());
     }
 }

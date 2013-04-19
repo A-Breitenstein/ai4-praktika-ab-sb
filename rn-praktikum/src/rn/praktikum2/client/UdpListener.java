@@ -22,9 +22,13 @@ public class UdpListener implements Runnable {
 
     DatagramPacket datagramPacket = new DatagramPacket(buffer, buffer.length);
 
-    public UdpListener(ChatClient chatClient, int port) {
+    private UdpListener(ChatClient chatClient, int port) {
         this.chatClient = chatClient;
         this.port = port;
+    }
+
+    public static UdpListener create(ChatClient chatClient, int port) {
+        return new UdpListener(chatClient, port);
     }
 
     @Override

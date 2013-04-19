@@ -24,4 +24,8 @@ public class ServerConnection {
     public boolean isSocketClosed() {
         return serverSocket.isClosed();
     }
+
+    public Map<String, String> getUserToIp() {
+        return userToIp;
+    }
 }
