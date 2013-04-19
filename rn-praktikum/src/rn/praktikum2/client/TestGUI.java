@@ -7,18 +7,18 @@ import javax.swing.*;
  * Date: 19.04.13
  * Time: 18:45
  */
-public class Test {
+public class TestGUI {
 
     private ClientView clientView;
     private ClientLogin clientLogin;
 
 
     public static void main(String[] args) {
-        Test test = new Test();
+        TestGUI testGUI = new TestGUI();
 
-        test.clientLogin();
+        testGUI.clientLogin();
 
-        while (!test.clientLogin.done()) {
+        while (!testGUI.clientLogin.done()) {
             System.out.println("wait for login");
             try {
                 Thread.sleep(1500);
@@ -27,14 +27,14 @@ public class Test {
             }
         }
 
-        test.clientView();
+        testGUI.clientView();
         for (int i = 0; i < 3; i++) {
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             }
-            test.clientView.displayMessage("Test " + i + ", funzt das!?");
+            testGUI.clientView.displayMessage("TestGUI " + i + ", funzt das!?");
         }
 
     }
