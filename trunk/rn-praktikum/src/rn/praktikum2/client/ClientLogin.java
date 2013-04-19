@@ -3,7 +3,6 @@ package rn.praktikum2.client;
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.beans.PropertyChangeEvent;
@@ -15,11 +14,14 @@ import java.beans.PropertyChangeListener;
  * Time: 18:53
  */
 public class ClientLogin {
-    private JButton btn_login;
-    private JTextField e_username;
+    public JButton btn_login;
+    public JTextField e_username;
     private JPanel loginForm;
-    private JLabel l_info;
+    public JLabel l_info;
     private boolean done = false;
+    private String username;
+    public ChatClient chatClient;
+    final private String usernameNA = "Name ist bereits vergeben";
 
     public ClientLogin(){
         e_username.getDocument().addDocumentListener(new DocumentListener() {
@@ -48,10 +50,14 @@ public class ClientLogin {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //TODO: LOGIN validation
-                l_info.setText(e_username.getText());
-                done = !done;
-                e_username.setEnabled(false);
-                btn_login.setEnabled(false);
+                username = e_username.getText();
+                if (chatClient.evaluateUsername(username)) {
+                    l_info.setText(username);
+                    e_username.setEnabled(false);
+                    btn_login.setEnabled(false);
+                }else{
+                    l_info.setText(usernameNA);
+                }
             }
         });
     }
@@ -85,5 +91,13 @@ public class ClientLogin {
     public boolean done() {
 
         return done;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setChatClient(ChatClient chatClient) {
+        this.chatClient = chatClient;
     }
 }

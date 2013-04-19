@@ -10,6 +10,8 @@ import java.awt.event.InputMethodEvent;
 import java.awt.event.InputMethodListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.util.*;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -25,6 +27,8 @@ public class ClientView extends JFrame {
     private JButton btn_send;
     private JTextArea w_userWindow;
     private JScrollPane scrollpanel;
+    public ChatClient chatClient;
+
 
 
     public ClientView() {
@@ -62,12 +66,15 @@ public class ClientView extends JFrame {
                 displayMessageToTextareaFromEditfield(w_chatWindow, e_editFieldChat);
             }
         });
+
+
     }
 
     private void displayMessageToTextareaFromEditfield(JTextArea textArea, JTextField textField) {
         if (!emptyEditField(textField)) {
             String text = textField.getText();
-            appendTextToTextarea(text, textArea);
+//            appendTextToTextarea(text, textArea);
+            chatClient.sendMessage(text);
             clearTextfield(textField);
         }
     }
@@ -106,7 +113,19 @@ public class ClientView extends JFrame {
         return JPanelArea;
     }
 
-    public void displayMessage(String s) {
-        w_chatWindow.append(s + "\n");
+    public void displayMessage(String message) {
+        w_chatWindow.append(message + "\n");
+    }
+
+    public void displayUsers(List<String> user) {
+
+        w_userWindow.setText("");
+        for (String username : user) {
+            w_userWindow.append(username + "\n");
+        }
+    }
+
+    public void setChatClient(ChatClient chatClient) {
+        this.chatClient = chatClient;
     }
 }
