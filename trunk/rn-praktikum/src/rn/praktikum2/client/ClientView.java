@@ -111,6 +111,7 @@ public class ClientView extends JFrame {
 
     public void displayMessage(String message) {
         w_chatWindow.append(message + "\n");
+        w_chatWindow.setCaretPosition(w_chatWindow.getDocument().getLength());
     }
 
     public void displayUsers(List<String> user) {
