@@ -25,17 +25,13 @@ public class ServerConnection implements Runnable{
     private Socket serverSocket;
 
 
-    public ServerConnection(ChatClient chatClient, String serverIp, int serverPort) {
+    public ServerConnection(ChatClient chatClient, String serverIp, int serverPort) throws IOException {
         this.chatClient = chatClient;
         this.serverIp = serverIp;
         this.serverPort = serverPort;
         this.userToIp = new HashMap<String, String>();
+        this.serverSocket = new Socket(serverIp, serverPort);
 
-        try {
-            serverSocket = new Socket(serverIp, serverPort);
-        } catch (IOException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
     }
 
     public Socket getServerSocket() {

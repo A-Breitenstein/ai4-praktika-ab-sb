@@ -29,10 +29,11 @@ public class ChatClient {
     private String username;
     private ClientView clientView;
     private ClientLogin clientLogin;
-    int port = 50000;
+    int port;
 
 
     Semaphore sem_validatedUsername = new Semaphore(0);
+    Semaphore sem_validatedIpPort = new Semaphore(0);
 
     public static void main(String[] args) {
         try {
@@ -45,20 +46,10 @@ public class ChatClient {
     public void startClient() throws InterruptedException {
 
 
-        try {
-            serverConnection = new ServerConnection(this,"127.0.0.1",port);
-            listener = UdpListener.create(this, port);
-            sender = UdpSender.create(this, port);
-            inFromServer = new BufferedReader(new InputStreamReader(serverConnection.getServerSocket().getInputStream(),"UTF-8"));
-            outToServer = new DataOutputStream(serverConnection.getServerSocket().getOutputStream());
-        } catch (IOException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
-
-
-
         ui_login();
         clientLogin.setChatClient(this);
+
+        sem_validatedIpPort.acquire();
 
         sem_validatedUsername.acquire();
 
@@ -97,7 +88,8 @@ public class ChatClient {
         frame.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
-                sendBYE();
+                if(serverConnection != null)
+                    sendBYE();
             }
         });
         frame.setContentPane(clientLogin.getLoginform());
@@ -105,6 +97,29 @@ public class ChatClient {
         frame.pack();
         frame.setVisible(true);
 
+    }
+
+    public boolean evaluateIpPort(String ipport) {
+        try {
+            String[] ipAndPort = ipport.split(":");
+            String ip = ipAndPort[0];
+            String sPort = ipAndPort[1];
+
+            int iPort = Integer.valueOf(sPort);
+            this.port = iPort;
+
+            serverConnection = new ServerConnection(this, ip, port);
+            listener = UdpListener.create(this, port);
+            sender = UdpSender.create(this, port);
+            inFromServer = new BufferedReader(new InputStreamReader(serverConnection.getServerSocket().getInputStream(), "UTF-8"));
+            outToServer = new DataOutputStream(serverConnection.getServerSocket().getOutputStream());
+
+            sem_validatedIpPort.release(1);
+
+            return true;
+        } catch (Exception ie) {
+            return false;
+        }
     }
 
     public boolean evaluateUsername(String username) {
@@ -153,10 +168,10 @@ public class ChatClient {
         return username;
     }
 
+
     public List<String> getIpList() {
         return new ArrayList<String>(serverConnection.getUserToIp().values());
     }
-
 
     public void displayUsers(List<String> users) {
 
