@@ -34,6 +34,7 @@ public class ChatClient {
 
     Semaphore sem_validatedUsername = new Semaphore(0);
     Semaphore sem_validatedIpPort = new Semaphore(0);
+    final private int udpPort = 50001;
 
     public static void main(String[] args) {
         try {
@@ -109,8 +110,8 @@ public class ChatClient {
             this.port = iPort;
 
             serverConnection = new ServerConnection(this, ip, port);
-            listener = UdpListener.create(this, port);
-            sender = UdpSender.create(this, port);
+            listener = UdpListener.create(this, udpPort);
+            sender = UdpSender.create(this, udpPort);
             inFromServer = new BufferedReader(new InputStreamReader(serverConnection.getServerSocket().getInputStream(), "UTF-8"));
             outToServer = new DataOutputStream(serverConnection.getServerSocket().getOutputStream());
 
