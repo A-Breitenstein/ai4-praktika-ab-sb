@@ -58,7 +58,7 @@ public class ClientLogin {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //TODO: LOGIN validation
-                if (!ipport.isEmpty()) {
+                if (!e_ipport.isEnabled()) {
 
                     username = e_username.getText();
                     if (chatClient.evaluateUsername(username)) {
