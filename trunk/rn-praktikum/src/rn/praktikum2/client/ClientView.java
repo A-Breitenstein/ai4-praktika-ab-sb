@@ -67,7 +67,7 @@ public class ClientView extends JFrame {
     }
 
     private void displayMessageToTextareaFromEditfield(JTextArea textArea, JTextField textField) {
-        if (!emptyEditField(textField)) {
+        if (!emptyOrTooLongEditField(textField)) {
             String text = textField.getText();
 //            appendTextToTextarea(text, textArea);
             chatClient.sendMessage(text);
@@ -83,14 +83,14 @@ public class ClientView extends JFrame {
         textField.setText("");
     }
 
-    private boolean emptyEditField(JTextField textField) {
+    private boolean emptyOrTooLongEditField(JTextField textField) {
         String editFieldText = textField.getText();
-        return editFieldText.isEmpty() || editFieldText.replace(" ", "").isEmpty();
+        return editFieldText.isEmpty() || editFieldText.replace(" ", "").isEmpty() || editFieldText.length()>100;
     }
 
     private void validateButton(JTextField textField) {
 
-        if (emptyEditField(textField))
+        if (emptyOrTooLongEditField(textField))
             btn_send.setEnabled(false);
         else
             btn_send.setEnabled(true);
