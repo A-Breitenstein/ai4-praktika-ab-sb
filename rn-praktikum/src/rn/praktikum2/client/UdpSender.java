@@ -37,7 +37,7 @@ public class UdpSender{
     public void sendMessage(String message) {
         if (message.length() > MaxMessageSize) throw new IllegalArgumentException("message is too long");
 
-        final String outGoingMessage = chatClient.getUsername() + ": " + message;//String.valueOf(chatClient.getUsername());
+        final String outGoingMessage = chatClient.getUsername() + ": " + message+"\n";//String.valueOf(chatClient.getUsername());
 
         buffer = outGoingMessage.getBytes();
 

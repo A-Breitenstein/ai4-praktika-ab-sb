@@ -22,6 +22,7 @@ public class ChatServer implements Runnable {
     private DataOutputStream outToServer; // Ausgabestream zum Server
     private BufferedReader inFromServer;  // Eingabestream vom Server
     private String username;
+    private static String serverHostname = "lab26";
 
     private ChatServer(Socket clientSocket) {
         this.clientSocket = clientSocket;
@@ -72,8 +73,13 @@ public class ChatServer implements Runnable {
                     case INFO:
                         StringBuilder sb = new StringBuilder(ChatCommands.LIST.name()).append(" ").append(userMap.size()).append(" ");
                         Map<String, ChatServer> userMapCopy = new HashMap<String, ChatServer>(userMap);
+                        String tmpfix;
                         for (Map.Entry<String, ChatServer> entry : userMapCopy.entrySet()) {
-                            sb.append(entry.getValue().clientSocket.getInetAddress().getHostAddress()).append(" ").append(entry.getKey()).append(" ");
+                            tmpfix = entry.getValue().clientSocket.getInetAddress().getHostAddress();
+                            if(tmpfix.equals("127.0.0.1")|tmpfix.equals("localhost"))
+                                sb.append(serverHostname).append(" ").append(entry.getKey()).append(" ");
+                            else
+                                sb.append(entry.getValue().clientSocket.getInetAddress().getHostName()).append(" ").append(entry.getKey()).append(" ");
 
                         }
 
@@ -124,13 +130,19 @@ public class ChatServer implements Runnable {
 
             } catch (IllegalArgumentException e) {
                 writeToClient(ChatCommands.ERROR.name() + " Ihr Chat-client bewegt sich außerhalb des Protokolls");
+                try {
+                    clientSocket.close();
+                } catch (IOException e1) {
+//                    e1.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                }
             } catch (IOException e) {
-                e.printStackTrace();
+//                e.printStackTrace();
             }
 
         }
         System.out.println("Serverinstanz :" +clientSocket + " wird beendet.");
         synchronized (userMap) {userMap.remove(username);}
+        ChatDispatcher.getInstance().clientLeft();
     }
 
 
@@ -149,7 +161,17 @@ public class ChatServer implements Runnable {
         String reply = "";
 
         try {
-            reply = inFromServer.readLine();
+            StringBuilder input = new StringBuilder("");
+            char[] chars = new char[1];
+            inFromServer.read(chars);
+            int counter = 0;
+            while (chars[0] != '\n' && counter < 25) {
+                input.append(chars[0]);
+                inFromServer.read(chars);
+                counter++;
+            }
+            reply = input.toString();
+//            reply = inFromServer.readLine();
         } catch (IOException e) {
             System.err.println("Connection aborted by server!");
             try {
