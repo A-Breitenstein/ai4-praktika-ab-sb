@@ -1,43 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="rn-praktikum:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="79e6bdfb-a409-42b3-bad2-8919505c0351" name="Default" comment="rnp: praktikum1 wt">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rn/praktikum2/client/ChatClient.java" afterPath="$PROJECT_DIR$/src/rn/praktikum2/client/ChatClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rn/praktikum2/client/ServerConnection.java" afterPath="$PROJECT_DIR$/src/rn/praktikum2/client/ServerConnection.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rn/praktikum2/server/ChatDispatcher.java" afterPath="$PROJECT_DIR$/src/rn/praktikum2/server/ChatDispatcher.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rn/praktikum2/server/ChatServer.java" afterPath="$PROJECT_DIR$/src/rn/praktikum2/server/ChatServer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rn/praktikum2/client/UdpListener.java" afterPath="$PROJECT_DIR$/src/rn/praktikum2/client/UdpListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rn/praktikum2/client/UdpSender.java" afterPath="$PROJECT_DIR$/src/rn/praktikum2/client/UdpSender.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rnpr1.db" afterPath="$PROJECT_DIR$/rnpr1.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/users.ser" afterPath="$PROJECT_DIR$/users.ser" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rn-praktikum.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/" />
-    <file path="/Dummy.txt" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1366336956645" ignored="false" />
-    <file path="/ServerState.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365080197534" ignored="false" />
+    <file path="/Dummy.txt" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365419952336" ignored="false" />
+    <file path="/ServerState.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365418740832" ignored="false" />
     <file path="/Messages.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1364595863755" ignored="false" />
     <file path="/User.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365094531190" ignored="false" />
     <file path="/ServerStateTransitions.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1364289583106" ignored="false" />
-    <file path="/Server.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365079785212" ignored="false" />
+    <file path="/Server.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365418620057" ignored="false" />
     <file path="/Command.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365097441658" ignored="false" />
-    <file path="$PROJECT_DIR$/../SE2/HAW-ANDROID-APP/haw_android_app/.idea/workspace.xml" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1366337911520" ignored="false" />
-    <file path="/Databases.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365105560447" ignored="false" />
+    <file path="$PROJECT_DIR$/../SE2/HAW-ANDROID-APP/haw_android_app/.idea/workspace.xml" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1364603375660" ignored="false" />
+    <file path="/Databases.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365410434632" ignored="false" />
     <file path="/Message.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365097857598" ignored="false" />
-    <file path="/Client.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365347135566" ignored="false" />
-    <file path="/ClientRunner.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365347272484" ignored="false" />
-    <file path="/fragment.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365116584015" ignored="false" />
+    <file path="/Client.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365413256580" ignored="false" />
+    <file path="/ClientRunner.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365418194769" ignored="false" />
+    <file path="/fragment.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1367226626909" ignored="false" />
     <file path="/UserDescriptors.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365078291880" ignored="false" />
-    <file path="/a.dummy" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1366337085534" ignored="false" />
+    <file path="/a.dummy" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365078327127" ignored="false" />
     <file path="/MailProvider.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365346098084" ignored="false" />
     <file path="/UserDescriptor.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365183862929" ignored="false" />
     <file path="/AccountManager.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365094845610" ignored="false" />
     <file path="/Communication.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365112852406" ignored="false" />
     <file path="/user-2.log" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365251601119" ignored="false" />
     <file path="/Dispatcher.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365343796014" ignored="false" />
-    <file path="$PROJECT_DIR$/../SE2/HAW-ANDROID-APP/haw_android_app/src/de/hawhamburg/informatik/HAW_APP/mainmenunew/MainMenuIcons.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1366334688353" ignored="false" />
-    <file path="/MainMenuIcons.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1366334671989" ignored="false" />
-    <file path="/ServerConnection.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1366336420467" ignored="false" />
-    <file path="/UdpListener.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1366336911964" ignored="false" />
-    <file path="/ChatClient.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1366337757463" ignored="false" />
-    <file path="/UdpSender.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1366337878872" ignored="false" />
+    <file path="/UserProvider.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365412926875" ignored="false" />
+    <file path="/ChatServer.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1367232726041" ignored="false" />
+    <file path="/qwe.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1367226606261" ignored="false" />
+    <file path="/Qwe.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1367226252346" ignored="false" />
+    <file path="/UdpListener.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1367226573321" ignored="false" />
+    <file path="/ChatDispatcher.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1367233730829" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,22 +66,7 @@
     <sortChildren value="false" />
   </component>
   <component name="DebuggerManager">
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/rn/praktikum1/server/provider/MailProvider.java" line="69" class="rn.praktikum1.server.provider.MailProvider" package="rn.praktikum1.server.provider">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -107,7 +101,50 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/rn/praktikum1/server/provider/MailProvider.java" line="69" class="rn.praktikum1.server.provider.MailProvider" package="rn.praktikum1.server.provider">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/rn/praktikum1/client/ClientRunner.java" line="57" class="rn.praktikum1.client.ClientRunner" package="rn.praktikum1.client">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/rn/praktikum2/server/ChatDispatcher.java" line="51" class="rn.praktikum2.server.ChatDispatcher" package="rn.praktikum2.server">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -117,55 +154,50 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ClientRunner.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/client/ClientRunner.java">
+      <file leaf-file-name="ChatServer.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/rn/praktikum2/server/ChatServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="17" selection-start="1922" selection-end="1922" vertical-scroll-proportion="0.0">
+            <state line="165" column="36" selection-start="6694" selection-end="6694" vertical-scroll-proportion="0.38083538">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Message.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/mails/Message.java">
+      <file leaf-file-name="ChatCommands.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/rn/praktikum2/server/ChatCommands.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="0" selection-start="683" selection-end="683" vertical-scroll-proportion="0.0">
+            <state line="9" column="12" selection-start="196" selection-end="196" vertical-scroll-proportion="-7.2">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MailProvider.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/provider/MailProvider.java">
+      <file leaf-file-name="ClientLogin.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/rn/praktikum2/client/ClientLogin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="146" column="5" selection-start="4232" selection-end="4232" vertical-scroll-proportion="0.0">
+            <state line="56" column="60" selection-start="1720" selection-end="1720" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#1462#1659#0" expanded="true" />
+                <element signature="e#1648#1649#0" expanded="true" />
+                <element signature="e#2295#2296#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UdpSender.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/rn/praktikum2/client/UdpSender.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="25" selection-start="1315" selection-end="1315" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDescriptor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/client/UserDescriptor.java">
+      <file leaf-file-name="UdpListener.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/rn/praktikum2/client/UdpListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="40" selection-start="443" selection-end="443" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Client.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/client/Client.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="315" column="15" selection-start="11495" selection-end="11495" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Databases.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/rn/helperlein/Databases.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="26" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0">
+            <state line="46" column="33" selection-start="1187" selection-end="1187" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -174,43 +206,44 @@
       <file leaf-file-name="ChatClient.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/rn/praktikum2/client/ChatClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="29" selection-start="2159" selection-end="2159" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="59" column="33" selection-start="1628" selection-end="1628" vertical-scroll-proportion="25.8">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServerConnection.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/rn/praktikum2/client/ServerConnection.java">
+      <file leaf-file-name="ClientView.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/rn/praktikum2/client/ClientView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="46" selection-start="463" selection-end="463" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="70" column="40" selection-start="2250" selection-end="2250" vertical-scroll-proportion="-10.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UdpSender.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/rn/praktikum2/client/UdpSender.java">
+      <file leaf-file-name="ChatDispatcher.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/rn/praktikum2/server/ChatDispatcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="36" selection-start="555" selection-end="555" vertical-scroll-proportion="0.26750702">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="71" column="24" selection-start="2138" selection-end="2138" vertical-scroll-proportion="-2.16">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UdpListener.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/rn/praktikum2/client/UdpListener.java">
+      <file leaf-file-name="Messages.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/states/Messages.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="8" selection-start="754" selection-end="986" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="18" column="40" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Client.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/client/Client.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="61" column="0" selection-start="1641" selection-end="1641" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -225,28 +258,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/rn/praktikum1/server/Command.java" />
-        <option value="$PROJECT_DIR$/src/rn/praktikum1/server/mails/Message.java" />
-        <option value="$PROJECT_DIR$/src/rn/helperlein/Communication.java" />
-        <option value="$PROJECT_DIR$/src/rn/praktikum1/client/UserDescriptor.java" />
-        <option value="$PROJECT_DIR$/src/rn/helperlein/Databases.java" />
-        <option value="$PROJECT_DIR$/src/rn/praktikum1/server/Server.java" />
-        <option value="$PROJECT_DIR$/user-2.log" />
-        <option value="$PROJECT_DIR$/src/rn/praktikum1/server/Dispatcher.java" />
         <option value="$PROJECT_DIR$/src/rn/praktikum1/server/provider/MailProvider.java" />
+        <option value="$PROJECT_DIR$/src/rn/helperlein/Databases.java" />
+        <option value="$PROJECT_DIR$/users.ser" />
+        <option value="$PROJECT_DIR$/src/rn/praktikum1/server/provider/UserProvider.java" />
         <option value="$PROJECT_DIR$/src/rn/praktikum1/client/Client.java" />
+        <option value="$PROJECT_DIR$/SERVER-user-22.log" />
         <option value="$PROJECT_DIR$/src/rn/praktikum1/client/ClientRunner.java" />
-        <option value="$PROJECT_DIR$/src/rn/praktikum2/client/TcpConnection.java" />
-        <option value="$PROJECT_DIR$/src/rn/praktikum2/client/UdpListener.java" />
-        <option value="$PROJECT_DIR$/src/rn/praktikum2/client/ServerConnection.java" />
-        <option value="$PROJECT_DIR$/src/rn/praktikum2/client/ChatClient.java" />
+        <option value="$PROJECT_DIR$/src/rn/praktikum1/server/Server.java" />
+        <option value="$PROJECT_DIR$/src/rn/praktikum1/server/states/ServerState.java" />
+        <option value="$PROJECT_DIR$/SERVER-user-23.log" />
+        <option value="$PROJECT_DIR$/src/rn/praktikum3/qwe.java" />
         <option value="$PROJECT_DIR$/src/rn/praktikum2/client/UdpSender.java" />
+        <option value="$PROJECT_DIR$/src/rn/praktikum3/Qwe.java" />
+        <option value="$PROJECT_DIR$/src/rn/praktikum2/client/UdpListener.java" />
+        <option value="$PROJECT_DIR$/src/rn/praktikum2/server/ChatServer.java" />
+        <option value="$PROJECT_DIR$/src/rn/praktikum2/server/ChatDispatcher.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="640" />
-    <option name="height" value="994" />
+    <option name="x" value="-4" />
+    <option name="y" value="-4" />
+    <option name="width" value="1688" />
+    <option name="height" value="1018" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -262,10 +297,28 @@
             <id>Android Lint</id>
           </State>
           <State>
-            <id>CSS</id>
+            <id>Assignment issues</id>
+          </State>
+          <State>
+            <id>Assignment issuesGroovy</id>
           </State>
           <State>
             <id>Class metrics</id>
+          </State>
+          <State>
+            <id>Class structure</id>
+          </State>
+          <State>
+            <id>Cloning issues</id>
+          </State>
+          <State>
+            <id>Code maturity issues</id>
+          </State>
+          <State>
+            <id>Code style issues</id>
+          </State>
+          <State>
+            <id>Concurrency annotation issues</id>
           </State>
           <State>
             <id>Control FlowGroovy</id>
@@ -274,13 +327,31 @@
             <id>Control flow issues</id>
           </State>
           <State>
-            <id>Control flow issuesJavaScript</id>
+            <id>Data flow issues</id>
           </State>
           <State>
-            <id>Dependency issues</id>
+            <id>Data flow issuesGroovy</id>
+          </State>
+          <State>
+            <id>Declaration redundancy</id>
+          </State>
+          <State>
+            <id>Declaration redundancyGroovy</id>
+          </State>
+          <State>
+            <id>DeclarationGroovy</id>
+          </State>
+          <State>
+            <id>Encapsulation issues</id>
           </State>
           <State>
             <id>Error handling</id>
+          </State>
+          <State>
+            <id>Finalization issues</id>
+          </State>
+          <State>
+            <id>GPath inspectionsGroovy</id>
           </State>
           <State>
             <id>General</id>
@@ -289,7 +360,22 @@
             <id>Groovy</id>
           </State>
           <State>
+            <id>IDEA Platform Inspections</id>
+          </State>
+          <State>
+            <id>Inheritance issues</id>
+          </State>
+          <State>
+            <id>Initialization issues</id>
+          </State>
+          <State>
+            <id>Internationalization issues</id>
+          </State>
+          <State>
             <id>J2ME issues</id>
+          </State>
+          <State>
+            <id>JUnit issues</id>
           </State>
           <State>
             <id>Java language level issues</id>
@@ -298,13 +384,13 @@
             <id>Java language level migration aids</id>
           </State>
           <State>
-            <id>JavaScript</id>
+            <id>JavaBeans issues</id>
           </State>
           <State>
-            <id>JavaScript function metricsJavaScript</id>
+            <id>Javadoc issues</id>
           </State>
           <State>
-            <id>JavaScript validity issuesJavaScript</id>
+            <id>Logging issues</id>
           </State>
           <State>
             <id>Method MetricsGroovy</id>
@@ -313,7 +399,7 @@
             <id>Method metrics</id>
           </State>
           <State>
-            <id>Modularization issues</id>
+            <id>Naming ConventionsGroovy</id>
           </State>
           <State>
             <id>Naming conventions</id>
@@ -322,22 +408,34 @@
             <id>Numeric issues</id>
           </State>
           <State>
-            <id>Packaging issues</id>
+            <id>Pattern Validation</id>
+          </State>
+          <State>
+            <id>Performance issues</id>
+          </State>
+          <State>
+            <id>Portability issues</id>
           </State>
           <State>
             <id>Potentially confusing code constructsGroovy</id>
           </State>
           <State>
-            <id>Potentially confusing code constructsJavaScript</id>
-          </State>
-          <State>
             <id>Probable bugs</id>
           </State>
           <State>
-            <id>SQL</id>
+            <id>Probable bugsGroovy</id>
           </State>
           <State>
             <id>Security issues</id>
+          </State>
+          <State>
+            <id>Serialization issues</id>
+          </State>
+          <State>
+            <id>StyleGroovy</id>
+          </State>
+          <State>
+            <id>TestNG</id>
           </State>
           <State>
             <id>Threading issues</id>
@@ -346,17 +444,18 @@
             <id>Threading issuesGroovy</id>
           </State>
           <State>
+            <id>Verbose or redundant code constructs</id>
+          </State>
+          <State>
             <id>Visibility issues</id>
           </State>
           <State>
-            <id>XPath</id>
+            <id>XML</id>
+          </State>
+          <State>
+            <id>toString() issues</id>
           </State>
         </expanded-state>
-        <selected-state>
-          <State>
-            <id>Abstraction issues</id>
-          </State>
-        </selected-state>
       </profile-state>
     </entry>
   </component>
@@ -373,7 +472,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="0" />
+    <option name="STATE" value="2" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
@@ -394,10 +493,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="rn-praktikum" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -425,6 +520,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="rn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rn-praktikum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rn-praktikum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="praktikum3" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -479,6 +596,10 @@
               <option name="myItemId" value="client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClientView" />
+              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -498,7 +619,41 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="helperlein" />
+              <option name="myItemId" value="praktikum2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ClientLogin" />
+              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rn-praktikum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rn-praktikum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="praktikum2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -512,18 +667,18 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value=".idea" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="OverrideImplement.combined" value="false" />
@@ -531,8 +686,8 @@
     <property name="Repository.Attach.JavaDocs" value="true" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Ignored.Files" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/logback-1.0.11" />
+    <property name="options.lastSelected" value="editor.preferences.appearance" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/slf4j-api-1.7.5.jar!/" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -550,29 +705,7 @@
       <recent name="rn.praktikum1.client" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Dispatcher">
-    <configuration default="false" name="UserProvider" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="rn.praktikum1.server.provider.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="rn.praktikum1.server.provider.UserProvider" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="rn-praktikum" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.ChatClient">
     <configuration default="false" name="Dispatcher" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -599,32 +732,6 @@
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="UserDescriptor" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="rn.praktikum1.client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="rn.praktikum1.client.UserDescriptor" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="rn-praktikum" />
-      <envs />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <ConfigurationWrapper RunnerId="Debug" />
       <method />
     </configuration>
     <configuration default="false" name="Client" type="Application" factoryName="Application" temporary="true">
@@ -655,14 +762,9 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="ClientRunner" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="rn.praktikum1.client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="rn.praktikum1.client.ClientRunner" />
+    <configuration default="false" name="ChatDispatcher" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="rn.praktikum2.server.ChatDispatcher" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -681,6 +783,44 @@
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ChatClient" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="rn.praktikum2.client.ChatClient" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="rn-praktikum" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Qwe" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="rn.praktikum3.Qwe" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="rn-praktikum" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -775,19 +915,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.UserProvider" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Dispatcher" />
-      <item index="2" class="java.lang.String" itemvalue="Application.UserDescriptor" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Client" />
-      <item index="4" class="java.lang.String" itemvalue="Application.ClientRunner" />
+      <item index="0" class="java.lang.String" itemvalue="Application.Dispatcher" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Client" />
+      <item index="2" class="java.lang.String" itemvalue="Application.ChatDispatcher" />
+      <item index="3" class="java.lang.String" itemvalue="Application.ChatClient" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Qwe" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Dispatcher" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Client" />
-        <item index="2" class="java.lang.String" itemvalue="Application.ClientRunner" />
-        <item index="3" class="java.lang.String" itemvalue="Application.UserDescriptor" />
-        <item index="4" class="java.lang.String" itemvalue="Application.UserProvider" />
+        <item index="0" class="java.lang.String" itemvalue="Application.ChatDispatcher" />
+        <item index="1" class="java.lang.String" itemvalue="Application.ChatClient" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Qwe" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Dispatcher" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Client" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -796,6 +936,11 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SliceManager">
+    <option name="analysisUIOptions">
+      <AnalysisUIOptions />
+    </option>
+  </component>
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="true">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
@@ -820,20 +965,20 @@
     <option name="myMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="E:\Projekte\IntelliJ\AI4\rn-praktikum" />
-          <option name="myCopyRoot" value="E:\Projekte\IntelliJ\AI4\rn-praktikum" />
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
         </SvnCopyRootSimple>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="E:\Projekte\IntelliJ\AI4\rn-praktikum\.idea" />
-          <option name="myCopyRoot" value="E:\Projekte\IntelliJ\AI4\rn-praktikum\.idea" />
+          <option name="myVcsRoot" value="$PROJECT_DIR$/.idea" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/.idea" />
         </SvnCopyRootSimple>
       </list>
     </option>
     <option name="myMoreRealMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="E:\Projekte\IntelliJ\AI4\rn-praktikum" />
-          <option name="myCopyRoot" value="E:\Projekte\IntelliJ\AI4\rn-praktikum" />
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
         </SvnCopyRootSimple>
       </list>
     </option>
@@ -892,9 +1037,9 @@
       <created>1365189685113</created>
       <updated>1365189685113</updated>
     </task>
-    <task id="LOCAL-00013" summary="rnp2: Client struktur">
-      <created>1366336978160</created>
-      <updated>1366336978160</updated>
+    <task id="LOCAL-00013" summary="rnp: praktikum1 wt">
+      <created>1365420015184</created>
+      <updated>1365420015184</updated>
     </task>
     <option name="localTasksCounter" value="14" />
     <servers />
@@ -920,33 +1065,34 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="640" height="994" extended-state="0" />
-    <editor active="true" />
+    <frame x="-4" y="-4" width="1688" height="1018" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44607842" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42034313" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893497" sideWeight="0.38351256" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41954023" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32873562" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5797101" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40802675" sideWeight="0.05709712" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3448276" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40802675" sideWeight="0.05709712" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22853957" sideWeight="0.49786553" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37012264" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24226804" sideWeight="0.6764361" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22853957" sideWeight="0.49786553" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3689655" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988507" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24230146" sideWeight="0.6764361" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4484536" sideWeight="0.17279822" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8272018" sideWeight="0.93916756" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17298289" sideWeight="0.53908044" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46091953" sideWeight="0.93916756" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893497" sideWeight="0.38351256" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4470457" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32887402" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Metrics" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -988,7 +1134,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="rnp2: Client struktur" />
+    <option name="LAST_COMMIT_MESSAGE" value="rnp: praktikum1 wt" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1014,7 +1160,7 @@
     <MESSAGE value="rnp: praktikum1  uidl eingebaut , nur noch mails abrufen die man noch nicht hat sowie das starten des postfach update services im client" />
     <MESSAGE value="rnp: praktikum1 UIDL eingebaut + nur noch mails abrufen die man noch nicht hat sowie postfach update service im client" />
     <MESSAGE value="rnp: praktikum1 kann sein das du deine users.ser löschen musst damit es funzt, da sich der userDesciptor ADT geändert hat und du musst dann mit hand einen user erstellen" />
-    <MESSAGE value="rnp2: Client struktur" />
+    <MESSAGE value="rnp: praktikum1 wt" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1026,119 +1172,113 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/mails/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="158" selection-end="158" vertical-scroll-proportion="0.08934708">
+        <state line="50" column="25" selection-start="977" selection-end="977" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SERVER-user-23.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1944" column="1" selection-start="206909" selection-end="206909" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bai4rnpE@lab31.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="223" column="33" selection-start="9055" selection-end="9055" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bai4rnpE@lab30.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="377" column="91" selection-start="12881" selection-end="12881" vertical-scroll-proportion="0.34160757" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/client/ClientRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="205" column="39" selection-start="7607" selection-end="7607" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/states/Messages.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="38" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/Command.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/logs/byUserid.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rn/helperlein/Databases.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="26" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/client/UserDescriptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="40" selection-start="443" selection-end="443" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/provider/MailProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="146" column="5" selection-start="4232" selection-end="4232" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/mails/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="683" selection-end="683" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/Dispatcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="23" selection-start="1063" selection-end="1063" vertical-scroll-proportion="0.0">
+        <state line="18" column="40" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/client/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="315" column="15" selection-start="11495" selection-end="11495" vertical-scroll-proportion="0.0">
+        <state line="61" column="0" selection-start="1641" selection-end="1641" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/client/ClientRunner.java">
+    <entry file="file://$PROJECT_DIR$/src/rn/praktikum3/Qwe.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="17" selection-start="1922" selection-end="1922" vertical-scroll-proportion="0.0">
+        <state line="13" column="0" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/rn/praktikum1/server/Server.java">
+    <entry file="file://$PROJECT_DIR$/src/rn/praktikum2/client/ClientView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="63" selection-start="3355" selection-end="3355" vertical-scroll-proportion="0.0">
+        <state line="70" column="40" selection-start="2250" selection-end="2250" vertical-scroll-proportion="-10.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/rn/praktikum2/client/UdpListener.java">
+    <entry file="file://$PROJECT_DIR$/src/rn/praktikum2/server/ChatCommands.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="8" selection-start="754" selection-end="986" vertical-scroll-proportion="0.0">
+        <state line="9" column="12" selection-start="196" selection-end="196" vertical-scroll-proportion="-7.2">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rn/praktikum2/client/ClientLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="60" selection-start="1720" selection-end="1720" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rn/praktikum2/client/ServerConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="46" selection-start="463" selection-end="463" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1462#1659#0" expanded="true" />
+            <element signature="e#1648#1649#0" expanded="true" />
+            <element signature="e#2295#2296#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rn/praktikum2/client/ChatClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="29" selection-start="2159" selection-end="2159" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="59" column="33" selection-start="1628" selection-end="1628" vertical-scroll-proportion="25.8">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rn/praktikum2/client/UdpListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="33" selection-start="1187" selection-end="1187" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rn/praktikum2/client/UdpSender.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="36" selection-start="555" selection-end="555" vertical-scroll-proportion="0.26750702">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="48" column="25" selection-start="1315" selection-end="1315" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rn/praktikum2/server/ChatDispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="24" selection-start="2138" selection-end="2138" vertical-scroll-proportion="-2.16">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rn/praktikum2/server/ChatServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="165" column="36" selection-start="6694" selection-end="6694" vertical-scroll-proportion="0.38083538">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1148,10 +1288,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>rn-praktikum:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1218,7 +1360,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>logback-1.0</last-edited>
+          <last-edited>logback-classic-1.0.11-sources</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

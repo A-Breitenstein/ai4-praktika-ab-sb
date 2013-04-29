@@ -21,11 +21,16 @@ public class ChatDispatcher {
     ExecutorService threadPool;
     ServerSocket serverSocket;
     int port = 50000;
-
+    int max_connections = 10;
+    int current_connections = 0;
+    private static ChatDispatcher instance;
+    Thread dispatcherThread;
     public ChatDispatcher() {
-
+        instance = this;
+        dispatcherThread = Thread.currentThread();
         try {
             serverSocket = new ServerSocket(port);
+            serverSocket.setSoTimeout(7000);
             threadPool = Executors.newCachedThreadPool();
 
             looper();
@@ -34,20 +39,44 @@ public class ChatDispatcher {
         }
 
     }
+
+    public static ChatDispatcher getInstance() {
+        return instance;
+    }
+
     public void looper() {
 
         while (true){
             try {
-                Socket clientSocket = serverSocket.accept();
-                threadPool.execute(ChatServer.create(clientSocket));
-//                Server.create(clientSocket).run();
+                Socket clientSocket;
+                if (current_connections < max_connections) {
+                    clientSocket= serverSocket.accept();
+                    threadPool.execute(ChatServer.create(clientSocket));
+                    current_connections++;
+                    System.out.println(current_connections);
+                }else{
+                    try {
+                        Thread.sleep(1000000);
+                    } catch (InterruptedException e) {
+
+                    }
+                }
             } catch (IOException e) {
-                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+//                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             }
         }
     }
 
-
+    public synchronized void clientLeft() {
+        if (current_connections < max_connections) {
+            current_connections--;
+            System.out.println(current_connections);
+        }
+        else{
+            current_connections--;
+            dispatcherThread.interrupt();
+        }
+    }
     public String getInput() {
         String s = "";
         try{
