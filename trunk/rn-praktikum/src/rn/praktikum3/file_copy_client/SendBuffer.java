@@ -17,8 +17,8 @@ public class SendBuffer {
     private int size;
     private Semaphore freiePlaetze, belegtePlaetze, lock, anzahlZuSendenePakete;
     private Map<Long, FCpacket> sendMap;
-    private long sendbase = 0;
-    private long nextSeqNum = 0;
+    private long sendbase = FileCopyClient.sequenzStart;
+    private long nextSeqNum = FileCopyClient.sequenzStart;
     private FileCopyClient fileCopyClient;
     private Queue<Long> timeOutQueue;
 

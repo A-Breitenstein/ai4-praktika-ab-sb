@@ -15,7 +15,7 @@ public class FileReader extends Thread {
     private int size;
     private String filename;
     private SendBuffer sendBuffer;
-    private long sequenzNumber = 1;
+    private long sequenzNumber = FileCopyClient.sequenzStart;
 
     public FileReader(int size, String filename, SendBuffer sendBuffer) {
         this.size = size;

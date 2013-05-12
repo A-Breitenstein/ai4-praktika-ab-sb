@@ -25,17 +25,25 @@ public class ACKReceiver extends Thread {
     }
 
     public void run() {
+        FCpacket paket;
         try {
             udpReceiver = new DatagramSocket(port);
+            callbackListner.rdy_for_ack_0();
+
+            udpReceiver.receive(datagramPacket);
+            paket = new FCpacket(datagramPacket.getData(),datagramPacket.getLength());
+            if(paket.getSeqNum() == 0){
+                callbackListner.ACK_0_received();
+            }
         } catch (SocketException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-
         while (!Thread.interrupted()) {
             try {
                 udpReceiver.receive(datagramPacket);
-                FCpacket paket = new FCpacket(datagramPacket.getData(),datagramPacket.getLength());
-
+                paket = new FCpacket(datagramPacket.getData(),datagramPacket.getLength());
                 callbackListner.receivedACK(paket.getSeqNum());
 
             } catch (IOException e) {
@@ -46,6 +54,8 @@ public class ACKReceiver extends Thread {
 
     public interface ACKListener{
         void receivedACK(long seqNum);
+        void ACK_0_received();
+        void rdy_for_ack_0();
     }
 
 }

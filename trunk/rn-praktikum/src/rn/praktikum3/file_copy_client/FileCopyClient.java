@@ -32,12 +32,16 @@ public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
   // -------- Variables
   // current default timeout in nanoseconds
   private long timeoutValue = 100000000L;
-
+//  private long timeoutValue = 9000000000L;
+  public static long sequenzStart = 1;
 
   // ... ToDo
   private SendBuffer sendBuffer;
+  public FileReader fileReader;
+  public Sender sender;
+  public ACKReceiver ackReceiver;
 
-  // Constructor
+    // Constructor
   public FileCopyClient(String serverArg, String sourcePathArg,
     String destPathArg, String windowSizeArg, String errorRateArg) {
     servername = serverArg;
@@ -52,17 +56,15 @@ public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
   public void runFileCopyClient() {
 
       // ToDo!!
-      FileReader fileReader = new FileReader(UDP_PACKET_SIZE-8,sourcePath,sendBuffer);
-      Sender sender = new Sender(servername,SERVER_PORT,UDP_PACKET_SIZE,sendBuffer);
-      ACKReceiver ackReceiver = new ACKReceiver(SERVER_PORT,UDP_PACKET_SIZE,this);
-      sender.send(makeControlPacket());
+      fileReader = new FileReader(UDP_PACKET_SIZE-8,sourcePath,sendBuffer);
+      sender = new Sender(servername,SERVER_PORT,UDP_PACKET_SIZE,sendBuffer);
+      ackReceiver = new ACKReceiver(SERVER_PORT+1,UDP_PACKET_SIZE,this);
       ackReceiver.start();
-      fileReader.start();
-      sender.start();
-
-
-
-
+      try {
+          ackReceiver.join();
+      } catch (InterruptedException e) {
+          e.printStackTrace();
+      }
   }
 
   /**
@@ -130,13 +132,26 @@ public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
 
     @Override
     public void receivedACK(long seqNum) {
+        if(TEST_OUTPUT_MODE)
+            System.out.println("Received ACK for: "+seqNum);
         sendBuffer.markAsAcked(seqNum);
     }
 
-  public static void main(String argv[]) throws Exception {
+    @Override
+    public void ACK_0_received() {
+        fileReader.start();
+        sender.start();
+    }
+
+    @Override
+    public void rdy_for_ack_0() {
+        sender.send(makeControlPacket());
+    }
+
+    public static void main(String argv[]) throws Exception {
 //    FileCopyClient myClient = new FileCopyClient(argv[0], argv[1], argv[2],
 //        argv[3], argv[4]);
-    FileCopyClient myClient = new FileCopyClient("localhost","rnpr1.db","rnpr1.db.copy","10","100");
+    FileCopyClient myClient = new FileCopyClient("Sven-LAPTOP","datei.pdf","datei.pdf","10","100");
     myClient.runFileCopyClient();
   }
 }
