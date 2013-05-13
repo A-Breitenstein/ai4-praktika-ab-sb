@@ -7,8 +7,6 @@ package rn.praktikum3.file_copy_client;
  */
 
 import java.io.*;
-import java.net.*;
-import java.util.concurrent.TimeUnit;
 
 public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
 
@@ -37,7 +35,7 @@ public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
   public static long sequenzStart = 1;
 
   // ... ToDo
-  private SendBuffer sendBuffer;
+  private WindowBuffer windowBuffer;
   public FileReader fileReader;
   public Sender sender;
   public ACKReceiver ackReceiver;
@@ -46,7 +44,7 @@ public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
     public long RTT_Accu = 0;
     // allee RTT_Updater messungen wird timeout neu berechnet
     public long RTT_Updater = 20;
-    public double RTT_X = 0.5;
+    public double RTT_X = 0.1;
     public double RTT_estimated = timeoutValue;
     public double RTT_deviation = 0;
 
@@ -60,15 +58,15 @@ public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
     destPath = destPathArg;
     windowSize = Integer.parseInt(windowSizeArg);
     serverErrorRate = Long.parseLong(errorRateArg);
-    sendBuffer = new SendBuffer(windowSize,this);
+    windowBuffer = new WindowBuffer(this,windowSize);
 
   }
 
   public void runFileCopyClient() {
 
       // ToDo!!
-      fileReader = new FileReader(UDP_PACKET_SIZE-8,sourcePath,sendBuffer);
-      sender = new Sender(servername,SERVER_PORT,UDP_PACKET_SIZE,sendBuffer);
+      fileReader = new FileReader(UDP_PACKET_SIZE-8,sourcePath, windowBuffer);
+      sender = new Sender(servername,SERVER_PORT,UDP_PACKET_SIZE, windowBuffer,this);
       ackReceiver = new ACKReceiver(SERVER_PORT+1,UDP_PACKET_SIZE,this);
       ackReceiver.start();
       try {
@@ -103,7 +101,7 @@ public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
    */
   public void timeoutTask(long seqNum) {
   // ToDo
-      sendBuffer.addSeqNumToTimeOutQueue(seqNum);
+      windowBuffer.timeOut(seqNum);
   }
 
 
@@ -153,7 +151,7 @@ public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
     public void receivedACK(FCpacket fCpacket) {
         if(TEST_OUTPUT_MODE)
             System.out.println("Received ACK for: "+fCpacket.getSeqNum());
-        sendBuffer.markAsAcked(fCpacket);
+        windowBuffer.ackPacketReceived(fCpacket);
     }
 
     @Override
@@ -170,7 +168,7 @@ public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
     public static void main(String argv[]) throws Exception {
 //    FileCopyClient myClient = new FileCopyClient(argv[0], argv[1], argv[2],
 //        argv[3], argv[4]);
-    FileCopyClient myClient = new FileCopyClient("Sven-LAPTOP","datei.pdf","datei.pdf","10","100");
+    FileCopyClient myClient = new FileCopyClient("Bolte","sqlitejdbc-v056.jar","sqlitejdbc-v056.jar.COPY","10","100");
     myClient.runFileCopyClient();
   }
 }

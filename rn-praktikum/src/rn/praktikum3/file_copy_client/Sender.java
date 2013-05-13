@@ -15,12 +15,14 @@ public class Sender extends Thread {
     private int port;
     private String targetAddress;
     private byte[] buffer;
-    private SendBuffer sendBuffer;
+    private WindowBuffer windowBuffer;
+    private FileCopyClient fileCopyClient;
 
-    public Sender(String targetAddress, int port, int packet_maxsize,SendBuffer sendBuffer) {
+    public Sender(String targetAddress, int port, int packet_maxsize,WindowBuffer windowBuffer,FileCopyClient fileCopyClient) {
         this.port = port;
         this.targetAddress = targetAddress;
-        this.sendBuffer = sendBuffer;
+        this.windowBuffer = windowBuffer;
+        this.fileCopyClient = fileCopyClient;
         try {
             socket = new DatagramSocket();
         } catch (SocketException e) {
@@ -33,11 +35,17 @@ public class Sender extends Thread {
     public void run() {
         FCpacket tmp;
         while (!isInterrupted()) {
-            tmp = sendBuffer.getNextPacket();
-            if(tmp != null)
+            tmp = windowBuffer.getNextPacket();
+            if(tmp != null){
+                tmp.setTimestamp(System.nanoTime());
+                fileCopyClient.startTimer(tmp);
                 send(tmp);
-            else
+
+            }
+            else{
+                System.out.println("lol null");
                 break;
+            }
         }
 
     }

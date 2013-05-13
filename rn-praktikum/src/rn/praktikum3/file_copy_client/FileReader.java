@@ -14,13 +14,13 @@ public class FileReader extends Thread {
 
     private int size;
     private String filename;
-    private SendBuffer sendBuffer;
+    private WindowBuffer windowBuffer;
     private long sequenzNumber = FileCopyClient.sequenzStart;
 
-    public FileReader(int size, String filename, SendBuffer sendBuffer) {
+    public FileReader(int size, String filename, WindowBuffer windowBuffer) {
         this.size = size;
         this.filename = filename;
-        this.sendBuffer = sendBuffer;
+        this.windowBuffer = windowBuffer;
     }
 
     public void run() {
@@ -34,7 +34,7 @@ public class FileReader extends Thread {
         int nRead;
         try {
             while ( (nRead=f.read( barray, 0, size )) != -1 ){
-                sendBuffer.putPacket(new FCpacket(sequenzNumber++,barray,nRead));
+                windowBuffer.putPacket(new FCpacket(sequenzNumber++,barray,nRead));
 
             }
         } catch (IOException e) {
