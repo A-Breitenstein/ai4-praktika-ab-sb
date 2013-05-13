@@ -40,11 +40,14 @@ public class ACKReceiver extends Thread {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
         while (!Thread.interrupted()) {
             try {
                 udpReceiver.receive(datagramPacket);
                 paket = new FCpacket(datagramPacket.getData(),datagramPacket.getLength());
-                callbackListner.receivedACK(paket.getSeqNum());
+                paket.setTimestamp(System.nanoTime());
+                callbackListner.receivedACK(paket);
 
             } catch (IOException e) {
                 e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
@@ -53,7 +56,7 @@ public class ACKReceiver extends Thread {
     }
 
     public interface ACKListener{
-        void receivedACK(long seqNum);
+        void receivedACK(FCpacket fCpacket);
         void ACK_0_received();
         void rdy_for_ack_0();
     }

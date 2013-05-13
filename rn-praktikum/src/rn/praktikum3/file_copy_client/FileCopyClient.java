@@ -8,6 +8,7 @@ package rn.praktikum3.file_copy_client;
 
 import java.io.*;
 import java.net.*;
+import java.util.concurrent.TimeUnit;
 
 public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
 
@@ -40,6 +41,16 @@ public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
   public FileReader fileReader;
   public Sender sender;
   public ACKReceiver ackReceiver;
+    // zaehlt wie viele messungen wir schon haben
+    public long RTT_SampleCount = 0;
+    public long RTT_Accu = 0;
+    // allee RTT_Updater messungen wird timeout neu berechnet
+    public long RTT_Updater = 20;
+    public double RTT_X = 0.5;
+    public double RTT_estimated = timeoutValue;
+    public double RTT_deviation = 0;
+
+
 
     // Constructor
   public FileCopyClient(String serverArg, String sourcePathArg,
@@ -101,8 +112,16 @@ public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
    * Computes the current timeout value (in nanoseconds)
    */
   public void computeTimeoutValue(long sampleRTT) {
-
   // ToDo
+      RTT_Accu+= sampleRTT;
+      RTT_SampleCount++;
+      if(RTT_Accu % RTT_Updater == 0){
+          sampleRTT = (RTT_Accu / RTT_SampleCount);
+          RTT_estimated = (1-RTT_X) * RTT_estimated + RTT_X * sampleRTT;
+          RTT_deviation = (1-RTT_X) * RTT_deviation + RTT_X * Math.abs(sampleRTT-RTT_estimated);
+          timeoutValue = (long)(RTT_estimated + 4*RTT_deviation);
+      }
+
   }
 
 
@@ -131,10 +150,10 @@ public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
   }
 
     @Override
-    public void receivedACK(long seqNum) {
+    public void receivedACK(FCpacket fCpacket) {
         if(TEST_OUTPUT_MODE)
-            System.out.println("Received ACK for: "+seqNum);
-        sendBuffer.markAsAcked(seqNum);
+            System.out.println("Received ACK for: "+fCpacket.getSeqNum());
+        sendBuffer.markAsAcked(fCpacket);
     }
 
     @Override

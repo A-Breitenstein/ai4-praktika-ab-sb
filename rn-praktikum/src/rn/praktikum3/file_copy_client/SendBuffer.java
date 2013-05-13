@@ -55,9 +55,12 @@ public class SendBuffer {
             anzahlZuSendenePakete.acquire();
             lock.acquire();
             if(timeOutQueue.isEmpty()){
-                tmp = sendMap.get(nextSeqNum++);
+                tmp = sendMap.get(nextSeqNum);
+                nextSeqNum+=1;
+                tmp.setTimestamp(System.nanoTime());
             }else{
                 tmp = sendMap.get(timeOutQueue.poll());
+                tmp.setTimestamp(System.nanoTime());
             }
             fileCopyClient.startTimer(tmp);
         } catch (InterruptedException e) {
@@ -73,6 +76,7 @@ public class SendBuffer {
             lock.acquire();
 
                 sendMap.remove(seqNum);
+                timeOutQueue.remove(seqNum);
 
             lock.release();
             freiePlaetze.release();
@@ -81,29 +85,21 @@ public class SendBuffer {
         }
     }
 
-    public void markAsAcked(long seqNum) {
+    public synchronized void markAsAcked(FCpacket ACKPacket) {
         FCpacket tmp = null;
-        try {
-            lock.acquire();
-            tmp = sendMap.get(seqNum);
-            if(tmp != null){
-                tmp.setValidACK(true);
-                fileCopyClient.cancelTimer(sendMap.get(seqNum));
-            }
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        final long seqNum = ACKPacket.getSeqNum();
+
+        tmp = sendMap.get(seqNum);
+        if(tmp != null){
+            tmp.setValidACK(true);
+            fileCopyClient.cancelTimer(sendMap.get(seqNum));
+            fileCopyClient.computeTimeoutValue(ACKPacket.getTimestamp()-tmp.getTimestamp());
         }
-        lock.release();
+
 
         if (seqNum == sendbase) {
-            while(tmp!=null && tmp.isValidACK() && sendbase <= nextSeqNum){
-                try {
-                    lock.acquire();
-                    fileCopyClient.cancelTimer(sendMap.get(sendbase));
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                lock.release();
+            while(tmp!=null && tmp.isValidACK() && sendbase < nextSeqNum){
+                fileCopyClient.cancelTimer(sendMap.get(sendbase));
                 removePacket(sendbase);
                 sendbase+=1;
                 tmp = sendMap.get(sendbase);
@@ -115,7 +111,8 @@ public class SendBuffer {
     public void addSeqNumToTimeOutQueue(long seqNum) {
         try {
             lock.acquire();
-            if(!sendMap.get(seqNum).isValidACK()){
+            FCpacket tmp = sendMap.get(seqNum);
+            if(tmp != null && !tmp.isValidACK()){
                 System.out.println("packet "+seqNum+" added to Timeout queue");
                 timeOutQueue.add(seqNum);
                 anzahlZuSendenePakete.release();
