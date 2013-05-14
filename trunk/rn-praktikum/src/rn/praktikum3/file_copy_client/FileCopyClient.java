@@ -7,6 +7,7 @@ package rn.praktikum3.file_copy_client;
  */
 
 import java.io.*;
+import java.util.concurrent.TimeUnit;
 
 public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
 
@@ -43,7 +44,7 @@ public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
     public long RTT_SampleCount = 0;
     public long RTT_Accu = 0;
     // allee RTT_Updater messungen wird timeout neu berechnet
-    public long RTT_Updater = 20;
+    public long RTT_Updater = 1;
     public double RTT_X = 0.1;
     public double RTT_estimated = timeoutValue;
     public double RTT_deviation = 0;
@@ -168,7 +169,7 @@ public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
     public static void main(String argv[]) throws Exception {
 //    FileCopyClient myClient = new FileCopyClient(argv[0], argv[1], argv[2],
 //        argv[3], argv[4]);
-    FileCopyClient myClient = new FileCopyClient("Bolte","sqlitejdbc-v056.jar","sqlitejdbc-v056.jar.COPY","10","100");
+    FileCopyClient myClient = new FileCopyClient("Janeway","sqlitejdbc-v056.jar","sqlitejdbc-v056.jar.COPY","10","100");
     myClient.runFileCopyClient();
   }
 }

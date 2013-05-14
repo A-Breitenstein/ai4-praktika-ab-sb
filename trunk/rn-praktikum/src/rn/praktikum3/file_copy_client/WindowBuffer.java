@@ -4,7 +4,9 @@ import java.util.ArrayDeque;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Queue;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Semaphore;
+import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * Created with IntelliJ IDEA.
@@ -20,40 +22,48 @@ public class WindowBuffer {
     private long sendBaseP1;
 
     private FileCopyClient fileCopyClient;
-    private Map<Long, FCpacket> windowMap;
+//    private Map<Long, FCpacket> windowMap;
+    private ConcurrentHashMap<String,FCpacket> windowMap;
 
     private Queue<Long> timeOutQueue;
     private Semaphore freiePlaetze;
     private Semaphore belegtePlaetze;
     private Semaphore zuSendenePakete;
     private Semaphore timeOutQueueLock;
-    private Semaphore windowBufferLock;
+    private Semaphore windowBufferLOck;
+    private final Semaphore versendetePakte;
 
     public WindowBuffer(FileCopyClient fileCopyClient, int windowSize) {
         this.fileCopyClient = fileCopyClient;
         this.windowSize = windowSize;
 
-        windowMap = new HashMap<Long, FCpacket>();
+        windowMap = new ConcurrentHashMap<String, FCpacket>();
         timeOutQueue = new ArrayDeque<Long>();
 
-        freiePlaetze = new Semaphore(windowSize);
+        freiePlaetze = new Semaphore(windowSize,true);
         belegtePlaetze = new Semaphore(0);
-        zuSendenePakete = new Semaphore(0);
-        timeOutQueueLock = new Semaphore(1,true);
-        windowBufferLock = new Semaphore(1,true);
 
+        zuSendenePakete = new Semaphore(0,true);
+        versendetePakte = new Semaphore(0,true);
+
+
+        timeOutQueueLock = new Semaphore(1,true);
+        windowBufferLOck = new Semaphore(1,true);
+        
     }
 
     public void putPacket(FCpacket fCpacket) {
         try {
             freiePlaetze.acquire();
-                windowBufferLock.acquire();
-                    windowMap.put(fCpacket.getSeqNum(), fCpacket);
-                    if (windowMap.size() > windowSize)
-                        System.out.println("whyyyyy map whyyyy");
-                zuSendenePakete.release();
-                windowBufferLock.release();
-//            belegtePlaetze.release();
+                windowBufferLOck.acquire();
+                if(FileCopyClient.TEST_OUTPUT_MODE)
+                    fileCopyClient.testOut("Packet mit "+fCpacket.getSeqNum()+" zum buffer hinzugefügt");
+                    windowMap.put(String.valueOf(fCpacket.getSeqNum()), fCpacket);
+            if (zuSendenePakete.availablePermits() > windowSize)
+                zuSendenePakete.acquire(zuSendenePakete.availablePermits() - windowSize-1);
+            belegtePlaetze.release();
+            windowBufferLOck.release();
+            zuSendenePakete.release();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -63,78 +73,99 @@ public class WindowBuffer {
         FCpacket packet = null;
         try {
             zuSendenePakete.acquire();
-                timeOutQueueLock.acquire();
-                windowBufferLock.acquire();
-            if(!timeOutQueue.isEmpty())
-                packet = windowMap.get(timeOutQueue.poll());
-             else
-                packet = windowMap.get(nextSeqNum++);
 
-            if (packet == null) {
-                System.out.println("whyyyyyyy");
+            windowBufferLOck.acquire();
+                timeOutQueueLock.acquire();
+            if (!timeOutQueue.isEmpty()) {
+                long l = timeOutQueue.poll();
+                packet = windowMap.get(String.valueOf(l));
+
+                if (packet == null) {
+                    System.out.println("whyyyyyyy");
+                }
+            }else{
+                packet = windowMap.get(new Long(nextSeqNum).toString());
+                if (packet == null) {
+                    packet = windowMap.get(String.valueOf(nextSeqNum));
+                    System.out.println("whyyyyyyy");
+                }
+                nextSeqNum++;
             }
-                windowBufferLock.release();
-                timeOutQueueLock.release();
+
+            timeOutQueueLock.release();
+            windowBufferLOck.release();
+
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
-
+        if(FileCopyClient.TEST_OUTPUT_MODE)
+            fileCopyClient.testOut("Packet mit "+(nextSeqNum-1)+" wurde abgeschickt");
+        
         return packet;
 
 
     }
     public void ackPacketReceived(FCpacket ackPacket){
-        FCpacket packet = windowMap.get(ackPacket.getSeqNum());
-        if (packet != null) {
-            fileCopyClient.cancelTimer(packet);
-            fileCopyClient.computeTimeoutValue(ackPacket.getTimestamp() - packet.getTimestamp());
-            packet.setValidACK(true);
-            if (ackPacket.getSeqNum() == sendBase) {
-                int removes = 0;
-                try {
-                    windowBufferLock.acquire();
-                    while (packet != null &&packet.isValidACK()) {
-
-    //                        belegtePlaetze.acquire();
-                            timeOutQueueLock.acquire();
-                            timeOutQueue.remove(sendBase);
-                            timeOutQueueLock.release();
-
-                                int before = windowMap.size();
-                                windowMap.remove(sendBase);
-                                removes++;
-
-                                if(before == windowMap.size())
-                                    System.out.println("wooot");
-                                packet = windowMap.get(++sendBase);
-
-
-
-
-                    }
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                windowBufferLock.release();
-                freiePlaetze.release(removes);
-            }
-        }
-
-
-
-    }
-    public void timeOut(long seqNum) {
         try {
-            timeOutQueueLock.acquire();
-            if(!timeOutQueue.contains(seqNum)){
-                timeOutQueue.add(seqNum);
-                zuSendenePakete.release();
-            }
-            timeOutQueueLock.release();
+            windowBufferLOck.acquire();
+            FCpacket packet = windowMap.get(String.valueOf(ackPacket.getSeqNum()));
+            int removeCounter = 0;
+            if (packet != null) {
+                fileCopyClient.cancelTimer(packet);
+                fileCopyClient.computeTimeoutValue(ackPacket.getTimestamp() - packet.getTimestamp());
+                packet.setValidACK(true);
 
+                if (packet.getSeqNum() == sendBase) {
+                    removeCounter = 0;
+                    timeOutQueueLock.acquire();
+                    while (packet != null && packet.isValidACK()) {
+                        belegtePlaetze.acquire();
+                        timeOutQueue.remove(sendBase);
+                        windowMap.remove(String.valueOf(sendBase));
+                        removeCounter++;
+                        sendBase++;
+                        packet = windowMap.get(String.valueOf(sendBase));
+                        if (packet == null) {
+                            System.out.println("SendBase: " + sendBase + ", nextSeqNum: " + nextSeqNum);
+                        }
+                    }
+                    timeOutQueueLock.release();
+                }
+
+            }
+
+            windowBufferLOck.release();
+            freiePlaetze.release(removeCounter);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+    }
+    public void timeOut(long seqNum) {
+            try {
+                windowBufferLOck.acquire();
+                try {
+                    timeOutQueueLock.acquire();
+                    FCpacket fCpacket = windowMap.get(String.valueOf(seqNum));
+                    if (fCpacket != null && !fCpacket.isValidACK() && !timeOutQueue.contains(seqNum)) {
+                        timeOutQueue.add(new Long(seqNum));
+                        System.out.println("timeout triggert for " + seqNum);
+                        if (zuSendenePakete.availablePermits() > windowSize)
+                            zuSendenePakete.acquire(zuSendenePakete.availablePermits() - windowSize-1);
+                        zuSendenePakete.release();
+
+                    }
+                    timeOutQueueLock.release();
+                } catch (InterruptedException iE) {
+                    iE.printStackTrace();
+                    timeOutQueueLock.release();
+                }
+                windowBufferLOck.release();
+
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+                windowBufferLOck.release();
+            }
+
     }
 }
