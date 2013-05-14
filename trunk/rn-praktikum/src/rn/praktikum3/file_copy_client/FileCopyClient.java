@@ -169,7 +169,7 @@ public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
     public static void main(String argv[]) throws Exception {
 //    FileCopyClient myClient = new FileCopyClient(argv[0], argv[1], argv[2],
 //        argv[3], argv[4]);
-    FileCopyClient myClient = new FileCopyClient("Janeway","sqlitejdbc-v056.jar","sqlitejdbc-v056.jar.COPY","10","100");
+    FileCopyClient myClient = new FileCopyClient("Sven-LAPTOP","sqlitejdbc-v056.jar","sqlitejdbc-v056.jar.COPY","10","100");
     myClient.runFileCopyClient();
   }
 }
