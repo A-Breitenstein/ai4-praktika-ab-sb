@@ -1,32 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="79e6bdfb-a409-42b3-bad2-8919505c0351" name="Default" comment="rnp: praktikum1 wt">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/rn/praktikum3/file_copy_client" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/rn/praktikum3/file_copy_server" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/ACKReceiver.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/FC_Timer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/FCpacket.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/FileCopyClient.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/rn/praktikum3/file_copy_server/FileCopyServer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/FileReader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/SendBuffer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/Sender.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Sven\IdeaProjects\rn-praktikum\lib\logback-classic-1.0.11-sources.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Sven\IdeaProjects\rn-praktikum\lib\logback-classic-1.0.11.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Sven\IdeaProjects\rn-praktikum\lib\logback-core-1.0.11-sources.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Sven\IdeaProjects\rn-praktikum\lib\logback-core-1.0.11.jar" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Sven\IdeaProjects\rn-praktikum\lib\slf4j-api-1.7.5.jar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rn/praktikum2/client/ChatClient.java" afterPath="$PROJECT_DIR$/src/rn/praktikum2/client/ChatClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rn/praktikum2/server/ChatDispatcher.java" afterPath="$PROJECT_DIR$/src/rn/praktikum2/server/ChatDispatcher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rn-praktikum.iml" afterPath="$PROJECT_DIR$/rn-praktikum.iml" />
+    <list default="true" readonly="true" id="79e6bdfb-a409-42b3-bad2-8919505c0351" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/FileCopyClient.java" afterPath="$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/FileCopyClient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/SendBuffer.java" afterPath="$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/SendBuffer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/WindowBuffer.java" afterPath="$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/WindowBuffer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rn-praktikum.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/" />
-    <file path="/Dummy.txt" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1368390238003" ignored="false" />
+    <file path="/Dummy.txt" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1368564334229" ignored="false" />
     <file path="/ServerState.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365080197534" ignored="false" />
     <file path="/Messages.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1364595863755" ignored="false" />
     <file path="/User.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1365094531190" ignored="false" />
@@ -62,12 +46,13 @@
     <file path="$PROJECT_DIR$/../haw_android_app/res/layout/stisys_mailinglists_form_fragment.xml" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1366397546010" ignored="false" />
     <file path="$PROJECT_DIR$/../haw_android_app/src/de/hawhamburg/informatik/HAW_APP/ActivityZumTesten.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1366397546010" ignored="false" />
     <file path="/ChatServer.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1366834195535" ignored="false" />
-    <file path="/FileCopyClient.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1368389673310" ignored="false" />
+    <file path="/FileCopyClient.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1368563045025" ignored="false" />
     <file path="/ACKListener.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1368367416803" ignored="false" />
     <file path="/ACKReceiver.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1368367402540" ignored="false" />
-    <file path="/SendBuffer.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1368386963407" ignored="false" />
+    <file path="/SendBuffer.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1368563768331" ignored="false" />
     <file path="/FileReader.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1368388131866" ignored="false" />
     <file path="/Sender.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1368389084088" ignored="false" />
+    <file path="/WindowBuffer.java" changelist="79e6bdfb-a409-42b3-bad2-8919505c0351" time="1368564292027" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +72,6 @@
     <sortChildren value="false" />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -95,7 +79,6 @@
         <option name="ENABLED" value="false" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
         <option name="SUSPEND_POLICY" value="SuspendAll" />
         <option name="SUSPEND" value="true" />
         <option name="COUNT_FILTER_ENABLED" value="false" />
@@ -112,7 +95,6 @@
         <option name="ENABLED" value="false" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
         <option name="SUSPEND_POLICY" value="SuspendAll" />
         <option name="SUSPEND" value="true" />
         <option name="COUNT_FILTER_ENABLED" value="false" />
@@ -125,6 +107,7 @@
       </breakpoint>
     </breakpoint_any>
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -137,10 +120,8 @@
       <file leaf-file-name="ACKReceiver.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/ACKReceiver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="16" selection-start="1202" selection-end="1202" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="47" column="16" selection-start="1533" selection-end="1533" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -157,10 +138,8 @@
       <file leaf-file-name="Sender.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/Sender.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="36" selection-start="779" selection-end="779" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="40" column="16" selection-start="1185" selection-end="1216" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -177,18 +156,7 @@
       <file leaf-file-name="SendBuffer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/SendBuffer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="16" selection-start="2286" selection-end="2286" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChatDispatcher.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/rn/praktikum2/server/ChatDispatcher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="19" selection-start="529" selection-end="529" vertical-scroll-proportion="0.0">
+            <state line="22" column="0" selection-start="635" selection-end="635" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -197,10 +165,8 @@
       <file leaf-file-name="FileCopyClient.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/FileCopyClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="18" selection-start="2527" selection-end="2527" vertical-scroll-proportion="0.76">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="103" column="23" selection-start="2783" selection-end="2783" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -208,10 +174,8 @@
       <file leaf-file-name="FileReader.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/FileReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="73" selection-start="464" selection-end="464" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="38" column="68" selection-start="1105" selection-end="1105" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -225,10 +189,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileCopyServer.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="WindowBuffer.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/WindowBuffer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="152" column="23" selection-start="5453" selection-end="5453" vertical-scroll-proportion="1.8734491">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4431#4441#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileCopyServer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/rn/praktikum3/file_copy_server/FileCopyServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="25" selection-start="135" selection-end="135" vertical-scroll-proportion="0.3430127">
+            <state line="45" column="10" selection-start="1192" selection-end="1192" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -244,7 +220,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/rn/praktikum2/client/ServerConnection.java" />
         <option value="$PROJECT_DIR$/src/rn/praktikum2/client/UdpSender.java" />
         <option value="$PROJECT_DIR$/src/rn/praktikum2/server/ChatDispatcher.java" />
         <option value="$PROJECT_DIR$/src/rn/praktikum2/client/ClientView.java" />
@@ -258,16 +233,17 @@
         <option value="$PROJECT_DIR$/src/rn/praktikum2/client/ChatClient.java" />
         <option value="$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/Sender.java" />
         <option value="$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/FileReader.java" />
-        <option value="$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/SendBuffer.java" />
         <option value="$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/FileCopyClient.java" />
+        <option value="$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/SendBuffer.java" />
+        <option value="$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/WindowBuffer.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-6" />
+    <option name="y" value="-6" />
+    <option name="width" value="1292" />
+    <option name="height" value="1006" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -409,7 +385,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -561,12 +536,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rn-praktikum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rn-praktikum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -584,14 +574,14 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FullScreen" value="false" />
-    <property name="Repository.Attach.Sources" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="Repository.Attach.Sources" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="Downloaded.Files.Path" value="C:\Users\Sven\IdeaProjects\rn-praktikum\lib\" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="Downloaded.Files.Path" value="C:\Users\Sven\IdeaProjects\rn-praktikum\lib\" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -600,6 +590,120 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="rn.praktikum3.file_copy_server" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree">
+    <UpdateInfo date="Moments ago" ActionInfo="_Update">
+      <UpdatedFiles>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated from server" />
+          <option name="myStatusName" value="Changed on server" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CHANGED_ON_SERVER" />
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Updated" />
+            <option name="myStatusName" value="Changed" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="UPDATED" />
+            <PATH vcs="svn" revision="65">E:\Projekte\IntelliJ\AI4\rn-praktikum\src\rn\praktikum3\file_copy_client\WindowBuffer.java</PATH>
+            <PATH vcs="svn" revision="65">E:\Projekte\IntelliJ\AI4\rn-praktikum\src\rn\praktikum3\file_copy_client\ACKReceiver.java</PATH>
+            <PATH vcs="svn" revision="65">E:\Projekte\IntelliJ\AI4\rn-praktikum\src\rn\praktikum3\file_copy_client\FileCopyClient.java</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Created" />
+            <option name="myStatusName" value="Created" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="CREATED" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Deleted" />
+            <option name="myStatusName" value="Deleted" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="true" />
+            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Restored" />
+            <option name="myStatusName" value="Will be restored" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="RESTORED" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Modified" />
+          <option name="myStatusName" value="Modified" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MODIFIED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Skipped" />
+          <option name="myStatusName" value="Skipped" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SKIPPED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with conflicts" />
+          <option name="myStatusName" value="Will be merged with conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_CONFLICTS" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with tree conflicts" />
+          <option name="myStatusName" value="Merged with tree conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with property conflicts" />
+          <option name="myStatusName" value="Will be merged with property conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged" />
+          <option name="myStatusName" value="Will be merged" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Not in repository" />
+          <option name="myStatusName" value="Not in repository" />
+          <option name="mySupportsDeletion" value="true" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UNKNOWN" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally added" />
+          <option name="myStatusName" value="Locally added" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_ADDED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally removed" />
+          <option name="myStatusName" value="Locally removed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_REMOVED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Switched" />
+          <option name="myStatusName" value="Switched" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SWITCHED" />
+        </FILE-GROUP>
+      </UpdatedFiles>
+    </UpdateInfo>
   </component>
   <component name="RunManager" selected="Application.FileCopyClient">
     <configuration default="false" name="ChatDispatcher" type="Application" factoryName="Application" temporary="true">
@@ -726,19 +830,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -765,6 +856,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -830,7 +934,7 @@
       <AnalysisUIOptions />
     </option>
   </component>
-  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="true" SSL_PROTOCOLS="all">
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="true">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
     <option name="mySSHConnectionTimeout" value="30000" />
@@ -840,6 +944,7 @@
     <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
     <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
     <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="DETECT_NESTED_COPIES" value="true" />
     <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
     <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
     <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
@@ -853,20 +958,20 @@
     <option name="myMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\Users\Sven\IdeaProjects\rn-praktikum" />
-          <option name="myCopyRoot" value="C:\Users\Sven\IdeaProjects\rn-praktikum" />
+          <option name="myVcsRoot" value="E:\Projekte\IntelliJ\AI4\rn-praktikum" />
+          <option name="myCopyRoot" value="E:\Projekte\IntelliJ\AI4\rn-praktikum" />
         </SvnCopyRootSimple>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\Users\Sven\IdeaProjects\rn-praktikum\.idea" />
-          <option name="myCopyRoot" value="C:\Users\Sven\IdeaProjects\rn-praktikum\.idea" />
+          <option name="myVcsRoot" value="E:\Projekte\IntelliJ\AI4\rn-praktikum\.idea" />
+          <option name="myCopyRoot" value="E:\Projekte\IntelliJ\AI4\rn-praktikum\.idea" />
         </SvnCopyRootSimple>
       </list>
     </option>
     <option name="myMoreRealMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\Users\Sven\IdeaProjects\rn-praktikum" />
-          <option name="myCopyRoot" value="C:\Users\Sven\IdeaProjects\rn-praktikum" />
+          <option name="myVcsRoot" value="E:\Projekte\IntelliJ\AI4\rn-praktikum" />
+          <option name="myCopyRoot" value="E:\Projekte\IntelliJ\AI4\rn-praktikum" />
         </SvnCopyRootSimple>
       </list>
     </option>
@@ -953,33 +1058,34 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-6" y="-6" width="1292" height="1006" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44607842" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32887402" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" x="473" y="412" width="562" height="251" />
+      <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44548652" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32865497" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282532" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893497" sideWeight="0.38351256" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5797101" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40802675" sideWeight="0.05709712" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22853957" sideWeight="0.49786553" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37012264" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2274326" sideWeight="0.49786553" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24226254" sideWeight="0.6764361" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22838847" sideWeight="0.67112595" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6198439" sideWeight="0.93916756" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32887402" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22771475" sideWeight="0.6717468" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6198439" sideWeight="0.93916756" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37012264" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1009,7 +1115,7 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
-    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
+    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
     <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
     <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
@@ -1019,13 +1125,9 @@
     <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
     <option name="LIMIT_HISTORY" value="true" />
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
-    <option name="UPDATE_FILTER_SCOPE_NAME" />
-    <option name="USE_COMMIT_MESSAGE_MARGIN" value="false" />
-    <option name="COMMIT_MESSAGE_MARGIN_SIZE" value="72" />
-    <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="rn praktikum aufgabe 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="rnp: praktikum 3 locks? wtf xD" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1036,7 +1138,6 @@
     <option name="ACTIVE_VCS_NAME" />
     <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
-    <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="rnp:simple structure" />
@@ -1054,6 +1155,7 @@
     <MESSAGE value="rnp: praktikum1 kann sein das du deine users.ser löschen musst damit es funzt, da sich der userDesciptor ADT geändert hat und du musst dann mit hand einen user erstellen" />
     <MESSAGE value="rnp2: Client struktur" />
     <MESSAGE value="rn praktikum aufgabe 3" />
+    <MESSAGE value="rnp: praktikum 3 locks? wtf xD" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1091,13 +1193,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_17/src.zip!/java/util/ArrayDeque.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="351" column="19" selection-start="11405" selection-end="11405" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/rn/praktikum2/client/ChatClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="21" selection-start="906" selection-end="906" vertical-scroll-proportion="0.0">
@@ -1107,23 +1202,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rn/praktikum2/server/ChatDispatcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="19" selection-start="529" selection-end="529" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/ACKReceiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="16" selection-start="1202" selection-end="1202" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/FC_Timer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="19" selection-start="1212" selection-end="1212" vertical-scroll-proportion="0.0">
+        <state line="21" column="19" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1135,12 +1214,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/FileReader.java">
+    <entry file="file://$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/FileCopyClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="73" selection-start="464" selection-end="464" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="103" column="23" selection-start="2783" selection-end="2783" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/ACKReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="16" selection-start="1533" selection-end="1533" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/FC_Timer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="19" selection-start="1212" selection-end="1212" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1151,37 +1242,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/SendBuffer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="16" selection-start="2286" selection-end="2286" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/Sender.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="36" selection-start="779" selection-end="779" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/FileCopyClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="18" selection-start="2527" selection-end="2527" vertical-scroll-proportion="0.76">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="40" column="16" selection-start="1185" selection-end="1216" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/rn/praktikum3/file_copy_server/FileCopyServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="25" selection-start="135" selection-end="135" vertical-scroll-proportion="0.3430127">
+        <state line="45" column="10" selection-start="1192" selection-end="1192" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/SendBuffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="635" selection-end="635" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/FileReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="68" selection-start="1105" selection-end="1105" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rn/praktikum3/file_copy_client/WindowBuffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="152" column="23" selection-start="5453" selection-end="5453" vertical-scroll-proportion="1.8734491">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4431#4441#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
