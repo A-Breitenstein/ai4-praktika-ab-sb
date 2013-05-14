@@ -49,14 +49,9 @@ public class ACKReceiver extends Thread {
         while (!Thread.interrupted()) {
             try {
                 udpReceiver.receive(datagramPacket);
-                final FCpacket paket = new FCpacket(datagramPacket.getData(),datagramPacket.getLength());
+                FCpacket paket = new FCpacket(datagramPacket.getData(),datagramPacket.getLength());
                 paket.setTimestamp(System.nanoTime());
-                threadPool.execute(new Runnable() {
-                    @Override
-                    public void run() {
-                        callbackListner.receivedACK(paket);
-                    }
-                });
+                threadPool.execute(new ACKRunnable(paket));
 
             } catch (IOException e) {
                 e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
@@ -68,6 +63,20 @@ public class ACKReceiver extends Thread {
         void receivedACK(FCpacket fCpacket);
         void ACK_0_received();
         void rdy_for_ack_0();
+    }
+
+    public class ACKRunnable implements Runnable {
+        final FCpacket packet_reference;
+
+        public ACKRunnable(FCpacket packet_reference) {
+            this.packet_reference = packet_reference;
+        }
+
+        @Override
+        public void run() {
+            callbackListner.receivedACK(packet_reference);
+
+        }
     }
 
 }
