@@ -6,8 +6,7 @@ package rn.praktikum3.file_copy_client;
  Autoren:
  */
 
-import java.io.*;
-import java.util.concurrent.TimeUnit;
+import java.io.UnsupportedEncodingException;
 
 public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
 
@@ -103,6 +102,11 @@ public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
   public void timeoutTask(long seqNum) {
   // ToDo
       windowBuffer.timeOut(seqNum);
+//      if (!windowsBuffer.isACKed(seqNum)) {
+//          FCpacket fCpacket = windowBuffer.getTimedOutPackage(seqNum);
+//          fileCopyClient.startTimer(fCpacket);
+//          Sender.send(fCpacket);
+//      }
   }
 
 
