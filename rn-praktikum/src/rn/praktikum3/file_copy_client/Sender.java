@@ -43,7 +43,6 @@ public class Sender extends Thread {
 
             }
             else{
-                System.out.println("lol null");
                 break;
             }
         }
@@ -58,7 +57,7 @@ public class Sender extends Thread {
         } catch (UnknownHostException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         } catch (IOException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            interrupt();
         }
     }
 }

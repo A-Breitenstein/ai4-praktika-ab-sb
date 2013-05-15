@@ -6,6 +6,7 @@ import java.net.DatagramSocket;
 import java.net.SocketException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created with IntelliJ IDEA.
@@ -27,7 +28,9 @@ public class ACKReceiver extends Thread {
         datagramPacket = new DatagramPacket(dataBuffer,dataBuffer.length);
         threadPool = Executors.newCachedThreadPool();
     }
-
+    public void closeSocket() {
+        udpReceiver.close();
+    }
     public void run() {
         try {
             FCpacket paket;
@@ -46,17 +49,17 @@ public class ACKReceiver extends Thread {
         }
 
 
-        while (!Thread.interrupted()) {
+        while (!udpReceiver.isClosed()) {
             try {
                 udpReceiver.receive(datagramPacket);
-                FCpacket paket = new FCpacket(datagramPacket.getData(),datagramPacket.getLength());
+                FCpacket paket = new FCpacket(datagramPacket.getData(), datagramPacket.getLength());
                 paket.setTimestamp(System.nanoTime());
                 threadPool.execute(new ACKRunnable(paket));
 
             } catch (IOException e) {
-                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             }
         }
+        threadPool.shutdown();
     }
 
     public interface ACKListener{

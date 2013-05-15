@@ -34,11 +34,10 @@ public class FileReader extends Thread {
         int nRead;
         try {
             while ( (nRead=f.read( barray, 0, size )) != -1 ){
-                System.out.println("reader ich laufe "+sequenzNumber);
                 windowBuffer.putPacket(new FCpacket(sequenzNumber++,barray,nRead));
 
             }
-            System.out.println("reader ich ende "+sequenzNumber);
+            windowBuffer.fileEndReached(sequenzNumber-1);
         } catch (IOException e) {
             e.printStackTrace();
         }
