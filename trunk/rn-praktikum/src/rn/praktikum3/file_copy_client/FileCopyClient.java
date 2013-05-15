@@ -6,15 +6,17 @@ package rn.praktikum3.file_copy_client;
  Autoren:
  */
 
-import java.io.UnsupportedEncodingException;
+import java.io.*;
+import java.util.concurrent.TimeUnit;
 
 public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
 
   // -------- Constants
-  public final static boolean TEST_OUTPUT_MODE = true;
+  public final static boolean TEST_OUTPUT_MODE = false;
 
   public final int SERVER_PORT = 23000;
 
+//  public final int UDP_PACKET_SIZE = 1024;
   public final int UDP_PACKET_SIZE = 1024;
 
   // -------- Public parms
@@ -43,11 +45,16 @@ public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
     public long RTT_SampleCount = 0;
     public long RTT_Accu = 0;
     // allee RTT_Updater messungen wird timeout neu berechnet
-    public long RTT_Updater = 1;
-    public double RTT_X = 0.1;
+    public long RTT_Updater = 150;      // 150
+    public double RTT_X = 0.1;           //0.1
     public double RTT_estimated = timeoutValue;
     public double RTT_deviation = 0;
 
+    public static long lostPackets = 0;
+    public static long startTime = 0;
+    public static long endTime = 0;
+    public static long timeoutCount = 0;
+    public Thread mainThread;
 
 
     // Constructor
@@ -64,16 +71,25 @@ public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
 
   public void runFileCopyClient() {
 
+      mainThread = Thread.currentThread();
       // ToDo!!
       fileReader = new FileReader(UDP_PACKET_SIZE-8,sourcePath, windowBuffer);
       sender = new Sender(servername,SERVER_PORT,UDP_PACKET_SIZE, windowBuffer,this);
       ackReceiver = new ACKReceiver(SERVER_PORT+1,UDP_PACKET_SIZE,this);
+      startTime = System.currentTimeMillis();
       ackReceiver.start();
       try {
           ackReceiver.join();
       } catch (InterruptedException e) {
-          e.printStackTrace();
+        endTime = System.currentTimeMillis();
       }
+      ackReceiver.closeSocket();
+      sender.interrupt();
+
+
+      System.out.println(TimeUnit.MILLISECONDS.toSeconds(endTime - startTime) +"s   ("+(endTime - startTime)+" ms)");
+      System.out.println("windowsize: "+windowSize+"  errorRate: "+serverErrorRate);
+      System.out.println("lostpackets: "+lostPackets+"  timeouts: "+timeoutCount+" sampleRTT: "+(RTT_Accu/RTT_SampleCount)+" ns");
   }
 
   /**
@@ -101,12 +117,8 @@ public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
    */
   public void timeoutTask(long seqNum) {
   // ToDo
+      timeoutCount++;
       windowBuffer.timeOut(seqNum);
-//      if (!windowsBuffer.isACKed(seqNum)) {
-//          FCpacket fCpacket = windowBuffer.getTimedOutPackage(seqNum);
-//          fileCopyClient.startTimer(fCpacket);
-//          Sender.send(fCpacket);
-//      }
   }
 
 
@@ -123,6 +135,8 @@ public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
           RTT_estimated = (1-RTT_X) * RTT_estimated + RTT_X * sampleRTT;
           RTT_deviation = (1-RTT_X) * RTT_deviation + RTT_X * Math.abs(sampleRTT-RTT_estimated);
           timeoutValue = (long)(RTT_estimated + 4*RTT_deviation);
+          RTT_Accu = 0;
+          RTT_SampleCount =0;
       }
 
   }
@@ -157,7 +171,11 @@ public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
         if(TEST_OUTPUT_MODE)
             System.out.println("Received ACK for: "+fCpacket.getSeqNum());
         windowBuffer.ackPacketReceived(fCpacket);
+        if (windowBuffer.isEmpty()) {
+            mainThread.interrupt();
+        }
     }
+
 
     @Override
     public void ACK_0_received() {
@@ -173,7 +191,7 @@ public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
     public static void main(String argv[]) throws Exception {
 //    FileCopyClient myClient = new FileCopyClient(argv[0], argv[1], argv[2],
 //        argv[3], argv[4]);
-    FileCopyClient myClient = new FileCopyClient("46.59.227.41","sqlitejdbc-v056.jar","sqlitejdbc-v056.jar.COPY","10","100");
+    FileCopyClient myClient = new FileCopyClient("Charly","RN_SoSe13_Kap2.pdf","RN_SoSe13_Kap2.pdf","8","10000");
     myClient.runFileCopyClient();
   }
 }
