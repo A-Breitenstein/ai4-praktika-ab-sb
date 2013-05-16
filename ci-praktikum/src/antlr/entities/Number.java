@@ -7,14 +7,17 @@ package antlr.entities;
  */
 public class Number {
 
+    private String tokenId;
+
     private String number;
 
-    private Number(String number) {
+    private Number(String tokenId, String number) {
+        this.tokenId = tokenId;
         this.number = number;
     }
 
-    public static Number create(String number) {
-        return new Number(number);
+    public static Number create(String tokenId, String number) {
+        return new Number(tokenId, number);
     }
 
     public String getNumber() {
@@ -23,5 +26,13 @@ public class Number {
 
     public void setNumber(String number) {
         this.number = number;
+    }
+
+    public String getTokenId() {
+        return tokenId;
+    }
+
+    public void setTokenId(String tokenId) {
+        this.tokenId = tokenId;
     }
 }
