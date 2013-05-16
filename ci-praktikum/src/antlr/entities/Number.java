@@ -20,6 +20,11 @@ public class Number {
         return new Number(tokenId, number);
     }
 
+    @Override
+    public String toString() {
+        return number;
+    }
+
     public String getNumber() {
         return number;
     }
