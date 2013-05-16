@@ -22,8 +22,25 @@ public class Operation {
         this.calcsym = calcsym;
     }
 
+    private Operation() {
+    }
+
     public static Operation create(Number firstOperand, Number secondOperand, Number result, Calcsym calcsym) {
         return new Operation(firstOperand, secondOperand, result, calcsym);
+    }
+
+    public static Operation create() {
+        return new Operation();
+    }
+
+    @Override
+    public String toString() {
+        return "Operation{" +
+                "firstOperand=" + firstOperand +
+                ", secondOperand=" + secondOperand +
+                ", result=" + result +
+                ", calcsym=" + calcsym +
+                '}';
     }
 
     public Number getFirstOperand() {
