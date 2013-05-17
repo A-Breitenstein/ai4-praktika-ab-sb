@@ -1,6 +1,8 @@
 package antlr.srcfiles;
 
+import antlr.constraint.AlphametricSample;
 import antlr.entities.*;
+import antlr.entities.Number;
 import org.antlr.runtime.ANTLRFileStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
@@ -51,13 +53,14 @@ public class __Test__ {
 //                    System.out.print("\n");
 
                     switch (zahlCounter) {
-                        case 0: operation.setFirstOperand(antlr.entities.Number.create("",builder.toString()));
+                        case 0: operation.setFirstOperand(Number.create("",builder.toString()));
                             break;
-                        case 1: operation.setSecondOperand(antlr.entities.Number.create("", builder.toString()));
+                        case 1: operation.setSecondOperand(Number.create("", builder.toString()));
                             break;
-                        case 2: operation.setResult(antlr.entities.Number.create("", builder.toString()));
+                        case 2: operation.setResult(Number.create("", builder.toString()));
                             break;
                     }
+                    builder = new StringBuilder();
                     zahlCounter++;
                 }
 
@@ -73,6 +76,7 @@ public class __Test__ {
             for (Operation oper : raetsel) {
                 oper.normalize();
                 System.out.println(oper);
+                new AlphametricSample(oper.getFirstOperand().getNumber(), oper.getSecondOperand().getNumber(), oper.getResult().getNumber()).run();
             }
 
         } catch (RecognitionException e) {

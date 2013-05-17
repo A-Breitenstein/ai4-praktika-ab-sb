@@ -1,15 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" name="Default" comment="" />
+    <list default="true" readonly="true" id="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" name="Default" comment="ci-praktikum: entities">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/antlr/constraint" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/antlr/constraint/AlphametricSample.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/antlr/srcfiles/__Test__.java" afterPath="$PROJECT_DIR$/src/antlr/srcfiles/__Test__.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__Test___input.txt" afterPath="$PROJECT_DIR$/__Test___input.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="ci-praktikum.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/__Test__.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368665724902" ignored="false" />
+    <file path="/__Test__.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368801220511" ignored="false" />
     <file path="/miniPParser.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368660606823" ignored="false" />
     <file path="/zrdz.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368660797227" ignored="false" />
     <file path="/artihmetic_puzzleParser.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368664636523" ignored="false" />
-    <file path="/Test.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368664470062" ignored="false" />
+    <file path="/Test.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368795690589" ignored="false" />
     <file path="/artihmetic_puzzleLexer.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368664594042" ignored="false" />
+    <file path="/Number.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368718972763" ignored="false" />
+    <file path="/a.dummy" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368666935840" ignored="false" />
+    <file path="/Operation.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368718474928" ignored="false" />
+    <file path="/fragment.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368666465354" ignored="false" />
+    <file path="/Calcsym.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368666826669" ignored="false" />
+    <file path="/Dummy.txt" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368796563454" ignored="false" />
+    <file path="$PROJECT_DIR$/../SE2/HAW-ANDROID-APP/haw_android_app/src/de/hawhamburg/informatik/HAW_APP/module/calendar/CalenderModifier.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368716726249" ignored="false" />
+    <file path="$PROJECT_DIR$/../SE2/HAW-ANDROID-APP/haw_android_app/src/de/hawhamburg/informatik/HAW_APP/module/mensa/MensaUpdateService.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368716727158" ignored="false" />
+    <file path="$PROJECT_DIR$/../SE2/HAW-ANDROID-APP/haw_android_app/src/de/hawhamburg/informatik/HAW_APP/module/calendar/entities/Semester.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368717927966" ignored="false" />
+    <file path="/Semester.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368717115825" ignored="false" />
+    <file path="$PROJECT_DIR$/../SE2/HAW-ANDROID-APP/haw_android_app/src/de/hawhamburg/informatik/HAW_APP/module/calendar/entities/SemesterWrapper.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368717165693" ignored="false" />
+    <file path="/SemesterWrapper.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368717164620" ignored="false" />
+    <file path="$PROJECT_DIR$/../SE2/HAW-ANDROID-APP/haw_android_app/src/de/hawhamburg/informatik/HAW_APP/module/calendar/entities/Kurs.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368717249345" ignored="false" />
+    <file path="/Kurs.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368717249345" ignored="false" />
+    <file path="$PROJECT_DIR$/../SE2/HAW-ANDROID-APP/haw_android_app/src/de/hawhamburg/informatik/HAW_APP/module/calendar/entities/Termin.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368717927966" ignored="false" />
+    <file path="/Termin.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368717339312" ignored="false" />
+    <file path="$PROJECT_DIR$/../SE2/HAW-ANDROID-APP/haw_android_app/src/de/hawhamburg/informatik/HAW_APP/module/calendar/entities/Wochentag.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368717927966" ignored="false" />
+    <file path="/Wochentag.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368717361183" ignored="false" />
+    <file path="$PROJECT_DIR$/../SE2/HAW-ANDROID-APP/haw_android_app/src/de/hawhamburg/informatik/HAW_APP/module/calendar/entities/Zeitraum.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368717927966" ignored="false" />
+    <file path="/Zeitraum.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368717528801" ignored="false" />
+    <file path="$PROJECT_DIR$/../SE2/HAW-ANDROID-APP/haw_android_app/src/de/hawhamburg/informatik/HAW_APP/helper/rest/SemesterProvider.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368717927966" ignored="false" />
+    <file path="/SemesterProvider.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368717900510" ignored="false" />
+    <file path="$PROJECT_DIR$/../SE2/HAW-ANDROID-APP/haw_android_app/src/de/hawhamburg/informatik/HAW_APP/module/mensa/entities/MensaUtils.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368796567322" ignored="false" />
+    <file path="/MensaUtils.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368796107105" ignored="false" />
+    <file path="$PROJECT_DIR$/../SE2/HAW-ANDROID-APP/haw_android_app/src/de/hawhamburg/informatik/HAW_APP/helper/rest/RESTmensaProvider.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368795042602" ignored="false" />
+    <file path="/__Test___input.txt" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368801852505" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,13 +130,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="__Test__.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="__Test__.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/antlr/srcfiles/__Test__.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="66" selection-start="861" selection-end="861" vertical-scroll-proportion="0.67153287">
+            <state line="54" column="0" selection-start="1945" selection-end="1945" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#1062#1073#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__Test___input.txt" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/__Test___input.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AlphametricSample.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/antlr/constraint/AlphametricSample.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="160" column="41" selection-start="5770" selection-end="5770" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1037#1062#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Number.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/antlr/entities/Number.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="22" selection-start="464" selection-end="464" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Operation.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/antlr/entities/Operation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="18" selection-start="1176" selection-end="1176" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Calcsym.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/antlr/entities/Calcsym.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="9" selection-start="431" selection-end="431" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -113,9 +193,7 @@
         <entry file="file://$PROJECT_DIR$/src/antlr/srcfiles/artihmetic_puzzleParser.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="68" column="17" selection-start="2551" selection-end="2587" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -124,10 +202,7 @@
         <entry file="file://$PROJECT_DIR$/src/antlr/srcfiles/miniPLexer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="1" column="0" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#112#163#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -136,9 +211,7 @@
         <entry file="file://$PROJECT_DIR$/src/antlr/srcfiles/miniPParser.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="1" column="0" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#209#260#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -147,9 +220,7 @@
         <entry file="file://$PROJECT_DIR$/src/antlr/srcfiles/artihmetic_puzzleLexer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="8" column="35" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#162#186#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -164,10 +235,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/antlr/artihmetic_puzzleParser.java" />
-        <option value="$PROJECT_DIR$/src/antlr/grammars/__Test__.java" />
-        <option value="$PROJECT_DIR$/src/antlr/__Test__.java" />
-        <option value="$PROJECT_DIR$/src/java/zrdz.java" />
         <option value="$PROJECT_DIR$/src/java/Test.java" />
         <option value="$PROJECT_DIR$/src/java/Arithmetic_puzzleLexer.java" />
         <option value="$PROJECT_DIR$/src/java/artihmetic_puzzleLexer.java" />
@@ -177,15 +244,21 @@
         <option value="$PROJECT_DIR$/src/java/__Test__.java" />
         <option value="$PROJECT_DIR$/src/antlr/grammars/srcfiles/__Test__.java" />
         <option value="$PROJECT_DIR$/src/__Test__.java" />
+        <option value="$PROJECT_DIR$/src/antlr/entities/Calcsym.java" />
+        <option value="$PROJECT_DIR$/src/antlr/entities/Operation.java" />
+        <option value="$PROJECT_DIR$/src/antlr/entities/Number.java" />
+        <option value="$PROJECT_DIR$/src/antlr/entities/Test.java" />
+        <option value="$PROJECT_DIR$/src/antlr/constraint/AlphametricSample.java" />
         <option value="$PROJECT_DIR$/src/antlr/srcfiles/__Test__.java" />
+        <option value="$PROJECT_DIR$/__Test___input.txt" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-6" />
-    <option name="y" value="-6" />
-    <option name="width" value="1292" />
-    <option name="height" value="1006" />
+    <option name="x" value="401" />
+    <option name="y" value="61" />
+    <option name="width" value="640" />
+    <option name="height" value="994" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -215,6 +288,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -287,6 +361,50 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="antlr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ci-praktikum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ci-praktikum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="antlr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="constraint" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ci-praktikum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ci-praktikum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -308,7 +426,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -339,6 +456,9 @@
       <recent name="E:\Projekte\IntelliJ\AI4\ci-praktikum\lib" />
       <recent name="E:\Projekte\IntelliJ\AI4\ci-praktikum\src\antlr" />
     </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="antlr.entities" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Projekte\IntelliJ\AI4\ci-praktikum\src\antlr\srcfiles" />
       <recent name="E:\Projekte\IntelliJ\AI4\ci-praktikum\src" />
@@ -346,6 +466,119 @@
       <recent name="E:\Projekte\IntelliJ\AI4\ci-praktikum\src\antlr\grammars\srcfiles" />
       <recent name="E:\Projekte\IntelliJ\AI4\ci-praktikum" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree">
+    <UpdateInfo date="Moments ago" ActionInfo="_Update">
+      <UpdatedFiles>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated from server" />
+          <option name="myStatusName" value="Changed on server" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CHANGED_ON_SERVER" />
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Updated" />
+            <option name="myStatusName" value="Changed" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="UPDATED" />
+            <PATH vcs="svn" revision="77">E:\Projekte\IntelliJ\AI4\ci-praktikum\src\antlr\entities\Operation.java</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Created" />
+            <option name="myStatusName" value="Created" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="CREATED" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Deleted" />
+            <option name="myStatusName" value="Deleted" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="true" />
+            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Restored" />
+            <option name="myStatusName" value="Will be restored" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="RESTORED" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Modified" />
+          <option name="myStatusName" value="Modified" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MODIFIED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Skipped" />
+          <option name="myStatusName" value="Skipped" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SKIPPED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with conflicts" />
+          <option name="myStatusName" value="Will be merged with conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_CONFLICTS" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with tree conflicts" />
+          <option name="myStatusName" value="Merged with tree conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with property conflicts" />
+          <option name="myStatusName" value="Will be merged with property conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged" />
+          <option name="myStatusName" value="Will be merged" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED" />
+          <PATH vcs="svn" revision="77">E:\Projekte\IntelliJ\AI4\ci-praktikum\src\antlr\srcfiles\__Test__.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Not in repository" />
+          <option name="myStatusName" value="Not in repository" />
+          <option name="mySupportsDeletion" value="true" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UNKNOWN" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally added" />
+          <option name="myStatusName" value="Locally added" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_ADDED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally removed" />
+          <option name="myStatusName" value="Locally removed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_REMOVED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Switched" />
+          <option name="myStatusName" value="Switched" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SWITCHED" />
+        </FILE-GROUP>
+      </UpdatedFiles>
+    </UpdateInfo>
   </component>
   <component name="RunManager" selected="Application.__Test__">
     <configuration default="false" name="__Test__" type="Application" factoryName="Application" temporary="true">
@@ -371,7 +604,53 @@
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
       </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Test" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="antlr.entities.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="antlr.entities.Test" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ci-praktikum" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="AlphametricSample" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="antlr.constraint.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="antlr.constraint.AlphametricSample" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ci-praktikum" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -465,13 +744,17 @@
       <patterns />
       <method />
     </configuration>
-    <list size="1">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Application.__Test__" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Test" />
+      <item index="2" class="java.lang.String" itemvalue="Application.AlphametricSample" />
     </list>
     <recent_temporary>
-      <list size="2">
+      <list size="4">
         <item index="0" class="java.lang.String" itemvalue="Application.__Test__" />
-        <item index="1" class="java.lang.String" itemvalue="Application.__Test__" />
+        <item index="1" class="java.lang.String" itemvalue="Application.AlphametricSample" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Test" />
+        <item index="3" class="java.lang.String" itemvalue="Application.__Test__" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -480,6 +763,11 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SliceManager">
+    <option name="analysisUIOptions">
+      <AnalysisUIOptions />
+    </option>
+  </component>
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="true">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
@@ -498,6 +786,29 @@
     <option name="IGNORE_EXTERNALS" value="false" />
     <configuration useDefault="false">C:\Users\Akatsuki\AppData\Roaming\Subversion</configuration>
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="E:\Projekte\IntelliJ\AI4\ci-praktikum" />
+          <option name="myCopyRoot" value="E:\Projekte\IntelliJ\AI4\ci-praktikum" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="E:\Projekte\IntelliJ\AI4\ci-praktikum\.idea" />
+          <option name="myCopyRoot" value="E:\Projekte\IntelliJ\AI4\ci-praktikum\.idea" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="E:\Projekte\IntelliJ\AI4\ci-praktikum" />
+          <option name="myCopyRoot" value="E:\Projekte\IntelliJ\AI4\ci-praktikum" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -505,33 +816,46 @@
       <created>1368627237099</created>
       <updated>1368627237099</updated>
     </task>
+    <task id="LOCAL-00001" summary="ci-praktikum: entities">
+      <created>1368666975139</created>
+      <updated>1368666975139</updated>
+    </task>
+    <task id="LOCAL-00002" summary="ci-praktikum: added tokenId">
+      <created>1368696256185</created>
+      <updated>1368696256185</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ci-praktikum: list of operation gesamelt">
+      <created>1368719045142</created>
+      <updated>1368719045142</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1292" height="1006" extended-state="6" />
+    <frame x="401" y="61" width="640" height="994" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.68464243" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3270809" sideWeight="0.65235007" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4982415" sideWeight="0.65235007" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39976552" sideWeight="0.3419773" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33059788" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32965687" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20097245" sideWeight="0.6729191" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.6158833" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34116694" sideWeight="0.62016416" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.7463235" sideWeight="0.6158833" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -577,7 +901,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="import ci-praktikum.idea" />
+    <option name="LAST_COMMIT_MESSAGE" value="ci-praktikum: list of operation gesamelt" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -592,6 +916,9 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="mkdir ci-praktikum" />
     <MESSAGE value="import ci-praktikum.idea" />
+    <MESSAGE value="ci-praktikum: entities" />
+    <MESSAGE value="ci-praktikum: added tokenId" />
+    <MESSAGE value="ci-praktikum: list of operation gesamelt" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -601,38 +928,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://E:/Programme/Java/jdk1.7.0/src.zip!/java/net/DualStackPlainSocketImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="258" column="22" selection-start="7235" selection-end="7235" vertical-scroll-proportion="0.31893003" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/antlr-runtime-3.5.jar!/org/antlr/runtime/debug/DebugParser.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="16" selection-start="774" selection-end="774" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/antlr-runtime-3.5-sources.jar!/org/antlr/runtime/debug/DebugParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="0" selection-start="2793" selection-end="2793" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__Test___input.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/antlr-runtime-3.5-sources.jar!/org/antlr/runtime/RecognizerSharedState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="11" selection-start="4887" selection-end="4887" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/antlr-runtime-3.5-sources.jar!/org/antlr/runtime/CommonTokenStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="0" selection-start="3910" selection-end="3910" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/antlr-runtime-3.5-sources.jar!/org/antlr/runtime/ANTLRStringStream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="216" column="0" selection-start="6104" selection-end="6104" vertical-scroll-proportion="0.0" />
@@ -660,53 +955,85 @@
     <entry file="file://$PROJECT_DIR$/src/antlr/srcfiles/artihmetic_puzzleLexer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="35" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#162#186#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/antlr/srcfiles/miniPLexer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#112#163#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/antlr/srcfiles/miniPParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#209#260#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/antlr/srcfiles/artihmetic_puzzleParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="68" column="17" selection-start="2551" selection-end="2587" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/antlr-runtime-3.5-sources.jar!/org/antlr/runtime/tree/CommonTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="13" selection-start="1886" selection-end="1886" vertical-scroll-proportion="-2.1358025">
+        <state line="37" column="13" selection-start="1886" selection-end="1886" vertical-scroll-proportion="-2.1358025" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/antlr/entities/Calcsym.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="9" selection-start="431" selection-end="431" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/antlr/entities/Operation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="18" selection-start="1176" selection-end="1176" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/antlr/entities/Number.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="22" selection-start="464" selection-end="464" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Programme/Java/jdk1.7.0/src.zip!/java/util/Calendar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="398" column="28" selection-start="17880" selection-end="17880" vertical-scroll-proportion="0.33190578" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/antlr/constraint/AlphametricSample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="160" column="41" selection-start="5770" selection-end="5770" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1037#1062#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/antlr/srcfiles/__Test__.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="66" selection-start="861" selection-end="861" vertical-scroll-proportion="0.67153287">
+        <state line="54" column="0" selection-start="1945" selection-end="1945" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1062#1073#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__Test___input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
