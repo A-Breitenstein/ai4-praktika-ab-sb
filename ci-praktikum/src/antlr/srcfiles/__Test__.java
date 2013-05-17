@@ -64,10 +64,17 @@ public class __Test__ {
                 raetsel.add(operation);
             }
 
-
-            for (Operation operation1 : raetsel) {
-                System.out.println(operation1);
+            System.out.println("Standard:");
+            for (Operation op : raetsel) {
+                System.out.println(op);
             }
+
+            System.out.println("Normalized:");
+            for (Operation oper : raetsel) {
+                oper.normalize();
+                System.out.println(oper);
+            }
+
         } catch (RecognitionException e) {
             e.printStackTrace();
         }
