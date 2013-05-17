@@ -43,6 +43,16 @@ public class Operation {
                 '}';
     }
 
+    public Operation normalize() {
+        if (calcsym.equals(Calcsym.MINUS)) {
+            Number tempNumber = this.firstOperand;
+            this.setFirstOperand(this.getResult());
+            this.setResult(tempNumber);
+            this.setCalcsym(Calcsym.PLUS);
+        }
+        return this;
+    }
+
     public Number getFirstOperand() {
         return firstOperand;
     }
