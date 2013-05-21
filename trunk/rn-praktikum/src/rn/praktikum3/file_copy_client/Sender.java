@@ -29,8 +29,8 @@ public class Sender extends Thread {
             e.printStackTrace();
         }
     }
-    public int getClientPort() {
-        return socket.getPort();
+    public DatagramSocket getSocket() {
+        return socket;
     }
     public void run() {
         FCpacket tmp;
