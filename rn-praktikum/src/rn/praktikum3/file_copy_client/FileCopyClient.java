@@ -7,6 +7,7 @@ package rn.praktikum3.file_copy_client;
  */
 
 import java.io.*;
+import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
 public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
@@ -16,7 +17,6 @@ public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
 
   public final int SERVER_PORT = 23000;
 
-//  public final int UDP_PACKET_SIZE = 1024;
   public final int UDP_PACKET_SIZE = 1024;
 
   // -------- Public parms
@@ -42,10 +42,9 @@ public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
   public Sender sender;
   public ACKReceiver ackReceiver;
     // zaehlt wie viele messungen wir schon haben
-    public long RTT_SampleCount = 0;
-    public long RTT_Accu = 0;
+    public long RTT_sample = 0;
     // allee RTT_Updater messungen wird timeout neu berechnet
-    public long RTT_Updater = 150;      // 150
+    public long RTT_Updater = 2;      // 150
     public double RTT_X = 0.1;           //0.1
     public double RTT_estimated = timeoutValue;
     public double RTT_deviation = 0;
@@ -55,6 +54,7 @@ public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
     public static long endTime = 0;
     public static long timeoutCount = 0;
     public Thread mainThread;
+    private long calculatedTimeoutValue;
 
 
     // Constructor
@@ -69,14 +69,15 @@ public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
 
   }
 
-  public void runFileCopyClient() {
+  public long runFileCopyClient() {
 
       mainThread = Thread.currentThread();
       // ToDo!!
       fileReader = new FileReader(UDP_PACKET_SIZE-8,sourcePath, windowBuffer);
       sender = new Sender(servername,SERVER_PORT,UDP_PACKET_SIZE, windowBuffer,this);
-      ackReceiver = new ACKReceiver(SERVER_PORT+1,UDP_PACKET_SIZE,this);
       startTime = System.currentTimeMillis();
+      sender.send(makeControlPacket());
+      ackReceiver = new ACKReceiver(sender.getSocket(),UDP_PACKET_SIZE,this);
       ackReceiver.start();
       try {
           ackReceiver.join();
@@ -89,7 +90,8 @@ public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
 
       System.out.println(TimeUnit.MILLISECONDS.toSeconds(endTime - startTime) +"s   ("+(endTime - startTime)+" ms)");
       System.out.println("windowsize: "+windowSize+"  errorRate: "+serverErrorRate);
-      System.out.println("lostpackets: "+lostPackets+"  timeouts: "+timeoutCount+" sampleRTT: "+(RTT_Accu/RTT_SampleCount)+" ns");
+      System.out.println("lostpackets: "+lostPackets+"  timeouts: "+timeoutCount+" sampleRTT: "+(timeoutValue)+" ns");
+      return (endTime - startTime);
   }
 
   /**
@@ -117,6 +119,7 @@ public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
    */
   public void timeoutTask(long seqNum) {
   // ToDo
+      testOut("perfoming timeoutTask for Packet: " + seqNum);
       timeoutCount++;
       windowBuffer.timeOut(seqNum);
   }
@@ -127,17 +130,13 @@ public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
    * Computes the current timeout value (in nanoseconds)
    */
   public void computeTimeoutValue(long sampleRTT) {
-  // ToDo
-      RTT_Accu+= sampleRTT;
-      RTT_SampleCount++;
-      if(RTT_Accu % RTT_Updater == 0){
-          sampleRTT = (RTT_Accu / RTT_SampleCount);
-          RTT_estimated = (1-RTT_X) * RTT_estimated + RTT_X * sampleRTT;
-          RTT_deviation = (1-RTT_X) * RTT_deviation + RTT_X * Math.abs(sampleRTT-RTT_estimated);
-          timeoutValue = (long)(RTT_estimated + 4*RTT_deviation);
-          RTT_Accu = 0;
-          RTT_SampleCount =0;
-      }
+      // ToDo
+
+      RTT_estimated = (1 - RTT_X) * RTT_estimated + RTT_X * sampleRTT;
+      RTT_deviation = (1 - RTT_X) * RTT_deviation + RTT_X * Math.abs(sampleRTT - RTT_estimated);
+      calculatedTimeoutValue = (long) (RTT_estimated + 4 * RTT_deviation);
+      timeoutValue = (calculatedTimeoutValue>0?calculatedTimeoutValue:timeoutValue);
+
 
   }
 
@@ -168,8 +167,7 @@ public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
 
     @Override
     public void receivedACK(FCpacket fCpacket) {
-        if(TEST_OUTPUT_MODE)
-            System.out.println("Received ACK for: "+fCpacket.getSeqNum());
+        testOut("Received ACK for: "+fCpacket.getSeqNum());
         windowBuffer.ackPacketReceived(fCpacket);
         if (windowBuffer.isEmpty()) {
             mainThread.interrupt();
@@ -183,15 +181,27 @@ public class FileCopyClient extends Thread implements ACKReceiver.ACKListener {
         sender.start();
     }
 
-    @Override
-    public void rdy_for_ack_0() {
-        sender.send(makeControlPacket());
-    }
 
     public static void main(String argv[]) throws Exception {
 //    FileCopyClient myClient = new FileCopyClient(argv[0], argv[1], argv[2],
 //        argv[3], argv[4]);
-    FileCopyClient myClient = new FileCopyClient("Charly","RN_SoSe13_Kap2.pdf","RN_SoSe13_Kap2.pdf","8","10000");
-    myClient.runFileCopyClient();
+
+        FileCopyClient myClient = new FileCopyClient("LAB21","RN_SoSe13_Kap2.pdf","copy/RN_SoSe13_Kap2.pdf","8","10000");
+        myClient.runFileCopyClient();
+
+//        for (Integer windowSize : Arrays.asList(128)) {
+//            long timeVal = 0;
+//            for (Integer errorRate : Arrays.asList(10000)) {
+//
+//                for (int i = 0; i < 1; i++) {
+//
+//                    FileCopyClient myClient = new FileCopyClient("LAB21","RN_SoSe13_Kap2.pdf","copy/RN_SoSe13_Kap2.pdf",String.valueOf(windowSize),String.valueOf(errorRate));
+//                    timeVal += myClient.runFileCopyClient();
+//                }
+////                System.out.println("---###---windowS,errorR,time: " + windowSize + "," + errorRate +","+timeVal/3+ "---###---");
+//            }
+//        }
+        
+        
   }
 }

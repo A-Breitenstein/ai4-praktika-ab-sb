@@ -25,8 +25,8 @@ public class WindowBuffer {
         this.fileCopyClient = fileCopyClient;
         this.windowSize = windowSize;
         this.instance = this;
-        zuSendenePakete = new ArrayBlockingQueue<FCpacket>(windowSize*2,true);
-        buffer = new LinkedBlockingQueue<FCpacket>(windowSize);
+        zuSendenePakete = new ArrayBlockingQueue<FCpacket>(windowSize,true);
+        buffer = new ArrayBlockingQueue<FCpacket>(windowSize,true);
     }
 
     public void putPacket(FCpacket fCpacket) {

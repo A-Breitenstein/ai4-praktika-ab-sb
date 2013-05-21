@@ -21,11 +21,12 @@ public class ACKReceiver extends Thread {
     private int port;
     private ACKListener callbackListner;
     private ExecutorService threadPool;
-    public ACKReceiver(int port, int udp_packet_size,ACKListener listener) {
+    public ACKReceiver(DatagramSocket socket, int udp_packet_size,ACKListener listener) {
         dataBuffer = new byte[8];
         this.port = port;
         callbackListner = listener;
         datagramPacket = new DatagramPacket(dataBuffer,dataBuffer.length);
+        udpReceiver = socket;
         threadPool = Executors.newCachedThreadPool();
     }
     public void closeSocket() {
@@ -33,15 +34,14 @@ public class ACKReceiver extends Thread {
     }
     public void run() {
         try {
-            FCpacket paket;
-            udpReceiver = new DatagramSocket(port);
-            callbackListner.rdy_for_ack_0();
+            FCpacket paket = null;
 
-            udpReceiver.receive(datagramPacket);
-            paket = new FCpacket(datagramPacket.getData(),datagramPacket.getLength());
-            if(paket.getSeqNum() == 0){
-                callbackListner.ACK_0_received();
-            }
+            do {
+                udpReceiver.receive(datagramPacket);
+                paket = new FCpacket(datagramPacket.getData(),datagramPacket.getLength());
+            }while (paket != null && paket.getSeqNum() != 0);
+            callbackListner.ACK_0_received();
+
         } catch (SocketException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         } catch (IOException e) {
@@ -65,7 +65,6 @@ public class ACKReceiver extends Thread {
     public interface ACKListener{
         void receivedACK(FCpacket fCpacket);
         void ACK_0_received();
-        void rdy_for_ack_0();
     }
 
     public class ACKRunnable implements Runnable {
