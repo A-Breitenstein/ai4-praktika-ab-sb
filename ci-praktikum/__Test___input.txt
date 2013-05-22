@@ -1,1 +1,1 @@
-[GS,DD,ESD,B,A,FA,CS,I,AH]V[+,+,+]H[-,+,-].
+[GS,DD,ESD,B,A,FA,CS,I,AH]V[+,-,+]H[-,+,-].
