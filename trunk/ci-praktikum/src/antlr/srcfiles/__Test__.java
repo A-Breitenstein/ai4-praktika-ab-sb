@@ -1,6 +1,7 @@
 package antlr.srcfiles;
 
 import antlr.constraint.AlphametricSample;
+import antlr.constraint.ConstraintSolver;
 import antlr.entities.Calcsym;
 import antlr.entities.Number;
 import antlr.entities.Operation;
@@ -72,10 +73,6 @@ public class __Test__ {
                         number = Number.create(tokenID,token);
                     }
 
-
-
-
-
                     switch (zahlCounter) {
                         case 0:
                             operation.setFirstOperand(number);
@@ -103,8 +100,16 @@ public class __Test__ {
             for (Operation oper : raetsel) {
                 oper.normalize();
                 System.out.println(oper);
+
+                System.out.println("---beispiel---");
                 new AlphametricSample(oper.getFirstOperand().getNumber(), oper.getSecondOperand().getNumber(), oper.getResult().getNumber()).run();
+
+                System.out.println("---nachgemacht---");
+                new ConstraintSolver().solve(oper.getFirstOperand().getNumber(),
+                                             oper.getSecondOperand().getNumber(),
+                                             oper.getResult().getNumber());
             }
+
 
         } catch (RecognitionException e) {
             e.printStackTrace();
