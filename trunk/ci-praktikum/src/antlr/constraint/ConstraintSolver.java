@@ -14,6 +14,8 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import static choco.Choco.neq;
+
 /**
  * User: Alex
  * Date: 25.05.13
@@ -159,6 +161,11 @@ public class ConstraintSolver {
         IntegerExpressionVariable letters_op1 = Choco.scalar(iv_array_op1, coefficients_op1);
         IntegerExpressionVariable letters_op2 = Choco.scalar(iv_array_op2, coefficients_op2);
         IntegerExpressionVariable letters_result = Choco.scalar(iv_array_result, coefficients_result);
+
+//        Erstes zeichen darf nicht 0 sein
+        model.addConstraints(neq(integerVariableMap.get(op1.substring(0, 1)), 0));
+        model.addConstraints(neq(integerVariableMap.get(op2.substring(0, 1)), 0));
+//        model.addConstraints(neq(integerVariableMap.get(result.substring(0, 1)), 0));
 
         model.addConstraint(Choco.eq(letters_op1, iv_op1));
         model.addConstraint(Choco.eq(letters_op2, iv_op2));
