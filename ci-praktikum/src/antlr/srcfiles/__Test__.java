@@ -1,8 +1,9 @@
 package antlr.srcfiles;
 
 import antlr.constraint.AlphametricSample;
-import antlr.entities.*;
+import antlr.entities.Calcsym;
 import antlr.entities.Number;
+import antlr.entities.Operation;
 import org.antlr.runtime.ANTLRFileStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
@@ -10,12 +11,18 @@ import org.antlr.runtime.TokenStream;
 import org.antlr.runtime.tree.CommonTree;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 public class __Test__ {
 
     public static void main(String args[]) throws Exception {
+
+        Map<String, String> tokenMap = new HashMap<String, String>();
+        int tokenIDCounter = 0;
+
         artihmetic_puzzleLexer lex = new artihmetic_puzzleLexer(new ANTLRFileStream("__Test___input.txt", "UTF8"));
         TokenStream tokens = new CommonTokenStream(lex);
 
@@ -52,12 +59,32 @@ public class __Test__ {
                     }
 //                    System.out.print("\n");
 
+                    String token = builder.toString();
+                    Number number;
+                    String tokenID = tokenMap.get(token);
+
+                    if ( tokenID == null) {
+                        tokenID = String.valueOf(tokenIDCounter++);
+                        tokenMap.put(token, tokenID);
+                        number = Number.create(tokenID, token);
+
+                    } else {
+                        number = Number.create(tokenID,token);
+                    }
+
+
+
+
+
                     switch (zahlCounter) {
-                        case 0: operation.setFirstOperand(Number.create("",builder.toString()));
+                        case 0:
+                            operation.setFirstOperand(number);
                             break;
-                        case 1: operation.setSecondOperand(Number.create("", builder.toString()));
+                        case 1:
+                            operation.setSecondOperand(number);
                             break;
-                        case 2: operation.setResult(Number.create("", builder.toString()));
+                        case 2:
+                            operation.setResult(number);
                             break;
                     }
                     builder = new StringBuilder();
