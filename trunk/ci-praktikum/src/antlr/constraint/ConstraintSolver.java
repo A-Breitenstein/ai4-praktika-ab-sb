@@ -81,8 +81,11 @@ public class ConstraintSolver {
         integerVariableMap.put("Z", Z);
     }
 
-    private static Model model = new CPModel();;
-    private static Map<String, IntegerVariable> globalVarHashMap = new HashMap<String, IntegerVariable>();
+    private Model model;
+
+    public ConstraintSolver() {
+        model = new CPModel();;
+    }
 
     public void addOperation(String op1, String op2, String result) {
         int uppB_op1 = (int) Math.pow(10d, op1.length()),
