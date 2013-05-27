@@ -165,7 +165,7 @@ public class ConstraintSolver {
 //        Erstes zeichen darf nicht 0 sein
         model.addConstraints(neq(integerVariableMap.get(op1.substring(0, 1)), 0));
         model.addConstraints(neq(integerVariableMap.get(op2.substring(0, 1)), 0));
-//        model.addConstraints(neq(integerVariableMap.get(result.substring(0, 1)), 0));
+        model.addConstraints(neq(integerVariableMap.get(result.substring(0, 1)), 0));
 
         model.addConstraint(Choco.eq(letters_op1, iv_op1));
         model.addConstraint(Choco.eq(letters_op2, iv_op2));
