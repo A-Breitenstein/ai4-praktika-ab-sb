@@ -96,6 +96,8 @@ public class __Test__ {
                 System.out.println(op);
             }
 
+            ConstraintSolver constraintSolver = new ConstraintSolver();
+
             System.out.println("Normalized:");
             for (Operation oper : raetsel) {
                 oper.normalize();
@@ -105,10 +107,12 @@ public class __Test__ {
                 new AlphametricSample(oper.getFirstOperand().getNumber(), oper.getSecondOperand().getNumber(), oper.getResult().getNumber()).run();
 
                 System.out.println("---nachgemacht---");
-                new ConstraintSolver().solve(oper.getFirstOperand().getNumber(),
-                                             oper.getSecondOperand().getNumber(),
-                                             oper.getResult().getNumber());
+                constraintSolver.addOperation(oper.getFirstOperand().getNumber(),
+                        oper.getSecondOperand().getNumber(),
+                        oper.getResult().getNumber());
             }
+
+            constraintSolver.solveModel();
 
 
         } catch (RecognitionException e) {

@@ -5,14 +5,12 @@ import choco.Options;
 import choco.cp.model.CPModel;
 import choco.cp.solver.CPSolver;
 import choco.kernel.model.Model;
+import choco.kernel.model.variables.Variable;
 import choco.kernel.model.variables.integer.IntegerExpressionVariable;
 import choco.kernel.model.variables.integer.IntegerVariable;
 import choco.kernel.solver.Solver;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 import static choco.Choco.neq;
 
@@ -55,40 +53,43 @@ public class ConstraintSolver {
 
     static {
         integerVariableMap = new HashMap<String, IntegerVariable>();
-        integerVariableMap.put("A",A);
-        integerVariableMap.put("B",B);
-        integerVariableMap.put("C",C);
-        integerVariableMap.put("D",D);
-        integerVariableMap.put("E",E);
-        integerVariableMap.put("F",F);
-        integerVariableMap.put("G",G);
-        integerVariableMap.put("H",H);
-        integerVariableMap.put("I",I);
-        integerVariableMap.put("J",J);
-        integerVariableMap.put("K",K);
-        integerVariableMap.put("L",L);
-        integerVariableMap.put("M",M);
-        integerVariableMap.put("N",N);
-        integerVariableMap.put("O",O);
-        integerVariableMap.put("P",P);
-        integerVariableMap.put("Q",Q);
-        integerVariableMap.put("R",R);
-        integerVariableMap.put("S",S);
-        integerVariableMap.put("T",T);
-        integerVariableMap.put("U",U);
-        integerVariableMap.put("V",V);
-        integerVariableMap.put("W",W);
-        integerVariableMap.put("X",X);
-        integerVariableMap.put("Y",Y);
-        integerVariableMap.put("Z",Z);
+        integerVariableMap.put("A", A);
+        integerVariableMap.put("B", B);
+        integerVariableMap.put("C", C);
+        integerVariableMap.put("D", D);
+        integerVariableMap.put("E", E);
+        integerVariableMap.put("F", F);
+        integerVariableMap.put("G", G);
+        integerVariableMap.put("H", H);
+        integerVariableMap.put("I", I);
+        integerVariableMap.put("J", J);
+        integerVariableMap.put("K", K);
+        integerVariableMap.put("L", L);
+        integerVariableMap.put("M", M);
+        integerVariableMap.put("N", N);
+        integerVariableMap.put("O", O);
+        integerVariableMap.put("P", P);
+        integerVariableMap.put("Q", Q);
+        integerVariableMap.put("R", R);
+        integerVariableMap.put("S", S);
+        integerVariableMap.put("T", T);
+        integerVariableMap.put("U", U);
+        integerVariableMap.put("V", V);
+        integerVariableMap.put("W", W);
+        integerVariableMap.put("X", X);
+        integerVariableMap.put("Y", Y);
+        integerVariableMap.put("Z", Z);
     }
 
-    public void solve(String op1, String op2, String result) {
-        Model model = new CPModel();
+    private static Model model;
+    private static Map<String, IntegerVariable> globalVarHashMap = new HashMap<String, IntegerVariable>();
 
-         int uppB_op1 = (int) Math.pow(10d,op1.length()),
-            uppB_op2 = (int) Math.pow(10d,op2.length()),
-            uppB_result = (int) Math.pow(10d,result.length());
+    public void addOperation(String op1, String op2, String result) {
+        model = new CPModel();
+
+        int uppB_op1 = (int) Math.pow(10d, op1.length()),
+                uppB_op2 = (int) Math.pow(10d, op2.length()),
+                uppB_result = (int) Math.pow(10d, result.length());
 
         IntegerVariable iv_op1 = Choco.makeIntVar(op1, 0, uppB_op1, Options.V_BOUND);
         IntegerVariable iv_op2 = Choco.makeIntVar(op2, 0, uppB_op2, Options.V_BOUND);
@@ -182,17 +183,10 @@ public class ConstraintSolver {
 //                    integerVariableMap.get(String.valueOf(result.charAt(i)))));
 //        }
 
-        model.addConstraint(Choco.eq(Choco.plus(iv_op1,iv_op2),iv_result));
+        model.addConstraint(Choco.eq(Choco.plus(iv_op1, iv_op2), iv_result));
 
-        model.addConstraint(Choco.allDifferent( integerVariableSet.toArray(new IntegerVariable[]{})));
+        model.addConstraint(Choco.allDifferent(integerVariableSet.toArray(new IntegerVariable[]{})));
 
-        Solver solver = new CPSolver();
-        solver.read(model);
-        solver.solve();
-
-        System.out.println("op1: " + solver.getVar(iv_op1).getVal());
-        System.out.println("op2: " + solver.getVar(iv_op2).getVal());
-        System.out.println("result: " + solver.getVar(iv_result).getVal());
 
 //        for (Map.Entry<String, IntegerVariable> stringIntegerVariableEntry : integerVariableMap.entrySet()) {
 //            if(solver.getVar(stringIntegerVariableEntry.getValue()) != null)
@@ -200,6 +194,19 @@ public class ConstraintSolver {
 //        }
     }
 
+    public void solveModel() {
+        Solver solver = new CPSolver();
+        solver.read(model);
+        solver.solve();
+        // das alles nach oben?????^
+
+        Iterator<IntegerVariable> integerVariableIterator = model.getIntVarIterator();
+        IntegerVariable integerVariable;
+        while (integerVariableIterator.hasNext()) {
+            integerVariable = integerVariableIterator.next();
+            System.out.println(integerVariable.getName()+": "+solver.getVar(integerVariable).getVal());
+        }
+    }
 
 
     public static void main(String[] args) {
