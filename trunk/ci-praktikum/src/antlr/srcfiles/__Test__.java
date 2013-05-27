@@ -1,6 +1,5 @@
 package antlr.srcfiles;
 
-import antlr.constraint.AlphametricSample;
 import antlr.constraint.ConstraintSolver;
 import antlr.entities.Calcsym;
 import antlr.entities.Number;
@@ -18,10 +17,10 @@ import java.util.Map;
 
 
 public class __Test__ {
-
+    public static Map<String, String> tokenMap = new HashMap<String, String>();
     public static void main(String args[]) throws Exception {
 
-        Map<String, String> tokenMap = new HashMap<String, String>();
+
         int tokenIDCounter = 0;
 
         artihmetic_puzzleLexer lex = new artihmetic_puzzleLexer(new ANTLRFileStream("__Test___input.txt", "UTF8"));
@@ -103,10 +102,10 @@ public class __Test__ {
                 oper.normalize();
                 System.out.println(oper);
 
-                System.out.println("---beispiel---");
-                new AlphametricSample(oper.getFirstOperand().getNumber(), oper.getSecondOperand().getNumber(), oper.getResult().getNumber()).run();
+//                System.out.println("---beispiel---");
+//                new AlphametricSample(oper.getFirstOperand().getNumber(), oper.getSecondOperand().getNumber(), oper.getResult().getNumber()).run();
 
-                System.out.println("---nachgemacht---");
+//                System.out.println("---nachgemacht---");
                 constraintSolver.addOperation(oper.getFirstOperand().getNumber(),
                         oper.getSecondOperand().getNumber(),
                         oper.getResult().getNumber());

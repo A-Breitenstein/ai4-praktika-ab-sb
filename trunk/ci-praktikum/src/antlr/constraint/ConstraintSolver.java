@@ -1,11 +1,11 @@
 package antlr.constraint;
 
+import antlr.srcfiles.__Test__;
 import choco.Choco;
 import choco.Options;
 import choco.cp.model.CPModel;
 import choco.cp.solver.CPSolver;
 import choco.kernel.model.Model;
-import choco.kernel.model.variables.Variable;
 import choco.kernel.model.variables.integer.IntegerExpressionVariable;
 import choco.kernel.model.variables.integer.IntegerVariable;
 import choco.kernel.solver.Solver;
@@ -81,12 +81,10 @@ public class ConstraintSolver {
         integerVariableMap.put("Z", Z);
     }
 
-    private static Model model;
+    private static Model model = new CPModel();;
     private static Map<String, IntegerVariable> globalVarHashMap = new HashMap<String, IntegerVariable>();
 
     public void addOperation(String op1, String op2, String result) {
-        model = new CPModel();
-
         int uppB_op1 = (int) Math.pow(10d, op1.length()),
                 uppB_op2 = (int) Math.pow(10d, op2.length()),
                 uppB_result = (int) Math.pow(10d, result.length());
@@ -172,6 +170,11 @@ public class ConstraintSolver {
         model.addConstraint(Choco.eq(letters_op2, iv_op2));
         model.addConstraint(Choco.eq(letters_result, iv_result));
 
+//        System.out.println("added: "+op1);
+//        System.out.println("added: "+op2);
+//        System.out.println("added: "+result);
+
+
 //        for (IntegerVariable integerVariable : integerVariableSet) {
 //            model.addConstraint(Choco.eq(Choco.scalar(new IntegerVariable[]{integerVariable},new int[]{1}),integerVariable));
 //        }
@@ -202,9 +205,15 @@ public class ConstraintSolver {
 
         Iterator<IntegerVariable> integerVariableIterator = model.getIntVarIterator();
         IntegerVariable integerVariable;
+        String varname;
+        Set<String> stringSet = new HashSet<String>();
         while (integerVariableIterator.hasNext()) {
             integerVariable = integerVariableIterator.next();
-            System.out.println(integerVariable.getName()+": "+solver.getVar(integerVariable).getVal());
+            varname = integerVariable.getName();
+            if (__Test__.tokenMap.containsKey(varname) && !stringSet.contains(varname)) {
+                System.out.println(varname+": "+solver.getVar(integerVariable).getVal());
+                stringSet.add(varname);
+            }
         }
     }
 
