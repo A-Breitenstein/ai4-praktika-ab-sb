@@ -1,1 +1,1 @@
-[ABC,DDE,FCF,CB,BGE,BCA,AEE,CBG,DGAE]V[+,+,+]H[+,+,+].
+[ABC,DDE,FCF,CB,BGE,BCA,AEE,CBG,DGAE]V[-,-,+]H[+,-,+].
