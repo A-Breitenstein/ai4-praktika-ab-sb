@@ -36,8 +36,6 @@ public class Test {
 
         IntegerVariable b = Choco.makeIntVar("b", 0, 9, Options.V_ENUM);
         IntegerVariable t = Choco.makeIntVar("t", 0, 9, Options.V_ENUM);
-// Array of coefficients
-        int[] c = new int[]{100000, 10000, 1000, 100, 10, 1};
 
 // Add equality between name and letters combination
         IntegerVariable uebertrag = Choco.makeIntVar("uebertrag", 0, 1);

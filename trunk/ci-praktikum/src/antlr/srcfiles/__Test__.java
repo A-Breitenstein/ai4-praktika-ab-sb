@@ -10,10 +10,7 @@ import org.antlr.runtime.RecognitionException;
 import org.antlr.runtime.TokenStream;
 import org.antlr.runtime.tree.CommonTree;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 
 public class __Test__ {
@@ -22,6 +19,7 @@ public class __Test__ {
 
 
         int tokenIDCounter = 0;
+        Set<String> tokenSymbolSet = new HashSet<String>();
 
         artihmetic_puzzleLexer lex = new artihmetic_puzzleLexer(new ANTLRFileStream("__Test___input.txt", "UTF8"));
         TokenStream tokens = new CommonTokenStream(lex);
@@ -55,6 +53,7 @@ public class __Test__ {
 
                     for (Object o2 : ((CommonTree) o1).getChildren()) {
 //                        System.out.print(o2); //Alle Zeichen die letzendlich eine Symbolzahl darstellt
+                        tokenSymbolSet.add(String.valueOf(o2));
                         builder.append(String.valueOf(o2));
                     }
 //                    System.out.print("\n");
@@ -96,6 +95,7 @@ public class __Test__ {
             }
 
             ConstraintSolver constraintSolver = new ConstraintSolver();
+            constraintSolver.setAllDifferentVariables(tokenSymbolSet);
 
             System.out.println("Normalized:");
             for (Operation oper : raetsel) {
@@ -106,12 +106,15 @@ public class __Test__ {
 //                new AlphametricSample(oper.getFirstOperand().getNumber(), oper.getSecondOperand().getNumber(), oper.getResult().getNumber()).run();
 
 //                System.out.println("---nachgemacht---");
-                constraintSolver.addOperation(oper.getFirstOperand().getNumber(),
+//                constraintSolver.addOperation(oper.getFirstOperand().getNumber(),
+//                        oper.getSecondOperand().getNumber(),
+//                        oper.getResult().getNumber());
+                constraintSolver.addOperationSpaltenweise(oper.getFirstOperand().getNumber(),
                         oper.getSecondOperand().getNumber(),
                         oper.getResult().getNumber());
             }
 
-            constraintSolver.solveModel();
+            constraintSolver.solveModelSpaltenweise(tokenMap.keySet());
 
 
         } catch (RecognitionException e) {
