@@ -2,25 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/antlr/constraint/Solver.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/antlr-3.5-complete.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/antlr/srcfiles/Constraint.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/antlr/constraint/Main.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/antlr/srcfiles/Number.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/antlr/srcfiles/SymbolraetselEmitter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/antlr/srcfiles/SymbolraetselEmitter.tokens" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/antlr/srcfiles/__Test___input.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/antlr_3_5_complete.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template.stg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/antlr/srcfiles/treePaserPuzzel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/antlr/srcfiles/treePaserPuzzel.tokens" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/antlr/srcfiles/__Test__.java" afterPath="$PROJECT_DIR$/src/antlr/srcfiles/__Test__.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__Test___input.txt" afterPath="$PROJECT_DIR$/__Test___input.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/antlr/srcfiles/artihmetic_puzzle.tokens" afterPath="$PROJECT_DIR$/src/antlr/srcfiles/artihmetic_puzzle.tokens" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/antlr/srcfiles/artihmetic_puzzleLexer.java" afterPath="$PROJECT_DIR$/src/antlr/srcfiles/artihmetic_puzzleLexer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/antlr/srcfiles/artihmetic_puzzleParser.java" afterPath="$PROJECT_DIR$/src/antlr/srcfiles/artihmetic_puzzleParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ci-praktikum.iml" afterPath="$PROJECT_DIR$/ci-praktikum.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ci-praktikum.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/__Test__.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1369320838122" ignored="false" />
+    <file path="/__Test__.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1370276279597" ignored="false" />
     <file path="/miniPParser.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368660606823" ignored="false" />
     <file path="/zrdz.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368660797227" ignored="false" />
     <file path="/artihmetic_puzzleParser.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368664636523" ignored="false" />
-    <file path="/Test.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368795690589" ignored="false" />
+    <file path="/Test.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1369741168193" ignored="false" />
     <file path="/artihmetic_puzzleLexer.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368664594042" ignored="false" />
     <file path="/Number.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368718972763" ignored="false" />
     <file path="/a.dummy" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368666935840" ignored="false" />
     <file path="/Operation.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368718474928" ignored="false" />
     <file path="/fragment.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368666465354" ignored="false" />
     <file path="/Calcsym.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368666826669" ignored="false" />
-    <file path="/Dummy.txt" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1369319908388" ignored="false" />
+    <file path="/Dummy.txt" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1369750242921" ignored="false" />
     <file path="$PROJECT_DIR$/../SE2/HAW-ANDROID-APP/haw_android_app/src/de/hawhamburg/informatik/HAW_APP/module/calendar/CalenderModifier.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368716726249" ignored="false" />
     <file path="$PROJECT_DIR$/../SE2/HAW-ANDROID-APP/haw_android_app/src/de/hawhamburg/informatik/HAW_APP/module/mensa/MensaUpdateService.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368716727158" ignored="false" />
     <file path="$PROJECT_DIR$/../SE2/HAW-ANDROID-APP/haw_android_app/src/de/hawhamburg/informatik/HAW_APP/module/calendar/entities/Semester.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368717927966" ignored="false" />
@@ -40,9 +55,13 @@
     <file path="$PROJECT_DIR$/../SE2/HAW-ANDROID-APP/haw_android_app/src/de/hawhamburg/informatik/HAW_APP/module/mensa/entities/MensaUtils.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368796567322" ignored="false" />
     <file path="/MensaUtils.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368796107105" ignored="false" />
     <file path="$PROJECT_DIR$/../SE2/HAW-ANDROID-APP/haw_android_app/src/de/hawhamburg/informatik/HAW_APP/helper/rest/RESTmensaProvider.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1368795042602" ignored="false" />
-    <file path="/__Test___input.txt" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1369319754626" ignored="false" />
+    <file path="/__Test___input.txt" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1369737521867" ignored="false" />
     <file path="$PROJECT_DIR$/../SE2/haw_app_server/src/main/java/de/haw/se2/bluedot/app/server/modules/mensa/service/parser/ParserMensa.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1369320040504" ignored="false" />
     <file path="/Solver.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1369572749068" ignored="false" />
+    <file path="/ConstraintSolver.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1369750236647" ignored="false" />
+    <file path="/Main.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1370277266701" ignored="false" />
+    <file path="/SymbolraetselEmitter.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1370279617673" ignored="false" />
+    <file path="/Constraint.java" changelist="c5d706e5-1aaf-4d03-930e-3c07eeba56a0" time="1370279670857" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +76,50 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="jar://$PROJECT_DIR$/lib/antlr-runtime-3.5-sources.jar!/org/antlr/runtime/debug/DebugTokenStream.java" line="83" class="org.antlr.runtime.debug.DebugTokenStream" package="org.antlr.runtime.debug">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="jar://$PROJECT_DIR$/lib/antlr-runtime-3.5-sources.jar!/org/antlr/runtime/debug/DebugEventSocketProxy.java" line="117" class="org.antlr.runtime.debug.DebugEventSocketProxy" package="org.antlr.runtime.debug">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/antlr/constraint/Main.java" line="34" class="antlr.constraint.Main" package="antlr.constraint">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -92,50 +155,6 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="jar://$PROJECT_DIR$/lib/antlr-runtime-3.5-sources.jar!/org/antlr/runtime/debug/DebugTokenStream.java" line="83" class="org.antlr.runtime.debug.DebugTokenStream" package="org.antlr.runtime.debug">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="jar://$PROJECT_DIR$/lib/antlr-runtime-3.5-sources.jar!/org/antlr/runtime/debug/DebugEventSocketProxy.java" line="117" class="org.antlr.runtime.debug.DebugEventSocketProxy" package="org.antlr.runtime.debug">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/antlr/srcfiles/__Test__.java" line="96" class="antlr.srcfiles.__Test__" package="antlr.srcfiles">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -145,88 +164,102 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="__Test__.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/antlr/srcfiles/__Test__.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="62" selection-start="2607" selection-end="2607" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#615#631#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Solver.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/antlr/constraint/Solver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="12" selection-start="2419" selection-end="2419" vertical-scroll-proportion="0.7367725">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="__Test___input.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/__Test___input.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="1" selection-start="1" selection-end="1" vertical-scroll-proportion="0.0">
+            <state line="0" column="32" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AlphametricSample.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/antlr/constraint/AlphametricSample.java">
+      <file leaf-file-name="SymbolraetselEmitter.tokens" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/antlr/srcfiles/SymbolraetselEmitter.tokens">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="160" column="41" selection-start="5770" selection-end="5770" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/antlr/constraint/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="0" selection-start="1592" selection-end="1592" vertical-scroll-proportion="0.44779584">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TreeParser.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/antlr-runtime-3.5-sources.jar!/org/antlr/runtime/tree/TreeParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="46" column="0" selection-start="2117" selection-end="2117" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="treePaserPuzzel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/antlr/srcfiles/treePaserPuzzel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="860" column="0" selection-start="25572" selection-end="25572" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SymbolraetselEmitter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/antlr/srcfiles/SymbolraetselEmitter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="185" column="86" selection-start="6013" selection-end="6013" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Constraint.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/antlr/srcfiles/Constraint.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="13" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#172#180#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Number.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/antlr/entities/Number.java">
+        <entry file="file://$PROJECT_DIR$/src/antlr/srcfiles/Number.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="25" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Operation.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/antlr/entities/Operation.java">
+      <file leaf-file-name="template.stg" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template.stg">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="18" selection-start="1176" selection-end="1176" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Calcsym.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/antlr/entities/Calcsym.java">
+      <file leaf-file-name="__Test__.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/antlr/srcfiles/__Test__.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="9" selection-start="431" selection-end="431" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="artihmetic_puzzleParser.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/antlr/srcfiles/artihmetic_puzzleParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="17" selection-start="2551" selection-end="2587" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="artihmetic_puzzleLexer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/antlr/srcfiles/artihmetic_puzzleLexer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="35" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="33" column="19" selection-start="1160" selection-end="1160" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#481#497#0" expanded="true" />
+                <element signature="e#645#653#0" expanded="true" />
+                <element signature="e#1258#1269#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -241,12 +274,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/java/Arithmetic_puzzleLexer.java" />
-        <option value="$PROJECT_DIR$/src/java/artihmetic_puzzleLexer.java" />
-        <option value="$PROJECT_DIR$/src/java/artihmetic_puzzleParser.java" />
-        <option value="$PROJECT_DIR$/src/java/miniPLexer.java" />
-        <option value="$PROJECT_DIR$/src/java/miniPParser.java" />
-        <option value="$PROJECT_DIR$/src/java/__Test__.java" />
         <option value="$PROJECT_DIR$/src/antlr/grammars/srcfiles/__Test__.java" />
         <option value="$PROJECT_DIR$/src/__Test__.java" />
         <option value="$PROJECT_DIR$/src/antlr/entities/Calcsym.java" />
@@ -254,16 +281,23 @@
         <option value="$PROJECT_DIR$/src/antlr/entities/Number.java" />
         <option value="$PROJECT_DIR$/src/antlr/entities/Test.java" />
         <option value="$PROJECT_DIR$/src/antlr/constraint/AlphametricSample.java" />
-        <option value="$PROJECT_DIR$/__Test___input.txt" />
-        <option value="$PROJECT_DIR$/src/antlr/srcfiles/__Test__.java" />
         <option value="$PROJECT_DIR$/src/antlr/constraint/Solver.java" />
+        <option value="$PROJECT_DIR$/src/antlr/constraint/Test.java" />
+        <option value="$PROJECT_DIR$/src/antlr/constraint/ConstraintSolver.java" />
+        <option value="$PROJECT_DIR$/src/antlr/srcfiles/__Test__.java" />
+        <option value="$PROJECT_DIR$/src/antlr/srcfiles/Number.java" />
+        <option value="$PROJECT_DIR$/src/antlr/srcfiles/Constraint.java" />
+        <option value="$PROJECT_DIR$/src/antlr/constraint/Main.java" />
+        <option value="$PROJECT_DIR$/__Test___input.txt" />
+        <option value="$PROJECT_DIR$/src/antlr/srcfiles/SymbolraetselEmitter.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="554" />
-    <option name="width" value="726" />
-    <option name="height" value="994" />
+    <option name="x" value="1672" />
+    <option name="y" value="-8" />
+    <option name="width" value="1696" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -293,6 +327,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -309,6 +344,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ci-praktikum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ci-praktikum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ci-praktikum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="antlr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="srcfiles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -352,13 +409,26 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ci-praktikum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ci-praktikum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.proportion" value="0.1615509" />
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -367,21 +437,23 @@
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="preferences.pluginManager" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/antlr-3.5-complete.jar!/" />
     <property name="project.structure.side.proportion" value="0.1953125" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="Downloaded.Files.Path" value="E:\Projekte\IntelliJ\AI4\ci-praktikum\lib" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="Downloaded.Files.Path" value="E:\Projekte\IntelliJ\AI4\ci-praktikum\lib" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="Z:\BAI-4\CI\ci-praktikum\src\antlr\srcfiles" />
+      <recent name="Z:\BAI-4\CI\ci-praktikum" />
       <recent name="E:\Projekte\IntelliJ\AI4\ci-praktikum\lib" />
       <recent name="E:\Projekte\IntelliJ\AI4\ci-praktikum\src\antlr" />
     </key>
@@ -396,7 +468,7 @@
       <recent name="E:\Projekte\IntelliJ\AI4\ci-praktikum" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Solver">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="__Test__" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -425,50 +497,6 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="Test" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="antlr.entities.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="antlr.entities.Test" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="ci-praktikum" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="AlphametricSample" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="antlr.constraint.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="antlr.constraint.AlphametricSample" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="ci-praktikum" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
     <configuration default="false" name="Solver" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -491,6 +519,63 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="ConstraintSolver" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="antlr.constraint.ConstraintSolver" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ci-praktikum" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Test" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="antlr.constraint.Test" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ci-praktikum" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="antlr.constraint.Main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ci-praktikum" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -503,19 +588,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -544,6 +616,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -582,19 +667,20 @@
       <patterns />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.__Test__" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Test" />
-      <item index="2" class="java.lang.String" itemvalue="Application.AlphametricSample" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Solver" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Solver" />
+      <item index="2" class="java.lang.String" itemvalue="Application.ConstraintSolver" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Test" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Solver" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
         <item index="1" class="java.lang.String" itemvalue="Application.__Test__" />
-        <item index="2" class="java.lang.String" itemvalue="Application.AlphametricSample" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Test" />
-        <item index="4" class="java.lang.String" itemvalue="Application.__Test__" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Test" />
+        <item index="3" class="java.lang.String" itemvalue="Application.ConstraintSolver" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Solver" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -632,20 +718,20 @@
     <option name="myMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="E:\Projekte\IntelliJ\AI4\ci-praktikum" />
-          <option name="myCopyRoot" value="E:\Projekte\IntelliJ\AI4\ci-praktikum" />
+          <option name="myVcsRoot" value="Z:\BAI-4\CI\ci-praktikum" />
+          <option name="myCopyRoot" value="Z:\BAI-4\CI\ci-praktikum" />
         </SvnCopyRootSimple>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="E:\Projekte\IntelliJ\AI4\ci-praktikum\.idea" />
-          <option name="myCopyRoot" value="E:\Projekte\IntelliJ\AI4\ci-praktikum\.idea" />
+          <option name="myVcsRoot" value="Z:\BAI-4\CI\ci-praktikum\.idea" />
+          <option name="myCopyRoot" value="Z:\BAI-4\CI\ci-praktikum\.idea" />
         </SvnCopyRootSimple>
       </list>
     </option>
     <option name="myMoreRealMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="E:\Projekte\IntelliJ\AI4\ci-praktikum" />
-          <option name="myCopyRoot" value="E:\Projekte\IntelliJ\AI4\ci-praktikum" />
+          <option name="myVcsRoot" value="Z:\BAI-4\CI\ci-praktikum" />
+          <option name="myCopyRoot" value="Z:\BAI-4\CI\ci-praktikum" />
         </SvnCopyRootSimple>
       </list>
     </option>
@@ -676,34 +762,40 @@
       <created>1369213044201</created>
       <updated>1369213044201</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ci-praktikum: choco beispiel eingebunden">
+      <created>1369750304156</created>
+      <updated>1369750304156</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="554" y="0" width="726" height="994" extended-state="0" />
-    <editor active="true" />
+    <frame x="1672" y="-8" width="1696" height="1066" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38997555" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.68464243" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38794085" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6837315" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4982415" sideWeight="0.65235007" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49724972" sideWeight="0.65235007" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39976552" sideWeight="0.3419773" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936978" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287827" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34020618" sideWeight="0.61002445" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.52675384" sideWeight="0.99741936" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30966952" sideWeight="0.5027503" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42464247" sideWeight="0.9947127" order="2" side_tool="false" content_ui="tabs" x="220" y="244" width="644" height="463" />
+      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -777,46 +869,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/lib/antlr-runtime-3.5-sources.jar!/org/antlr/runtime/debug/DebugTokenStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="0" selection-start="2881" selection-end="2881" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/antlr-runtime-3.5-sources.jar!/org/antlr/runtime/debug/DebugEventSocketProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="0" selection-start="3178" selection-end="3178" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/antlr/srcfiles/miniPLexer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/antlr/srcfiles/miniPParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/antlr/srcfiles/artihmetic_puzzleParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="17" selection-start="2551" selection-end="2587" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/antlr-runtime-3.5-sources.jar!/org/antlr/runtime/tree/CommonTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="13" selection-start="1886" selection-end="1886" vertical-scroll-proportion="-2.1358025" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/antlr/entities/Calcsym.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="9" selection-start="431" selection-end="431" vertical-scroll-proportion="0.0">
@@ -824,28 +876,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/antlr/constraint/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="67" selection-start="2025" selection-end="2147" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/antlr/entities/Operation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="18" selection-start="1176" selection-end="1176" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/Programme/Java/jdk1.7.0/src.zip!/java/util/Calendar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="398" column="28" selection-start="17880" selection-end="17880" vertical-scroll-proportion="0.33190578" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/antlr/constraint/AlphametricSample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="160" column="41" selection-start="5770" selection-end="5770" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__Test___input.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="1" selection-start="1" selection-end="1" vertical-scroll-proportion="0.0">
+        <state line="21" column="32" selection-start="479" selection-end="479" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -857,39 +897,143 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/antlr/srcfiles/__Test___input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/antlr/constraint/ConstraintSolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="315" column="51" selection-start="13063" selection-end="13063" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/antlr/srcfiles/__Test__.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="62" selection-start="2607" selection-end="2607" vertical-scroll-proportion="0.0">
+        <state line="33" column="19" selection-start="1160" selection-end="1160" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#615#631#0" expanded="true" />
+            <element signature="e#481#497#0" expanded="true" />
+            <element signature="e#645#653#0" expanded="true" />
+            <element signature="e#1258#1269#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/antlr/srcfiles/artihmetic_puzzleLexer.java">
+    <entry file="file://$PROJECT_DIR$/template.stg">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="35" selection-start="271" selection-end="271" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/choco-solver-2.1.5-with-sources.jar!/choco/Options.java">
+    <entry file="file://$PROJECT_DIR$/src/antlr/srcfiles/Number.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="31" selection-start="3174" selection-end="3174" vertical-scroll-proportion="0.3323442">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/antlr/constraint/Solver.java">
+    <entry file="file://$PROJECT_DIR$/src/antlr/srcfiles/Constraint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="12" selection-start="2419" selection-end="2419" vertical-scroll-proportion="0.7367725">
+        <state line="18" column="13" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#172#180#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__Test___input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="32" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/antlr/srcfiles/SymbolraetselEmitter.tokens">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/antlr/srcfiles/SymbolraetselEmitter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="185" column="86" selection-start="6013" selection-end="6013" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/antlr-runtime-3.5-sources.jar!/org/antlr/runtime/tree/TreeParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="0" selection-start="2117" selection-end="2117" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/antlr/srcfiles/treePaserPuzzel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="860" column="0" selection-start="25572" selection-end="25572" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/antlr/constraint/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="0" selection-start="1592" selection-end="1592" vertical-scroll-proportion="0.44779584">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="ideajad">
+    <property name="annotate" value="false" />
+    <property name="annotateFully" value="false" />
+    <property name="braces" value="false" />
+    <property name="clear" value="false" />
+    <property name="confirmNavigationTriggeredDecompile" value="true" />
+    <property name="dead" value="true" />
+    <property name="defaultInitializers" value="false" />
+    <property name="dissassemblerOnly" value="false" />
+    <property name="fieldsFirst" value="true" />
+    <property name="fileExtension" value="java" />
+    <property name="fullyQualifiedNames" value="false" />
+    <property name="indentation" value="4" />
+    <property name="intRadix" value="10" />
+    <property name="lineNumbersAsComments" value="true" />
+    <property name="longRadix" value="10" />
+    <property name="maxStringLength" value="64" />
+    <property name="nocast" value="false" />
+    <property name="noclass" value="false" />
+    <property name="nocode" value="false" />
+    <property name="noconv" value="false" />
+    <property name="noctor" value="false" />
+    <property name="nodos" value="false" />
+    <property name="nofd" value="false" />
+    <property name="noinner" value="false" />
+    <property name="nolvt" value="false" />
+    <property name="nonlb" value="false" />
+    <property name="outputDirectory" value="" />
+    <property name="packFields" value="3" />
+    <property name="packImports" value="7" />
+    <property name="prefixNumericalClasses" value="_cls" />
+    <property name="prefixNumericalFields" value="_fld" />
+    <property name="prefixNumericalLocals" value="_lcl" />
+    <property name="prefixNumericalMethods" value="_mth" />
+    <property name="prefixNumericalParameters" value="_prm" />
+    <property name="prefixUnusedExceptions" value="_ex" />
+    <property name="readonly" value="false" />
+    <property name="safe" value="false" />
+    <property name="sort" value="false" />
+    <property name="spaceAfterKeyword" value="false" />
+    <property name="splitStringsAtNewline" value="false" />
+    <property name="useTabs" value="false" />
   </component>
   <component name="masterDetails">
     <states>
@@ -947,6 +1091,7 @@
             <option name="proportions">
               <list>
                 <option value="0.1953125" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -966,7 +1111,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>antlr-runtime-3.5</last-edited>
+          <last-edited>antlr-3.5-complete</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

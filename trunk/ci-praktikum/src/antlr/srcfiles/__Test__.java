@@ -28,10 +28,10 @@ public class __Test__ {
         System.out.println("Before Try");
         try {
             System.out.println("Going to Start");
-            artihmetic_puzzleParser.start_return aReturn = g.start();
+            artihmetic_puzzleParser.starta_return aReturn = g.starta();
             System.out.println(aReturn.getTree());
 
-            CommonTree mainTree = aReturn.getTree();
+            CommonTree mainTree = (CommonTree) aReturn.getTree();
             List<Operation> raetsel = new ArrayList<Operation>();
 
             Operation operation;
