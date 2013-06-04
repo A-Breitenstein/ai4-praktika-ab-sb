@@ -1,4 +1,4 @@
-package antlr.srcfiles;// $ANTLR 3.4 Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g 2013-05-28 16:06:15
+package antlr.srcfiles;// $ANTLR 3.4 Z:\\BAI-4\\CI\\artihmetic_puzzle.g 2013-06-04 13:35:38
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -13,6 +13,8 @@ public class artihmetic_puzzleLexer extends Lexer {
     public static final int T__19=19;
     public static final int T__20=20;
     public static final int T__21=21;
+    public static final int T__22=22;
+    public static final int T__23=23;
     public static final int ERGEBNIS=4;
     public static final int GLEICH=5;
     public static final int HORIZONTAL=6;
@@ -40,17 +42,17 @@ public class artihmetic_puzzleLexer extends Lexer {
     public artihmetic_puzzleLexer(CharStream input, RecognizerSharedState state) {
         super(input,state);
     }
-    public String getGrammarFileName() { return "Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g"; }
+    public String getGrammarFileName() { return "Z:\\BAI-4\\CI\\artihmetic_puzzle.g"; }
 
     // $ANTLR start "T__17"
     public final void mT__17() throws RecognitionException {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:2:7: ( ',' )
-            // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:2:9: ','
+            // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:2:7: ( '+' )
+            // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:2:9: '+'
             {
-            match(','); 
+            match('+'); 
 
             }
 
@@ -68,10 +70,10 @@ public class artihmetic_puzzleLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:3:7: ( '[' )
-            // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:3:9: '['
+            // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:3:7: ( ',' )
+            // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:3:9: ','
             {
-            match('['); 
+            match(','); 
 
             }
 
@@ -89,12 +91,10 @@ public class artihmetic_puzzleLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:4:7: ( '].' )
-            // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:4:9: '].'
+            // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:4:7: ( '-' )
+            // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:4:9: '-'
             {
-            match("]."); 
-
-
+            match('-'); 
 
             }
 
@@ -112,12 +112,10 @@ public class artihmetic_puzzleLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:5:7: ( ']H[' )
-            // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:5:9: ']H['
+            // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:5:7: ( '[' )
+            // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:5:9: '['
             {
-            match("]H["); 
-
-
+            match('['); 
 
             }
 
@@ -135,10 +133,10 @@ public class artihmetic_puzzleLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:6:7: ( ']V[' )
-            // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:6:9: ']V['
+            // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:6:7: ( '].' )
+            // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:6:9: '].'
             {
-            match("]V["); 
+            match("]."); 
 
 
 
@@ -153,15 +151,17 @@ public class artihmetic_puzzleLexer extends Lexer {
     }
     // $ANTLR end "T__21"
 
-    // $ANTLR start "MINUS"
-    public final void mMINUS() throws RecognitionException {
+    // $ANTLR start "T__22"
+    public final void mT__22() throws RecognitionException {
         try {
-            int _type = MINUS;
+            int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:30:8: ( '-' )
-            // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:30:10: '-'
+            // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:7:7: ( ']H[' )
+            // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:7:9: ']H['
             {
-            match('-'); 
+            match("]H["); 
+
+
 
             }
 
@@ -172,17 +172,19 @@ public class artihmetic_puzzleLexer extends Lexer {
         	// do for sure before leaving
         }
     }
-    // $ANTLR end "MINUS"
+    // $ANTLR end "T__22"
 
-    // $ANTLR start "PLUS"
-    public final void mPLUS() throws RecognitionException {
+    // $ANTLR start "T__23"
+    public final void mT__23() throws RecognitionException {
         try {
-            int _type = PLUS;
+            int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:31:7: ( '+' )
-            // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:31:9: '+'
+            // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:8:7: ( ']V[' )
+            // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:8:9: ']V['
             {
-            match('+'); 
+            match("]V["); 
+
+
 
             }
 
@@ -193,15 +195,15 @@ public class artihmetic_puzzleLexer extends Lexer {
         	// do for sure before leaving
         }
     }
-    // $ANTLR end "PLUS"
+    // $ANTLR end "T__23"
 
     // $ANTLR start "LETTER"
     public final void mLETTER() throws RecognitionException {
         try {
             int _type = LETTER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:32:8: ( 'A' .. 'Z' )
-            // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:
+            // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:33:8: ( 'A' .. 'Z' )
+            // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:
             {
             if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z') ) {
                 input.consume();
@@ -225,17 +227,27 @@ public class artihmetic_puzzleLexer extends Lexer {
     // $ANTLR end "LETTER"
 
     public void mTokens() throws RecognitionException {
-        // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:1:8: ( T__17 | T__18 | T__19 | T__20 | T__21 | MINUS | PLUS | LETTER )
+        // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:1:8: ( T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | LETTER )
         int alt1=8;
         switch ( input.LA(1) ) {
-        case ',':
+        case '+':
             {
             alt1=1;
             }
             break;
-        case '[':
+        case ',':
             {
             alt1=2;
+            }
+            break;
+        case '-':
+            {
+            alt1=3;
+            }
+            break;
+        case '[':
+            {
+            alt1=4;
             }
             break;
         case ']':
@@ -243,37 +255,27 @@ public class artihmetic_puzzleLexer extends Lexer {
             switch ( input.LA(2) ) {
             case '.':
                 {
-                alt1=3;
+                alt1=5;
                 }
                 break;
             case 'H':
                 {
-                alt1=4;
+                alt1=6;
                 }
                 break;
             case 'V':
                 {
-                alt1=5;
+                alt1=7;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 1, 3, input);
+                    new NoViableAltException("", 1, 5, input);
 
                 throw nvae;
 
             }
 
-            }
-            break;
-        case '-':
-            {
-            alt1=6;
-            }
-            break;
-        case '+':
-            {
-            alt1=7;
             }
             break;
         case 'A':
@@ -316,7 +318,7 @@ public class artihmetic_puzzleLexer extends Lexer {
 
         switch (alt1) {
             case 1 :
-                // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:1:10: T__17
+                // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:1:10: T__17
                 {
                 mT__17(); 
 
@@ -324,7 +326,7 @@ public class artihmetic_puzzleLexer extends Lexer {
                 }
                 break;
             case 2 :
-                // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:1:16: T__18
+                // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:1:16: T__18
                 {
                 mT__18(); 
 
@@ -332,7 +334,7 @@ public class artihmetic_puzzleLexer extends Lexer {
                 }
                 break;
             case 3 :
-                // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:1:22: T__19
+                // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:1:22: T__19
                 {
                 mT__19(); 
 
@@ -340,7 +342,7 @@ public class artihmetic_puzzleLexer extends Lexer {
                 }
                 break;
             case 4 :
-                // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:1:28: T__20
+                // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:1:28: T__20
                 {
                 mT__20(); 
 
@@ -348,7 +350,7 @@ public class artihmetic_puzzleLexer extends Lexer {
                 }
                 break;
             case 5 :
-                // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:1:34: T__21
+                // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:1:34: T__21
                 {
                 mT__21(); 
 
@@ -356,23 +358,23 @@ public class artihmetic_puzzleLexer extends Lexer {
                 }
                 break;
             case 6 :
-                // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:1:40: MINUS
+                // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:1:40: T__22
                 {
-                mMINUS(); 
+                mT__22(); 
 
 
                 }
                 break;
             case 7 :
-                // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:1:46: PLUS
+                // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:1:46: T__23
                 {
-                mPLUS(); 
+                mT__23(); 
 
 
                 }
                 break;
             case 8 :
-                // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:1:51: LETTER
+                // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:1:52: LETTER
                 {
                 mLETTER(); 
 

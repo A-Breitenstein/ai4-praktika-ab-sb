@@ -2,7 +2,7 @@ package antlr.srcfiles;
 
 import antlr.constraint.ConstraintSolver;
 import antlr.entities.Calcsym;
-import antlr.entities.Number;
+import antlr.entities.NumberAlex;
 import antlr.entities.Operation;
 import org.antlr.runtime.ANTLRFileStream;
 import org.antlr.runtime.CommonTokenStream;
@@ -59,27 +59,27 @@ public class __Test__ {
 //                    System.out.print("\n");
 
                     String token = builder.toString();
-                    Number number;
+                    NumberAlex numberAlex;
                     String tokenID = tokenMap.get(token);
 
                     if ( tokenID == null) {
                         tokenID = String.valueOf(tokenIDCounter++);
                         tokenMap.put(token, tokenID);
-                        number = Number.create(tokenID, token);
+                        numberAlex = NumberAlex.create(tokenID, token);
 
                     } else {
-                        number = Number.create(tokenID,token);
+                        numberAlex = NumberAlex.create(tokenID, token);
                     }
 
                     switch (zahlCounter) {
                         case 0:
-                            operation.setFirstOperand(number);
+                            operation.setFirstOperand(numberAlex);
                             break;
                         case 1:
-                            operation.setSecondOperand(number);
+                            operation.setSecondOperand(numberAlex);
                             break;
                         case 2:
-                            operation.setResult(number);
+                            operation.setResult(numberAlex);
                             break;
                     }
                     builder = new StringBuilder();

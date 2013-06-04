@@ -1,16 +1,12 @@
 package antlr.constraint;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-import antlr.srcfiles.SymbolraetselEmitter;
-import antlr.srcfiles.artihmetic_puzzleLexer;
-import antlr.srcfiles.artihmetic_puzzleParser;
-import antlr.srcfiles.treePaserPuzzel;
+import antlr.srcfiles.*;
 import org.antlr.runtime.ANTLRInputStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
@@ -45,13 +41,15 @@ public class Main {
 
         CommonTreeNodeStream nodes2 = new CommonTreeNodeStream(r2);
         nodes2.setTokenStream(tokens);
-        SymbolraetselEmitter emitter = new SymbolraetselEmitter(nodes2);
-        InputStream templateIs = Main.class.getClassLoader()
-                .getResourceAsStream(TEMPLATE_FILE);
+        SymbolraetselEmitter2 emitter = new SymbolraetselEmitter2(nodes2);
+        InputStream templateIs = Main.class.getClassLoader().getResourceAsStream(TEMPLATE_FILE);
+        InputStream templateRichtig = new FileInputStream("template.stg");
+
+        templateIs = templateRichtig;
 
         StringTemplateGroup templates = new StringTemplateGroup(new InputStreamReader(templateIs, "ISO-8859-15"),AngleBracketTemplateLexer.class);
         emitter.setTemplateLib(templates);
-        SymbolraetselEmitter.puzzle_return puzzle_return = emitter.puzzle();
+        SymbolraetselEmitter2.puzzle_return puzzle_return = emitter.puzzle();
         String output = puzzle_return.getTemplate().toString();
         System.out.println("\n\nausgabe");
         System.out.println(output);

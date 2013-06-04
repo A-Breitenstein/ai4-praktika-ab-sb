@@ -7,15 +7,15 @@ package antlr.entities;
  */
 public class Operation {
 
-    private Number firstOperand;
+    private NumberAlex firstOperand;
 
-    private Number secondOperand;
+    private NumberAlex secondOperand;
 
-    private Number result;
+    private NumberAlex result;
 
     private Calcsym calcsym;
 
-    private Operation(Number firstOperand, Number secondOperand, Number result, Calcsym calcsym) {
+    private Operation(NumberAlex firstOperand, NumberAlex secondOperand, NumberAlex result, Calcsym calcsym) {
         this.firstOperand = firstOperand;
         this.secondOperand = secondOperand;
         this.result = result;
@@ -25,7 +25,7 @@ public class Operation {
     private Operation() {
     }
 
-    public static Operation create(Number firstOperand, Number secondOperand, Number result, Calcsym calcsym) {
+    public static Operation create(NumberAlex firstOperand, NumberAlex secondOperand, NumberAlex result, Calcsym calcsym) {
         return new Operation(firstOperand, secondOperand, result, calcsym);
     }
 
@@ -45,35 +45,35 @@ public class Operation {
 
     public Operation normalize() {
         if (calcsym.equals(Calcsym.MINUS)) {
-            Number tempNumber = this.firstOperand;
+            NumberAlex tempNumberAlex = this.firstOperand;
             this.setFirstOperand(this.getResult());
-            this.setResult(tempNumber);
+            this.setResult(tempNumberAlex);
             this.setCalcsym(Calcsym.PLUS);
         }
         return this;
     }
 
-    public Number getFirstOperand() {
+    public NumberAlex getFirstOperand() {
         return firstOperand;
     }
 
-    public void setFirstOperand(Number firstOperand) {
+    public void setFirstOperand(NumberAlex firstOperand) {
         this.firstOperand = firstOperand;
     }
 
-    public Number getSecondOperand() {
+    public NumberAlex getSecondOperand() {
         return secondOperand;
     }
 
-    public void setSecondOperand(Number secondOperand) {
+    public void setSecondOperand(NumberAlex secondOperand) {
         this.secondOperand = secondOperand;
     }
 
-    public Number getResult() {
+    public NumberAlex getResult() {
         return result;
     }
 
-    public void setResult(Number result) {
+    public void setResult(NumberAlex result) {
         this.result = result;
     }
 
