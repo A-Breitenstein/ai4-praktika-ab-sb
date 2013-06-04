@@ -8,6 +8,8 @@ import choco.kernel.model.Model;
 import choco.kernel.model.variables.integer.IntegerVariable;
 import choco.kernel.solver.Solver;
 
+import java.util.ArrayList;
+
 /**
  * Created with IntelliJ IDEA.
  * User: abg628
@@ -47,6 +49,7 @@ public class Test {
         // Add constraint of all different letters.
         model.addConstraint(Choco.allDifferent(d, o, n, a, l, g, e, r, b, t));
 
+        {
         model.addConstraint(Choco.eq(Choco.plus(d,d),Choco.plus(t,Choco.mult(uebertrag,10))));
         model.addConstraint(Choco.eq(Choco.plus(Choco.plus(l, l),uebertrag), Choco.plus(r, Choco.mult(uebertrag2, 10))));
         model.addConstraint(Choco.eq(Choco.plus(Choco.plus(a, a),uebertrag2), Choco.plus(e, Choco.mult(uebertrag3, 10))));
@@ -54,6 +57,7 @@ public class Test {
         model.addConstraint(Choco.eq(Choco.plus(Choco.plus(o, e),uebertrag4), Choco.plus(o, Choco.mult(uebertrag5, 10))));
         model.addConstraint(Choco.eq(Choco.plus(Choco.plus(d, g),uebertrag5), r));
 
+        }
 // Build a solver, read the model and solve it
         Solver s = new CPSolver();
         s.read(model);
@@ -62,5 +66,6 @@ public class Test {
         System.out.println("donald = " + s.getVar(d).getVal()+""+s.getVar(o).getVal()+""+s.getVar(n).getVal()+""+s.getVar(a).getVal()+""+s.getVar(l).getVal()+""+s.getVar(d).getVal());
         System.out.println("gerald = " + s.getVar(g).getVal()+""+s.getVar(e).getVal()+""+s.getVar(r).getVal()+""+s.getVar(a).getVal()+""+s.getVar(l).getVal()+""+s.getVar(d).getVal());
         System.out.println("robert = " + s.getVar(r).getVal()+""+s.getVar(o).getVal()+""+s.getVar(b).getVal()+""+s.getVar(e).getVal()+""+s.getVar(r).getVal()+""+s.getVar(t).getVal());
+
     }
 }

@@ -1,4 +1,4 @@
-package antlr.srcfiles;// $ANTLR 3.4 Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g 2013-05-28 16:06:15
+package antlr.srcfiles;// $ANTLR 3.4 Z:\\BAI-4\\CI\\artihmetic_puzzle.g 2013-06-04 13:35:38
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -11,7 +11,7 @@ import org.antlr.runtime.tree.*;
 @SuppressWarnings({"all", "warnings", "unchecked"})
 public class artihmetic_puzzleParser extends Parser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "ERGEBNIS", "GLEICH", "HORIZONTAL", "HVOPERATIONS", "LETTER", "MINUS", "OPERAND1", "OPERAND2", "PLUS", "RAETSEL", "START", "VERTIKAL", "ZAHL", "','", "'['", "'].'", "']H['", "']V['"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "ERGEBNIS", "GLEICH", "HORIZONTAL", "HVOPERATIONS", "LETTER", "MINUS", "OPERAND1", "OPERAND2", "PLUS", "RAETSEL", "START", "VERTIKAL", "ZAHL", "'+'", "','", "'-'", "'['", "'].'", "']H['", "']V['"
     };
 
     public static final int EOF=-1;
@@ -20,6 +20,8 @@ public class artihmetic_puzzleParser extends Parser {
     public static final int T__19=19;
     public static final int T__20=20;
     public static final int T__21=21;
+    public static final int T__22=22;
+    public static final int T__23=23;
     public static final int ERGEBNIS=4;
     public static final int GLEICH=5;
     public static final int HORIZONTAL=6;
@@ -58,7 +60,7 @@ public TreeAdaptor getTreeAdaptor() {
     return adaptor;
 }
     public String[] getTokenNames() { return artihmetic_puzzleParser.tokenNames; }
-    public String getGrammarFileName() { return "Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g"; }
+    public String getGrammarFileName() { return "Z:\\BAI-4\\CI\\artihmetic_puzzle.g"; }
 
 
     public static class starta_return extends ParserRuleReturnScope {
@@ -68,7 +70,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "starta"
-    // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:23:1: starta : '[' r0= zahl ',' r1= zahl ',' r2= zahl ',' r3= zahl ',' r4= zahl ',' r5= zahl ',' r6= zahl ',' r7= zahl ',' r8= zahl ']V[' v1= op ',' v2= op ',' v3= op ']H[' h1= op ',' h2= op ',' h3= op '].' -> ^( RAETSEL ^( $v1 $r0 $r1 $r2) ^( $v1 $r3 $r4 $r5) ^( $v3 $r6 $r7 $r8) ^( $h1 $r0 $r3 $r6) ^( $h2 $r1 $r4 $r7) ^( $h3 $r2 $r5 $r8) ) ;
+    // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:25:1: starta : '[' r0= zahl ',' r1= zahl ',' r2= zahl ',' r3= zahl ',' r4= zahl ',' r5= zahl ',' r6= zahl ',' r7= zahl ',' r8= zahl ']V[' v1= op ',' v2= op ',' v3= op ']H[' h1= op ',' h2= op ',' h3= op '].' -> ^( RAETSEL ^( $v1 $r0 $r1 $r2) ^( $v1 $r3 $r4 $r5) ^( $v3 $r6 $r7 $r8) ^( $h1 $r0 $r3 $r6) ^( $h2 $r1 $r4 $r7) ^( $h3 $r2 $r5 $r8) ) ;
     public final starta_return starta() throws RecognitionException {
         starta_return retval = new starta_return();
         retval.start = input.LT(1);
@@ -141,188 +143,188 @@ public TreeAdaptor getTreeAdaptor() {
         CommonTree string_literal16_tree=null;
         RewriteRuleTokenStream stream_21=new RewriteRuleTokenStream(adaptor,"token 21");
         RewriteRuleTokenStream stream_20=new RewriteRuleTokenStream(adaptor,"token 20");
-        RewriteRuleTokenStream stream_19=new RewriteRuleTokenStream(adaptor,"token 19");
-        RewriteRuleTokenStream stream_17=new RewriteRuleTokenStream(adaptor,"token 17");
+        RewriteRuleTokenStream stream_22=new RewriteRuleTokenStream(adaptor,"token 22");
         RewriteRuleTokenStream stream_18=new RewriteRuleTokenStream(adaptor,"token 18");
+        RewriteRuleTokenStream stream_23=new RewriteRuleTokenStream(adaptor,"token 23");
         RewriteRuleSubtreeStream stream_zahl=new RewriteRuleSubtreeStream(adaptor,"rule zahl");
         RewriteRuleSubtreeStream stream_op=new RewriteRuleSubtreeStream(adaptor,"rule op");
         try {
-            // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:23:8: ( '[' r0= zahl ',' r1= zahl ',' r2= zahl ',' r3= zahl ',' r4= zahl ',' r5= zahl ',' r6= zahl ',' r7= zahl ',' r8= zahl ']V[' v1= op ',' v2= op ',' v3= op ']H[' h1= op ',' h2= op ',' h3= op '].' -> ^( RAETSEL ^( $v1 $r0 $r1 $r2) ^( $v1 $r3 $r4 $r5) ^( $v3 $r6 $r7 $r8) ^( $h1 $r0 $r3 $r6) ^( $h2 $r1 $r4 $r7) ^( $h3 $r2 $r5 $r8) ) )
-            // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:23:10: '[' r0= zahl ',' r1= zahl ',' r2= zahl ',' r3= zahl ',' r4= zahl ',' r5= zahl ',' r6= zahl ',' r7= zahl ',' r8= zahl ']V[' v1= op ',' v2= op ',' v3= op ']H[' h1= op ',' h2= op ',' h3= op '].'
+            // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:25:8: ( '[' r0= zahl ',' r1= zahl ',' r2= zahl ',' r3= zahl ',' r4= zahl ',' r5= zahl ',' r6= zahl ',' r7= zahl ',' r8= zahl ']V[' v1= op ',' v2= op ',' v3= op ']H[' h1= op ',' h2= op ',' h3= op '].' -> ^( RAETSEL ^( $v1 $r0 $r1 $r2) ^( $v1 $r3 $r4 $r5) ^( $v3 $r6 $r7 $r8) ^( $h1 $r0 $r3 $r6) ^( $h2 $r1 $r4 $r7) ^( $h3 $r2 $r5 $r8) ) )
+            // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:25:10: '[' r0= zahl ',' r1= zahl ',' r2= zahl ',' r3= zahl ',' r4= zahl ',' r5= zahl ',' r6= zahl ',' r7= zahl ',' r8= zahl ']V[' v1= op ',' v2= op ',' v3= op ']H[' h1= op ',' h2= op ',' h3= op '].'
             {
-            char_literal1=(Token)match(input,18,FOLLOW_18_in_starta61);  
-            stream_18.add(char_literal1);
+            char_literal1=(Token)match(input,20,FOLLOW_20_in_starta67);  
+            stream_20.add(char_literal1);
 
 
-            pushFollow(FOLLOW_zahl_in_starta64);
+            pushFollow(FOLLOW_zahl_in_starta70);
             r0=zahl();
 
             state._fsp--;
 
             stream_zahl.add(r0.getTree());
 
-            char_literal2=(Token)match(input,17,FOLLOW_17_in_starta65);  
-            stream_17.add(char_literal2);
+            char_literal2=(Token)match(input,18,FOLLOW_18_in_starta71);  
+            stream_18.add(char_literal2);
 
 
-            pushFollow(FOLLOW_zahl_in_starta68);
+            pushFollow(FOLLOW_zahl_in_starta74);
             r1=zahl();
 
             state._fsp--;
 
             stream_zahl.add(r1.getTree());
 
-            char_literal3=(Token)match(input,17,FOLLOW_17_in_starta69);  
-            stream_17.add(char_literal3);
+            char_literal3=(Token)match(input,18,FOLLOW_18_in_starta75);  
+            stream_18.add(char_literal3);
 
 
-            pushFollow(FOLLOW_zahl_in_starta72);
+            pushFollow(FOLLOW_zahl_in_starta78);
             r2=zahl();
 
             state._fsp--;
 
             stream_zahl.add(r2.getTree());
 
-            char_literal4=(Token)match(input,17,FOLLOW_17_in_starta73);  
-            stream_17.add(char_literal4);
+            char_literal4=(Token)match(input,18,FOLLOW_18_in_starta79);  
+            stream_18.add(char_literal4);
 
 
-            pushFollow(FOLLOW_zahl_in_starta76);
+            pushFollow(FOLLOW_zahl_in_starta82);
             r3=zahl();
 
             state._fsp--;
 
             stream_zahl.add(r3.getTree());
 
-            char_literal5=(Token)match(input,17,FOLLOW_17_in_starta77);  
-            stream_17.add(char_literal5);
+            char_literal5=(Token)match(input,18,FOLLOW_18_in_starta83);  
+            stream_18.add(char_literal5);
 
 
-            pushFollow(FOLLOW_zahl_in_starta80);
+            pushFollow(FOLLOW_zahl_in_starta86);
             r4=zahl();
 
             state._fsp--;
 
             stream_zahl.add(r4.getTree());
 
-            char_literal6=(Token)match(input,17,FOLLOW_17_in_starta81);  
-            stream_17.add(char_literal6);
+            char_literal6=(Token)match(input,18,FOLLOW_18_in_starta87);  
+            stream_18.add(char_literal6);
 
 
-            pushFollow(FOLLOW_zahl_in_starta84);
+            pushFollow(FOLLOW_zahl_in_starta90);
             r5=zahl();
 
             state._fsp--;
 
             stream_zahl.add(r5.getTree());
 
-            char_literal7=(Token)match(input,17,FOLLOW_17_in_starta85);  
-            stream_17.add(char_literal7);
+            char_literal7=(Token)match(input,18,FOLLOW_18_in_starta91);  
+            stream_18.add(char_literal7);
 
 
-            pushFollow(FOLLOW_zahl_in_starta88);
+            pushFollow(FOLLOW_zahl_in_starta94);
             r6=zahl();
 
             state._fsp--;
 
             stream_zahl.add(r6.getTree());
 
-            char_literal8=(Token)match(input,17,FOLLOW_17_in_starta89);  
-            stream_17.add(char_literal8);
+            char_literal8=(Token)match(input,18,FOLLOW_18_in_starta95);  
+            stream_18.add(char_literal8);
 
 
-            pushFollow(FOLLOW_zahl_in_starta92);
+            pushFollow(FOLLOW_zahl_in_starta98);
             r7=zahl();
 
             state._fsp--;
 
             stream_zahl.add(r7.getTree());
 
-            char_literal9=(Token)match(input,17,FOLLOW_17_in_starta93);  
-            stream_17.add(char_literal9);
+            char_literal9=(Token)match(input,18,FOLLOW_18_in_starta99);  
+            stream_18.add(char_literal9);
 
 
-            pushFollow(FOLLOW_zahl_in_starta96);
+            pushFollow(FOLLOW_zahl_in_starta102);
             r8=zahl();
 
             state._fsp--;
 
             stream_zahl.add(r8.getTree());
 
-            string_literal10=(Token)match(input,21,FOLLOW_21_in_starta97);  
-            stream_21.add(string_literal10);
+            string_literal10=(Token)match(input,23,FOLLOW_23_in_starta103);  
+            stream_23.add(string_literal10);
 
 
-            pushFollow(FOLLOW_op_in_starta100);
+            pushFollow(FOLLOW_op_in_starta106);
             v1=op();
 
             state._fsp--;
 
             stream_op.add(v1.getTree());
 
-            char_literal11=(Token)match(input,17,FOLLOW_17_in_starta101);  
-            stream_17.add(char_literal11);
+            char_literal11=(Token)match(input,18,FOLLOW_18_in_starta107);  
+            stream_18.add(char_literal11);
 
 
-            pushFollow(FOLLOW_op_in_starta104);
+            pushFollow(FOLLOW_op_in_starta110);
             v2=op();
 
             state._fsp--;
 
             stream_op.add(v2.getTree());
 
-            char_literal12=(Token)match(input,17,FOLLOW_17_in_starta105);  
-            stream_17.add(char_literal12);
+            char_literal12=(Token)match(input,18,FOLLOW_18_in_starta111);  
+            stream_18.add(char_literal12);
 
 
-            pushFollow(FOLLOW_op_in_starta108);
+            pushFollow(FOLLOW_op_in_starta114);
             v3=op();
 
             state._fsp--;
 
             stream_op.add(v3.getTree());
 
-            string_literal13=(Token)match(input,20,FOLLOW_20_in_starta109);  
-            stream_20.add(string_literal13);
+            string_literal13=(Token)match(input,22,FOLLOW_22_in_starta115);  
+            stream_22.add(string_literal13);
 
 
-            pushFollow(FOLLOW_op_in_starta112);
+            pushFollow(FOLLOW_op_in_starta118);
             h1=op();
 
             state._fsp--;
 
             stream_op.add(h1.getTree());
 
-            char_literal14=(Token)match(input,17,FOLLOW_17_in_starta113);  
-            stream_17.add(char_literal14);
+            char_literal14=(Token)match(input,18,FOLLOW_18_in_starta119);  
+            stream_18.add(char_literal14);
 
 
-            pushFollow(FOLLOW_op_in_starta116);
+            pushFollow(FOLLOW_op_in_starta122);
             h2=op();
 
             state._fsp--;
 
             stream_op.add(h2.getTree());
 
-            char_literal15=(Token)match(input,17,FOLLOW_17_in_starta117);  
-            stream_17.add(char_literal15);
+            char_literal15=(Token)match(input,18,FOLLOW_18_in_starta123);  
+            stream_18.add(char_literal15);
 
 
-            pushFollow(FOLLOW_op_in_starta120);
+            pushFollow(FOLLOW_op_in_starta126);
             h3=op();
 
             state._fsp--;
 
             stream_op.add(h3.getTree());
 
-            string_literal16=(Token)match(input,19,FOLLOW_19_in_starta121);  
-            stream_19.add(string_literal16);
+            string_literal16=(Token)match(input,21,FOLLOW_21_in_starta127);  
+            stream_21.add(string_literal16);
 
 
             // AST REWRITE
-            // elements: r6, v1, v3, r4, h3, r2, r8, r2, r0, r0, r8, r7, h1, r3, r5, h2, r3, r1, r7, v1, r1, r5, r4, r6
+            // elements: r8, h2, r1, h1, v1, r8, r0, r4, h3, r3, v1, r7, r2, r3, r1, r6, r7, v3, r5, r0, r4, r5, r2, r6
             // token labels: 
-            // rule labels: v1, retval, v3, r6, r7, r8, r0, r1, r2, h1, r3, r4, h3, h2, r5
+            // rule labels: v1, retval, v3, r6, r7, r8, r0, r1, h1, r2, r3, r4, h3, r5, h2
             // token list labels: 
             // rule list labels: 
             // wildcard labels: 
@@ -335,25 +337,25 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_r8=new RewriteRuleSubtreeStream(adaptor,"rule r8",r8!=null?r8.tree:null);
             RewriteRuleSubtreeStream stream_r0=new RewriteRuleSubtreeStream(adaptor,"rule r0",r0!=null?r0.tree:null);
             RewriteRuleSubtreeStream stream_r1=new RewriteRuleSubtreeStream(adaptor,"rule r1",r1!=null?r1.tree:null);
-            RewriteRuleSubtreeStream stream_r2=new RewriteRuleSubtreeStream(adaptor,"rule r2",r2!=null?r2.tree:null);
             RewriteRuleSubtreeStream stream_h1=new RewriteRuleSubtreeStream(adaptor,"rule h1",h1!=null?h1.tree:null);
+            RewriteRuleSubtreeStream stream_r2=new RewriteRuleSubtreeStream(adaptor,"rule r2",r2!=null?r2.tree:null);
             RewriteRuleSubtreeStream stream_r3=new RewriteRuleSubtreeStream(adaptor,"rule r3",r3!=null?r3.tree:null);
             RewriteRuleSubtreeStream stream_r4=new RewriteRuleSubtreeStream(adaptor,"rule r4",r4!=null?r4.tree:null);
             RewriteRuleSubtreeStream stream_h3=new RewriteRuleSubtreeStream(adaptor,"rule h3",h3!=null?h3.tree:null);
-            RewriteRuleSubtreeStream stream_h2=new RewriteRuleSubtreeStream(adaptor,"rule h2",h2!=null?h2.tree:null);
             RewriteRuleSubtreeStream stream_r5=new RewriteRuleSubtreeStream(adaptor,"rule r5",r5!=null?r5.tree:null);
+            RewriteRuleSubtreeStream stream_h2=new RewriteRuleSubtreeStream(adaptor,"rule h2",h2!=null?h2.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 24:3: -> ^( RAETSEL ^( $v1 $r0 $r1 $r2) ^( $v1 $r3 $r4 $r5) ^( $v3 $r6 $r7 $r8) ^( $h1 $r0 $r3 $r6) ^( $h2 $r1 $r4 $r7) ^( $h3 $r2 $r5 $r8) )
+            // 26:3: -> ^( RAETSEL ^( $v1 $r0 $r1 $r2) ^( $v1 $r3 $r4 $r5) ^( $v3 $r6 $r7 $r8) ^( $h1 $r0 $r3 $r6) ^( $h2 $r1 $r4 $r7) ^( $h3 $r2 $r5 $r8) )
             {
-                // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:24:6: ^( RAETSEL ^( $v1 $r0 $r1 $r2) ^( $v1 $r3 $r4 $r5) ^( $v3 $r6 $r7 $r8) ^( $h1 $r0 $r3 $r6) ^( $h2 $r1 $r4 $r7) ^( $h3 $r2 $r5 $r8) )
+                // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:26:6: ^( RAETSEL ^( $v1 $r0 $r1 $r2) ^( $v1 $r3 $r4 $r5) ^( $v3 $r6 $r7 $r8) ^( $h1 $r0 $r3 $r6) ^( $h2 $r1 $r4 $r7) ^( $h3 $r2 $r5 $r8) )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot(
                 (CommonTree)adaptor.create(RAETSEL, "RAETSEL")
                 , root_1);
 
-                // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:24:16: ^( $v1 $r0 $r1 $r2)
+                // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:26:16: ^( $v1 $r0 $r1 $r2)
                 {
                 CommonTree root_2 = (CommonTree)adaptor.nil();
                 root_2 = (CommonTree)adaptor.becomeRoot(stream_v1.nextNode(), root_2);
@@ -367,7 +369,7 @@ public TreeAdaptor getTreeAdaptor() {
                 adaptor.addChild(root_1, root_2);
                 }
 
-                // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:24:38: ^( $v1 $r3 $r4 $r5)
+                // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:26:38: ^( $v1 $r3 $r4 $r5)
                 {
                 CommonTree root_2 = (CommonTree)adaptor.nil();
                 root_2 = (CommonTree)adaptor.becomeRoot(stream_v1.nextNode(), root_2);
@@ -381,7 +383,7 @@ public TreeAdaptor getTreeAdaptor() {
                 adaptor.addChild(root_1, root_2);
                 }
 
-                // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:24:61: ^( $v3 $r6 $r7 $r8)
+                // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:26:61: ^( $v3 $r6 $r7 $r8)
                 {
                 CommonTree root_2 = (CommonTree)adaptor.nil();
                 root_2 = (CommonTree)adaptor.becomeRoot(stream_v3.nextNode(), root_2);
@@ -395,7 +397,7 @@ public TreeAdaptor getTreeAdaptor() {
                 adaptor.addChild(root_1, root_2);
                 }
 
-                // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:24:83: ^( $h1 $r0 $r3 $r6)
+                // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:26:83: ^( $h1 $r0 $r3 $r6)
                 {
                 CommonTree root_2 = (CommonTree)adaptor.nil();
                 root_2 = (CommonTree)adaptor.becomeRoot(stream_h1.nextNode(), root_2);
@@ -409,7 +411,7 @@ public TreeAdaptor getTreeAdaptor() {
                 adaptor.addChild(root_1, root_2);
                 }
 
-                // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:24:107: ^( $h2 $r1 $r4 $r7)
+                // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:26:107: ^( $h2 $r1 $r4 $r7)
                 {
                 CommonTree root_2 = (CommonTree)adaptor.nil();
                 root_2 = (CommonTree)adaptor.becomeRoot(stream_h2.nextNode(), root_2);
@@ -423,7 +425,7 @@ public TreeAdaptor getTreeAdaptor() {
                 adaptor.addChild(root_1, root_2);
                 }
 
-                // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:24:130: ^( $h3 $r2 $r5 $r8)
+                // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:26:130: ^( $h3 $r2 $r5 $r8)
                 {
                 CommonTree root_2 = (CommonTree)adaptor.nil();
                 root_2 = (CommonTree)adaptor.becomeRoot(stream_h3.nextNode(), root_2);
@@ -476,7 +478,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "zahl"
-    // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:26:1: zahl : ( LETTER )* -> ^( ZAHL ( LETTER )* ) ;
+    // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:28:1: zahl : ( LETTER )* -> ^( ZAHL ( LETTER )* ) ;
     public final zahl_return zahl() throws RecognitionException {
         zahl_return retval = new zahl_return();
         retval.start = input.LT(1);
@@ -490,10 +492,10 @@ public TreeAdaptor getTreeAdaptor() {
         RewriteRuleTokenStream stream_LETTER=new RewriteRuleTokenStream(adaptor,"token LETTER");
 
         try {
-            // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:26:6: ( ( LETTER )* -> ^( ZAHL ( LETTER )* ) )
-            // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:26:8: ( LETTER )*
+            // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:28:6: ( ( LETTER )* -> ^( ZAHL ( LETTER )* ) )
+            // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:28:8: ( LETTER )*
             {
-            // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:26:8: ( LETTER )*
+            // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:28:8: ( LETTER )*
             loop1:
             do {
                 int alt1=2;
@@ -506,9 +508,9 @@ public TreeAdaptor getTreeAdaptor() {
 
                 switch (alt1) {
             	case 1 :
-            	    // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:26:8: LETTER
+            	    // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:28:8: LETTER
             	    {
-            	    LETTER17=(Token)match(input,LETTER,FOLLOW_LETTER_in_zahl242);  
+            	    LETTER17=(Token)match(input,LETTER,FOLLOW_LETTER_in_zahl248);  
             	    stream_LETTER.add(LETTER17);
 
 
@@ -532,16 +534,16 @@ public TreeAdaptor getTreeAdaptor() {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (CommonTree)adaptor.nil();
-            // 26:16: -> ^( ZAHL ( LETTER )* )
+            // 28:16: -> ^( ZAHL ( LETTER )* )
             {
-                // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:26:19: ^( ZAHL ( LETTER )* )
+                // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:28:19: ^( ZAHL ( LETTER )* )
                 {
                 CommonTree root_1 = (CommonTree)adaptor.nil();
                 root_1 = (CommonTree)adaptor.becomeRoot(
                 (CommonTree)adaptor.create(ZAHL, "ZAHL")
                 , root_1);
 
-                // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:26:26: ( LETTER )*
+                // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:28:26: ( LETTER )*
                 while ( stream_LETTER.hasNext() ) {
                     adaptor.addChild(root_1, 
                     stream_LETTER.nextNode()
@@ -589,7 +591,7 @@ public TreeAdaptor getTreeAdaptor() {
 
 
     // $ANTLR start "op"
-    // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:27:1: op : ( MINUS | PLUS );
+    // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:29:1: op : ( ( '+' -> PLUS ) | ( '-' -> MINUS ) );
     public final op_return op() throws RecognitionException {
         op_return retval = new op_return();
         retval.start = input.LT(1);
@@ -597,34 +599,109 @@ public TreeAdaptor getTreeAdaptor() {
 
         CommonTree root_0 = null;
 
-        Token set18=null;
+        Token char_literal18=null;
+        Token char_literal19=null;
 
-        CommonTree set18_tree=null;
+        CommonTree char_literal18_tree=null;
+        CommonTree char_literal19_tree=null;
+        RewriteRuleTokenStream stream_19=new RewriteRuleTokenStream(adaptor,"token 19");
+        RewriteRuleTokenStream stream_17=new RewriteRuleTokenStream(adaptor,"token 17");
 
         try {
-            // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:27:4: ( MINUS | PLUS )
-            // Z:\\AI4\\CI\\p1\\artihmetic_puzzle.g:
-            {
-            root_0 = (CommonTree)adaptor.nil();
+            // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:29:4: ( ( '+' -> PLUS ) | ( '-' -> MINUS ) )
+            int alt2=2;
+            int LA2_0 = input.LA(1);
 
-
-            set18=(Token)input.LT(1);
-
-            if ( input.LA(1)==MINUS||input.LA(1)==PLUS ) {
-                input.consume();
-                adaptor.addChild(root_0, 
-                (CommonTree)adaptor.create(set18)
-                );
-                state.errorRecovery=false;
+            if ( (LA2_0==17) ) {
+                alt2=1;
+            }
+            else if ( (LA2_0==19) ) {
+                alt2=2;
             }
             else {
-                MismatchedSetException mse = new MismatchedSetException(null,input);
-                throw mse;
+                NoViableAltException nvae =
+                    new NoViableAltException("", 2, 0, input);
+
+                throw nvae;
+
             }
+            switch (alt2) {
+                case 1 :
+                    // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:29:6: ( '+' -> PLUS )
+                    {
+                    // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:29:6: ( '+' -> PLUS )
+                    // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:29:7: '+'
+                    {
+                    char_literal18=(Token)match(input,17,FOLLOW_17_in_op266);  
+                    stream_17.add(char_literal18);
 
+
+                    // AST REWRITE
+                    // elements: 
+                    // token labels: 
+                    // rule labels: retval
+                    // token list labels: 
+                    // rule list labels: 
+                    // wildcard labels: 
+                    retval.tree = root_0;
+                    RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
+
+                    root_0 = (CommonTree)adaptor.nil();
+                    // 29:11: -> PLUS
+                    {
+                        adaptor.addChild(root_0, 
+                        (CommonTree)adaptor.create(PLUS, "PLUS")
+                        );
+
+                    }
+
+
+                    retval.tree = root_0;
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:29:20: ( '-' -> MINUS )
+                    {
+                    // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:29:20: ( '-' -> MINUS )
+                    // Z:\\BAI-4\\CI\\artihmetic_puzzle.g:29:21: '-'
+                    {
+                    char_literal19=(Token)match(input,19,FOLLOW_19_in_op274);  
+                    stream_19.add(char_literal19);
+
+
+                    // AST REWRITE
+                    // elements: 
+                    // token labels: 
+                    // rule labels: retval
+                    // token list labels: 
+                    // rule list labels: 
+                    // wildcard labels: 
+                    retval.tree = root_0;
+                    RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
+
+                    root_0 = (CommonTree)adaptor.nil();
+                    // 29:25: -> MINUS
+                    {
+                        adaptor.addChild(root_0, 
+                        (CommonTree)adaptor.create(MINUS, "MINUS")
+                        );
+
+                    }
+
+
+                    retval.tree = root_0;
+
+                    }
+
+
+                    }
+                    break;
 
             }
-
             retval.stop = input.LT(-1);
 
 
@@ -651,37 +728,39 @@ public TreeAdaptor getTreeAdaptor() {
 
  
 
-    public static final BitSet FOLLOW_18_in_starta61 = new BitSet(new long[]{0x0000000000020100L});
-    public static final BitSet FOLLOW_zahl_in_starta64 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_starta65 = new BitSet(new long[]{0x0000000000020100L});
-    public static final BitSet FOLLOW_zahl_in_starta68 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_starta69 = new BitSet(new long[]{0x0000000000020100L});
-    public static final BitSet FOLLOW_zahl_in_starta72 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_starta73 = new BitSet(new long[]{0x0000000000020100L});
-    public static final BitSet FOLLOW_zahl_in_starta76 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_starta77 = new BitSet(new long[]{0x0000000000020100L});
-    public static final BitSet FOLLOW_zahl_in_starta80 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_starta81 = new BitSet(new long[]{0x0000000000020100L});
-    public static final BitSet FOLLOW_zahl_in_starta84 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_starta85 = new BitSet(new long[]{0x0000000000020100L});
-    public static final BitSet FOLLOW_zahl_in_starta88 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_starta89 = new BitSet(new long[]{0x0000000000020100L});
-    public static final BitSet FOLLOW_zahl_in_starta92 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_starta93 = new BitSet(new long[]{0x0000000000200100L});
-    public static final BitSet FOLLOW_zahl_in_starta96 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_starta97 = new BitSet(new long[]{0x0000000000001200L});
-    public static final BitSet FOLLOW_op_in_starta100 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_starta101 = new BitSet(new long[]{0x0000000000001200L});
-    public static final BitSet FOLLOW_op_in_starta104 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_starta105 = new BitSet(new long[]{0x0000000000001200L});
-    public static final BitSet FOLLOW_op_in_starta108 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_starta109 = new BitSet(new long[]{0x0000000000001200L});
-    public static final BitSet FOLLOW_op_in_starta112 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_starta113 = new BitSet(new long[]{0x0000000000001200L});
-    public static final BitSet FOLLOW_op_in_starta116 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_starta117 = new BitSet(new long[]{0x0000000000001200L});
-    public static final BitSet FOLLOW_op_in_starta120 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_19_in_starta121 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_LETTER_in_zahl242 = new BitSet(new long[]{0x0000000000000102L});
+    public static final BitSet FOLLOW_20_in_starta67 = new BitSet(new long[]{0x0000000000040100L});
+    public static final BitSet FOLLOW_zahl_in_starta70 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_starta71 = new BitSet(new long[]{0x0000000000040100L});
+    public static final BitSet FOLLOW_zahl_in_starta74 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_starta75 = new BitSet(new long[]{0x0000000000040100L});
+    public static final BitSet FOLLOW_zahl_in_starta78 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_starta79 = new BitSet(new long[]{0x0000000000040100L});
+    public static final BitSet FOLLOW_zahl_in_starta82 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_starta83 = new BitSet(new long[]{0x0000000000040100L});
+    public static final BitSet FOLLOW_zahl_in_starta86 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_starta87 = new BitSet(new long[]{0x0000000000040100L});
+    public static final BitSet FOLLOW_zahl_in_starta90 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_starta91 = new BitSet(new long[]{0x0000000000040100L});
+    public static final BitSet FOLLOW_zahl_in_starta94 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_starta95 = new BitSet(new long[]{0x0000000000040100L});
+    public static final BitSet FOLLOW_zahl_in_starta98 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_starta99 = new BitSet(new long[]{0x0000000000800100L});
+    public static final BitSet FOLLOW_zahl_in_starta102 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_23_in_starta103 = new BitSet(new long[]{0x00000000000A0000L});
+    public static final BitSet FOLLOW_op_in_starta106 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_starta107 = new BitSet(new long[]{0x00000000000A0000L});
+    public static final BitSet FOLLOW_op_in_starta110 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_starta111 = new BitSet(new long[]{0x00000000000A0000L});
+    public static final BitSet FOLLOW_op_in_starta114 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_22_in_starta115 = new BitSet(new long[]{0x00000000000A0000L});
+    public static final BitSet FOLLOW_op_in_starta118 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_starta119 = new BitSet(new long[]{0x00000000000A0000L});
+    public static final BitSet FOLLOW_op_in_starta122 = new BitSet(new long[]{0x0000000000040000L});
+    public static final BitSet FOLLOW_18_in_starta123 = new BitSet(new long[]{0x00000000000A0000L});
+    public static final BitSet FOLLOW_op_in_starta126 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_starta127 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_LETTER_in_zahl248 = new BitSet(new long[]{0x0000000000000102L});
+    public static final BitSet FOLLOW_17_in_op266 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_op274 = new BitSet(new long[]{0x0000000000000002L});
 
 }

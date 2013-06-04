@@ -33,4 +33,14 @@ public class Number {
 	public int getSize() {
 		return digits.length;
 	}
+
+    @Override
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (char digit : digits) {
+            stringBuilder.append(digit);
+        }
+
+        return stringBuilder.toString();
+    }
 }

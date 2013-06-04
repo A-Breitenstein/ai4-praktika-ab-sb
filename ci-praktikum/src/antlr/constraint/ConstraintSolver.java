@@ -10,6 +10,7 @@ import choco.kernel.model.variables.integer.IntegerExpressionVariable;
 import choco.kernel.model.variables.integer.IntegerVariable;
 import choco.kernel.solver.Solver;
 
+
 import java.util.*;
 
 import static choco.Choco.neq;
@@ -332,5 +333,34 @@ public class ConstraintSolver {
 
     }
 
+    void addAllIntegervariables(Number number1,Number number2,Number number3) {
 
+
+
+
+    }
+
+    /*public static void main(String[] args) {
+        Set<Character> integerVars = new HashSet<Character>();
+        int operationCounter = 0;
+
+        Number number1, number2, number3;
+
+        for (Character c : number1.getCharacters()) {
+            if (c != null) {
+                integerVars.add(c);
+            }
+        }
+        for (Character c : number2.getCharacters()) {
+            if (c != null) {
+                integerVars.add(c);
+            }
+        }
+        for (Character c : number3.getCharacters()) {
+            if (c != null) {
+                integerVars.add(c);
+            }
+        }
+
+    }*/
 }
