@@ -1,0 +1,98 @@
+group template;
+
+sums(symbols,sums,vars,allDifferentString,constraintNetzListe,outputString) ::= <<
+
+<createHeader()>
+public class ConstraintSolver{
+	public static void main(String[] args){
+		Model model = new CPModel();
+		<defineVars(vars)>
+		model.addConstraint(Choco.allDifferent(<allDifferentString>));
+		
+		<constraintNetzListe:
+			{constraint| <constraint>}
+			; separator="\n">
+		
+		Solver solver = new CPSolver();
+        	solver.read(model);
+        	solver.solve();
+        	
+        	<outputString:
+			{s| <s>}
+			; separator="\n">
+	}
+
+
+}
+>>
+
+defineVars(liste) ::= <<
+<liste:
+{elem| IntegerVariable <elem> = Choco.makeIntVar("<elem>", 0, 9, String.valueOf(Options.V_ENUM)); }
+; separator="\n">
+>>
+
+createConstrains(liste) ::= <<
+<liste:
+{elem| IntegerVariable <elem> = Choco.makeIntVar("<elem>", 0, 9, String.valueOf(Options.V_ENUM)); }
+; separator="\n">
+>>
+
+createHeader() ::= <<
+
+import choco.Choco;
+import choco.Options;
+import choco.cp.model.CPModel;
+import choco.cp.solver.CPSolver;
+import choco.kernel.model.Model;
+import choco.kernel.model.variables.integer.IntegerExpressionVariable;
+import choco.kernel.model.variables.integer.IntegerVariable;
+import choco.kernel.solver.Solver;
+import static choco.Choco.neq;
+
+>>
+
+sum(number1, number2, number3) ::= <<
+<number1.characters, number2.characters, number3.characters :
+  {n1, n2, n3 | <if(n1)><n1><else>0<endif> + <if(n2)><n2><else>0<endif> = <if(n3)><n3><else>0<endif>;}
+  ; separator="\n">
+>>
+
+
+/*
+		<numberListe:
+			
+			{numbers|
+			
+				<first(numbers).characters, first(rest(numbers)).characters, last(numbers).characters:
+					{n1, n2, n3 |
+<if(n1)><n1><else>0<endif> + <if(n2)><n2><else>0<endif> = <if(n3)><n3><else>0<endif>;
+
+			if(stringliste) 
+			model.addConstraint(Choco.eq(Choco.plus(op1IT.previous(), op2IT.previous()), Choco.plus(resultIT.previous(), Choco.mult(uebertraege.get(indexOfUbertrag), 10))));
+			stringliste = false;
+			
+			
+			
+			<if(n1)>
+				<if(n2)>
+					<if(n3)>
+						model.addConstraint(Choco.eq(Choco.plus(Choco.plus(<n1>, <n2>), uebertraege.get(indexOfUbertrag - 1)), Choco.plus(<n3>, Choco.mult(uebertraege.get(indexOfUbertrag), 10))));
+					<else>
+						model.addConstraint(Choco.eq(Choco.plus(Choco.plus(<n1>,<n2>), uebertraege.get(indexOfUbertrag - 1)), <n3>));
+					<endif>
+				<else>
+					model.addConstraint(Choco.eq(Choco.plus(<n1>, uebertraege.get(indexOfUbertrag - 1)), Choco.plus(<n3>, Choco.mult(uebertraege.get(indexOfUbertrag), 10))));
+				<endif>
+			<else>
+				<if(n2)>
+					model.addConstraint(Choco.eq(Choco.plus(<n2>, uebertraege.get(indexOfUbertrag - 1)), Choco.plus(<n3>, Choco.mult(uebertraege.get(indexOfUbertrag), 10))));
+				<else>
+					model.addConstraint(Choco.eq(<n3>, uebertraege.get(indexOfUbertrag - 1)));
+				<endif>
+			<endif>
+					 }
+				 >
+		 	}
+		>
+*/

@@ -1,10 +1,6 @@
 package antlr.constraint;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 
 import antlr.srcfiles.*;
 import org.antlr.runtime.ANTLRInputStream;
@@ -53,6 +49,10 @@ public class Main {
         String output = puzzle_return.getTemplate().toString();
         System.out.println("\n\nausgabe");
         System.out.println(output);
+
+        FileWriter writer = new FileWriter("src/ConstraintSolver.java");
+        writer.write(output);
+        writer.close();
 
     }
 }

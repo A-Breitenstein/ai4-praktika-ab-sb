@@ -1,10 +1,18 @@
-package antlr.srcfiles;// $ANTLR 3.4 Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g 2013-06-04 18:20:47
+package antlr.srcfiles;// $ANTLR 3.4 Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g 2013-06-06 16:27:07
 
-    	import java.util.Set;
-	import java.util.HashSet;
-	import java.util.Arrays;
-	import java.math.BigInteger;
+
+	import choco.Choco;
+	import choco.Options;
+	import choco.cp.model.CPModel;
+	import choco.cp.solver.CPSolver;
+	import choco.kernel.model.Model;
+	import choco.kernel.model.variables.integer.IntegerExpressionVariable;
+	import choco.kernel.model.variables.integer.IntegerVariable;
+	import choco.kernel.solver.Solver;
 	import antlr.srcfiles.Number;
+	import java.util.*;
+	import org.antlr.runtime.BitSet;
+   	import org.antlr.runtime.tree.*;
 
 
 import org.antlr.runtime.*;
@@ -85,46 +93,142 @@ public static class STAttrMap extends HashMap {
     public String getGrammarFileName() { return "Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g"; }
 
 
-        Set<Character> integerVars = new HashSet<Character>();
+        Map<String,IntegerVariable>  integerVariableMap = new HashMap<String,IntegerVariable>();
         List<List<Number>> numbersBaum = new ArrayList<List<Number>>();
         int operationCounter = 0;
-
+    	
+    	void putIntegerVariablesInMap(Number number){
+    		for (Character c : number.getCharacters()) {
+    	            if (c != null) {
+    	            	if(integerVariableMap.get(String.valueOf(c)) == null)
+    		                integerVariableMap.put(String.valueOf(c),Choco.makeIntVar(String.valueOf(c), 0, 9, String.valueOf(Options.V_ENUM)));
+    	            }
+    	        }
+    	}
     	void sammelAllesAuf(Number number1,Number number2,Number number3){
     	
-    		for (Character c : number1.getCharacters()) {
-    	            if (c != null) {
-    	                integerVars.add(c);
-    	            }
-    	        }
-    	        
-    	        for (Character c : number2.getCharacters()) {
-    	            if (c != null) {
-    	                integerVars.add(c);
-    	            }
-    	        }
-    	        
-    	        for (Character c : number3.getCharacters()) {
-    	            if (c != null) {
-    	                integerVars.add(c);
-    	            }
-    	        }
+    		putIntegerVariablesInMap(number1);
+    		putIntegerVariablesInMap(number2);
+    		putIntegerVariablesInMap(number3);
     	        
     	        numbersBaum.add(new ArrayList<Number>(Arrays.asList(number1,number2,number3)));
             }
-    	List<Character> getVars(){
-    		return new ArrayList<Character>(integerVars);
+    	List<String> getVars(){
+    		return new ArrayList<String>(integerVariableMap.keySet());
     	}
     	String getAllDifferentString(){
     		
     		String tmp ="";
-    	        for (Character c : getVars()) {
+    	        for (String c : getVars()) {
             	    tmp+=c+",";            
     	        }
             	return tmp.substring(0,tmp.length()-1);
     	}
-    	List<List<Number>> getNumbersBaum(){
-    		return numbersBaum;
-    	}
+        	List<String> createConstraintNetz(){
+                List<String> codeStringListe = new ArrayList<String>();
+                for (List<Number> numbers : numbersBaum) {
+                    codeStringListe.addAll(addOperationSpaltenweise(numbers.get(0).toString(),numbers.get(1).toString(),numbers.get(2).toString()));
+                }
+        		return codeStringListe;
+        	}
+    	
+        public List<String> addOperationSpaltenweise(String op1, String op2, String result) {
+            List<String> codeString = new ArrayList<String>();
+
+            operationCounter++;
+
+            List<IntegerVariable> iv_op1_List = new ArrayList<IntegerVariable>();
+            List<IntegerVariable> iv_op2_List = new ArrayList<IntegerVariable>();
+            List<IntegerVariable> iv_result_List = new ArrayList<IntegerVariable>();
+
+            for (char c : op1.toCharArray()) {
+                iv_op1_List.add(integerVariableMap.get(String.valueOf(c)));
+            }
+
+            for (char c : op2.toCharArray()) {
+                iv_op2_List.add(integerVariableMap.get(String.valueOf(c)));
+            }
+
+            for (char c : result.toCharArray()) {
+                iv_result_List.add(integerVariableMap.get(String.valueOf(c)));
+            }
+
+            ListIterator<IntegerVariable> op1IT = iv_op1_List.listIterator(iv_op1_List.size());
+            ListIterator<IntegerVariable> op2IT = iv_op2_List.listIterator(iv_op2_List.size());
+            ListIterator<IntegerVariable> resultIT = iv_result_List.listIterator(iv_result_List.size());
+
+            List<IntegerVariable> uebertraege = new ArrayList<IntegerVariable>();
+
+            String name;
+            for (int i = 0; i < iv_result_List.size(); i++) {
+                name = "c" + operationCounter + "uebertrag" + i;
+                codeString.add("IntegerVariable "+name+" = Choco.makeIntVar(\""+name+"\", 0, 1);");
+                uebertraege.add(Choco.makeIntVar(name, 0, 1));
+            }
+
+            int indexOfUbertrag = 0;
+
+    //        model.addConstraint(Choco.eq(Choco.plus(op1IT.previous(), op2IT.previous()), Choco.plus(resultIT.previous(), Choco.mult(uebertraege.get(indexOfUbertrag), 10))));
+            codeString.add("model.addConstraint(Choco.eq(Choco.plus("+op1IT.previous().getName()+","+op2IT.previous().getName()+"), Choco.plus("+resultIT.previous().getName()+", Choco.mult("+uebertraege.get(indexOfUbertrag).getName()+", 10))));");
+
+            indexOfUbertrag++;
+            IntegerVariable resultVar, op1Var = null, op2Var = null;
+            boolean op1HasPrevious, op2HasPrevious;
+            while (resultIT.hasPrevious()) {
+
+                resultVar = resultIT.previous();
+
+                if (op1IT.hasPrevious()) {
+                    op1Var = op1IT.previous();
+                    op1HasPrevious = true;
+                } else {
+                    op1HasPrevious = false;
+                }
+
+                if (op2IT.hasPrevious()) {
+                    op2Var = op2IT.previous();
+                    op2HasPrevious = true;
+                } else {
+                    op2HasPrevious = false;
+                }
+
+
+                if (op1HasPrevious && op2HasPrevious) {
+                    if (resultIT.hasPrevious()) {
+    //                    model.addConstraint(Choco.eq(Choco.plus(Choco.plus(op1Var, op2Var), uebertraege.get(indexOfUbertrag - 1)), Choco.plus(resultVar, Choco.mult(uebertraege.get(indexOfUbertrag), 10))));
+                        codeString.add("model.addConstraint(Choco.eq(Choco.plus(Choco.plus("+op1Var.getName()+","+ op2Var.getName()+"), "+uebertraege.get(indexOfUbertrag - 1).getName()+"), Choco.plus("+resultVar.getName()+", Choco.mult("+uebertraege.get(indexOfUbertrag).getName()+", 10))));");
+                    } else {
+    //                    model.addConstraint(Choco.eq(Choco.plus(Choco.plus(op1Var, op2Var), uebertraege.get(indexOfUbertrag - 1)), resultVar));
+                        codeString.add("model.addConstraint(Choco.eq(Choco.plus(Choco.plus("+op1Var.getName()+","+ op2Var.getName()+"),"+ uebertraege.get(indexOfUbertrag - 1).getName()+"),"+ resultVar.getName()+"));");
+                    }
+                } else if (op1HasPrevious && !op2HasPrevious) {
+    //                model.addConstraint(Choco.eq(Choco.plus(op1Var, uebertraege.get(indexOfUbertrag - 1)), Choco.plus(resultVar, Choco.mult(uebertraege.get(indexOfUbertrag), 10))));
+                    codeString.add("model.addConstraint(Choco.eq(Choco.plus("+op1Var.getName()+", "+uebertraege.get(indexOfUbertrag - 1).getName()+"), Choco.plus("+resultVar.getName()+", Choco.mult("+uebertraege.get(indexOfUbertrag).getName()+", 10))));");
+                } else if (!op1HasPrevious && op2HasPrevious) {
+    //                model.addConstraint(Choco.eq(Choco.plus(op2Var, uebertraege.get(indexOfUbertrag - 1)), Choco.plus(resultVar, Choco.mult(uebertraege.get(indexOfUbertrag), 10))));
+                    codeString.add("model.addConstraint(Choco.eq(Choco.plus("+op2Var.getName()+", "+uebertraege.get(indexOfUbertrag - 1).getName()+"), Choco.plus("+resultVar.getName()+", Choco.mult("+uebertraege.get(indexOfUbertrag).getName()+", 10))));");
+                } else {
+                    codeString.add("model.addConstraint(Choco.eq("+resultVar.getName()+", "+uebertraege.get(indexOfUbertrag - 1).getName()+"));");
+                }
+
+                indexOfUbertrag++;
+            }
+            return codeString; 
+        }
+        List<String> getOutputString(){
+        	List<String> output = new ArrayList<String>();
+                for (List<Number> numbers : numbersBaum) {
+                   output.add("System.out.println("+wort(numbers.get(0).toString()) + " \" + \"+"+wort(numbers.get(1).toString())  + "\" = \"+"+ wort(numbers.get(2).toString())+"\"\");"); 
+                }
+            return output;
+        }
+        String wort(String s) {
+            String out= "";
+            for (Character c : s.toCharArray()) {
+                out+= "String.valueOf(solver.getVar("+c+").getVal())+";
+            }
+            return out;
+        }
 
 
 
@@ -136,7 +240,7 @@ public static class STAttrMap extends HashMap {
 
 
     // $ANTLR start "puzzle"
-    // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:61:1: puzzle : ^( RAETSEL (constraints+= constraint )* ) -> sums(sums=$constraintsvars=getVars()allDifferentString=getAllDifferentString()numberListe=getNumbersBaum());
+    // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:165:1: puzzle : ^( RAETSEL (constraints+= constraint )* ) -> sums(sums=$constraintsvars=getVars()allDifferentString=getAllDifferentString()constraintNetzListe=createConstraintNetz()outputString=getOutputString());
     public final puzzle_return puzzle() throws RecognitionException {
         puzzle_return retval = new puzzle_return();
         retval.start = input.LT(1);
@@ -145,14 +249,14 @@ public static class STAttrMap extends HashMap {
         List list_constraints=null;
         RuleReturnScope constraints = null;
         try {
-            // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:67:3: ( ^( RAETSEL (constraints+= constraint )* ) -> sums(sums=$constraintsvars=getVars()allDifferentString=getAllDifferentString()numberListe=getNumbersBaum()))
-            // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:68:3: ^( RAETSEL (constraints+= constraint )* )
+            // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:171:3: ( ^( RAETSEL (constraints+= constraint )* ) -> sums(sums=$constraintsvars=getVars()allDifferentString=getAllDifferentString()constraintNetzListe=createConstraintNetz()outputString=getOutputString()))
+            // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:172:3: ^( RAETSEL (constraints+= constraint )* )
             {
             match(input,RAETSEL,FOLLOW_RAETSEL_in_puzzle76); 
 
             if ( input.LA(1)==Token.DOWN ) {
                 match(input, Token.DOWN, null); 
-                // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:68:24: (constraints+= constraint )*
+                // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:172:24: (constraints+= constraint )*
                 loop1:
                 do {
                     int alt1=2;
@@ -165,7 +269,7 @@ public static class STAttrMap extends HashMap {
 
                     switch (alt1) {
                 	case 1 :
-                	    // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:68:24: constraints+= constraint
+                	    // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:172:24: constraints+= constraint
                 	    {
                 	    pushFollow(FOLLOW_constraint_in_puzzle80);
                 	    constraints=constraint();
@@ -190,9 +294,9 @@ public static class STAttrMap extends HashMap {
 
 
             // TEMPLATE REWRITE
-            // 69:3: -> sums(sums=$constraintsvars=getVars()allDifferentString=getAllDifferentString()numberListe=getNumbersBaum())
+            // 173:3: -> sums(sums=$constraintsvars=getVars()allDifferentString=getAllDifferentString()constraintNetzListe=createConstraintNetz()outputString=getOutputString())
             {
-                retval.st = templateLib.getInstanceOf("sums",new STAttrMap().put("sums", list_constraints).put("vars", getVars()).put("allDifferentString", getAllDifferentString()).put("numberListe", getNumbersBaum()));
+                retval.st = templateLib.getInstanceOf("sums",new STAttrMap().put("sums", list_constraints).put("vars", getVars()).put("allDifferentString", getAllDifferentString()).put("constraintNetzListe", createConstraintNetz()).put("outputString", getOutputString()));
             }
 
 
@@ -200,7 +304,7 @@ public static class STAttrMap extends HashMap {
             }
 
 
-              	System.out.println(integerVars);
+              	System.out.println(integerVariableMap);
               	System.out.println(numbersBaum);
               
         }
@@ -225,7 +329,7 @@ public static class STAttrMap extends HashMap {
 
 
     // $ANTLR start "constraint"
-    // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:72:1: constraint : ^( PLUS n1= number n2= number n3= number ) -> sum(number1=$n1.numbernumber2=$n2.numbernumber3=$n3.number);
+    // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:176:1: constraint : ^( PLUS n1= number n2= number n3= number ) -> sum(number1=$n1.numbernumber2=$n2.numbernumber3=$n3.number);
     public final constraint_return constraint() throws RecognitionException {
         constraint_return retval = new constraint_return();
         retval.start = input.LT(1);
@@ -239,25 +343,25 @@ public static class STAttrMap extends HashMap {
 
 
         try {
-            // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:81:3: ( ^( PLUS n1= number n2= number n3= number ) -> sum(number1=$n1.numbernumber2=$n2.numbernumber3=$n3.number))
-            // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:81:6: ^( PLUS n1= number n2= number n3= number )
+            // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:185:3: ( ^( PLUS n1= number n2= number n3= number ) -> sum(number1=$n1.numbernumber2=$n2.numbernumber3=$n3.number))
+            // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:185:6: ^( PLUS n1= number n2= number n3= number )
             {
-            match(input,PLUS,FOLLOW_PLUS_in_constraint125); 
+            match(input,PLUS,FOLLOW_PLUS_in_constraint129); 
 
             match(input, Token.DOWN, null); 
-            pushFollow(FOLLOW_number_in_constraint129);
+            pushFollow(FOLLOW_number_in_constraint133);
             n1=number();
 
             state._fsp--;
 
 
-            pushFollow(FOLLOW_number_in_constraint133);
+            pushFollow(FOLLOW_number_in_constraint137);
             n2=number();
 
             state._fsp--;
 
 
-            pushFollow(FOLLOW_number_in_constraint137);
+            pushFollow(FOLLOW_number_in_constraint141);
             n3=number();
 
             state._fsp--;
@@ -267,7 +371,7 @@ public static class STAttrMap extends HashMap {
 
 
             // TEMPLATE REWRITE
-            // 81:44: -> sum(number1=$n1.numbernumber2=$n2.numbernumber3=$n3.number)
+            // 185:44: -> sum(number1=$n1.numbernumber2=$n2.numbernumber3=$n3.number)
             {
                 retval.st = templateLib.getInstanceOf("sum",new STAttrMap().put("number1", (n1!=null?n1.number:null)).put("number2", (n2!=null?n2.number:null)).put("number3", (n3!=null?n3.number:null)));
             }
@@ -307,7 +411,7 @@ public static class STAttrMap extends HashMap {
 
 
     // $ANTLR start "number"
-    // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:83:1: number returns [Number number] : ^( ZAHL (syms+= LETTER )+ ) ;
+    // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:187:1: number returns [Number number] : ^( ZAHL (syms+= LETTER )+ ) ;
     public final number_return number() throws RecognitionException {
         number_return retval = new number_return();
         retval.start = input.LT(1);
@@ -317,13 +421,13 @@ public static class STAttrMap extends HashMap {
         List list_syms=null;
 
         try {
-            // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:88:3: ( ^( ZAHL (syms+= LETTER )+ ) )
-            // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:89:3: ^( ZAHL (syms+= LETTER )+ )
+            // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:192:3: ( ^( ZAHL (syms+= LETTER )+ ) )
+            // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:193:3: ^( ZAHL (syms+= LETTER )+ )
             {
-            match(input,ZAHL,FOLLOW_ZAHL_in_number180); 
+            match(input,ZAHL,FOLLOW_ZAHL_in_number184); 
 
             match(input, Token.DOWN, null); 
-            // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:89:14: (syms+= LETTER )+
+            // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:193:14: (syms+= LETTER )+
             int cnt2=0;
             loop2:
             do {
@@ -337,9 +441,9 @@ public static class STAttrMap extends HashMap {
 
                 switch (alt2) {
             	case 1 :
-            	    // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:89:14: syms+= LETTER
+            	    // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:193:14: syms+= LETTER
             	    {
-            	    syms=(CommonTree)match(input,LETTER,FOLLOW_LETTER_in_number184); 
+            	    syms=(CommonTree)match(input,LETTER,FOLLOW_LETTER_in_number188); 
             	    if (list_syms==null) list_syms=new ArrayList();
             	    list_syms.add(syms);
 
@@ -386,11 +490,11 @@ public static class STAttrMap extends HashMap {
 
     public static final BitSet FOLLOW_RAETSEL_in_puzzle76 = new BitSet(new long[]{0x0000000000000004L});
     public static final BitSet FOLLOW_constraint_in_puzzle80 = new BitSet(new long[]{0x0000000000001008L});
-    public static final BitSet FOLLOW_PLUS_in_constraint125 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_number_in_constraint129 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_PLUS_in_constraint129 = new BitSet(new long[]{0x0000000000000004L});
     public static final BitSet FOLLOW_number_in_constraint133 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_number_in_constraint137 = new BitSet(new long[]{0x0000000000000008L});
-    public static final BitSet FOLLOW_ZAHL_in_number180 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_LETTER_in_number184 = new BitSet(new long[]{0x0000000000000108L});
+    public static final BitSet FOLLOW_number_in_constraint137 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_number_in_constraint141 = new BitSet(new long[]{0x0000000000000008L});
+    public static final BitSet FOLLOW_ZAHL_in_number184 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_LETTER_in_number188 = new BitSet(new long[]{0x0000000000000108L});
 
 }
