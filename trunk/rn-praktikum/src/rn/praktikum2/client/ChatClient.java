@@ -81,6 +81,11 @@ public class ChatClient {
 
     private void sendBYE() {
         writeToServer(ChatCommands.BYE.name());
+        try {
+            serverConnection.getServerSocket().close();
+        } catch (IOException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
     }
 
     private void ui_login() {
