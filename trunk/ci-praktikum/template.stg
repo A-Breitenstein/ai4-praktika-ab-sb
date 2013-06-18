@@ -1,6 +1,6 @@
 group template;
 
-sums(symbols,sums,vars,allDifferentString,constraintNetzListe,outputString) ::= <<
+createTemplate(vars,allDifferentString,constraintNetzListe,outputString) ::= <<
 
 <createHeader()>
 public class ConstraintSolver{
@@ -50,12 +50,6 @@ import choco.kernel.model.variables.integer.IntegerVariable;
 import choco.kernel.solver.Solver;
 import static choco.Choco.neq;
 
->>
-
-sum(number1, number2, number3) ::= <<
-<number1.characters, number2.characters, number3.characters :
-  {n1, n2, n3 | <if(n1)><n1><else>0<endif> + <if(n2)><n2><else>0<endif> = <if(n3)><n3><else>0<endif>;}
-  ; separator="\n">
 >>
 
 

@@ -1,4 +1,4 @@
-package antlr.srcfiles;// $ANTLR 3.4 Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g 2013-06-06 16:27:07
+package antlr.srcfiles;// $ANTLR 3.4 Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g 2013-06-18 13:24:22
 
 
 	import choco.Choco;
@@ -240,7 +240,7 @@ public static class STAttrMap extends HashMap {
 
 
     // $ANTLR start "puzzle"
-    // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:165:1: puzzle : ^( RAETSEL (constraints+= constraint )* ) -> sums(sums=$constraintsvars=getVars()allDifferentString=getAllDifferentString()constraintNetzListe=createConstraintNetz()outputString=getOutputString());
+    // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:165:1: puzzle : ^( RAETSEL (constraints+= constraint )* ) -> createTemplate(vars=getVars()allDifferentString=getAllDifferentString()constraintNetzListe=createConstraintNetz()outputString=getOutputString());
     public final puzzle_return puzzle() throws RecognitionException {
         puzzle_return retval = new puzzle_return();
         retval.start = input.LT(1);
@@ -249,7 +249,7 @@ public static class STAttrMap extends HashMap {
         List list_constraints=null;
         RuleReturnScope constraints = null;
         try {
-            // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:171:3: ( ^( RAETSEL (constraints+= constraint )* ) -> sums(sums=$constraintsvars=getVars()allDifferentString=getAllDifferentString()constraintNetzListe=createConstraintNetz()outputString=getOutputString()))
+            // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:171:3: ( ^( RAETSEL (constraints+= constraint )* ) -> createTemplate(vars=getVars()allDifferentString=getAllDifferentString()constraintNetzListe=createConstraintNetz()outputString=getOutputString()))
             // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:172:3: ^( RAETSEL (constraints+= constraint )* )
             {
             match(input,RAETSEL,FOLLOW_RAETSEL_in_puzzle76); 
@@ -294,9 +294,9 @@ public static class STAttrMap extends HashMap {
 
 
             // TEMPLATE REWRITE
-            // 173:3: -> sums(sums=$constraintsvars=getVars()allDifferentString=getAllDifferentString()constraintNetzListe=createConstraintNetz()outputString=getOutputString())
+            // 173:3: -> createTemplate(vars=getVars()allDifferentString=getAllDifferentString()constraintNetzListe=createConstraintNetz()outputString=getOutputString())
             {
-                retval.st = templateLib.getInstanceOf("sums",new STAttrMap().put("sums", list_constraints).put("vars", getVars()).put("allDifferentString", getAllDifferentString()).put("constraintNetzListe", createConstraintNetz()).put("outputString", getOutputString()));
+                retval.st = templateLib.getInstanceOf("createTemplate",new STAttrMap().put("vars", getVars()).put("allDifferentString", getAllDifferentString()).put("constraintNetzListe", createConstraintNetz()).put("outputString", getOutputString()));
             }
 
 
@@ -329,7 +329,7 @@ public static class STAttrMap extends HashMap {
 
 
     // $ANTLR start "constraint"
-    // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:176:1: constraint : ^( PLUS n1= number n2= number n3= number ) -> sum(number1=$n1.numbernumber2=$n2.numbernumber3=$n3.number);
+    // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:176:1: constraint : ^( PLUS n1= number n2= number n3= number ) ;
     public final constraint_return constraint() throws RecognitionException {
         constraint_return retval = new constraint_return();
         retval.start = input.LT(1);
@@ -343,25 +343,25 @@ public static class STAttrMap extends HashMap {
 
 
         try {
-            // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:185:3: ( ^( PLUS n1= number n2= number n3= number ) -> sum(number1=$n1.numbernumber2=$n2.numbernumber3=$n3.number))
-            // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:185:6: ^( PLUS n1= number n2= number n3= number )
+            // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:180:3: ( ^( PLUS n1= number n2= number n3= number ) )
+            // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:180:6: ^( PLUS n1= number n2= number n3= number )
             {
-            match(input,PLUS,FOLLOW_PLUS_in_constraint129); 
+            match(input,PLUS,FOLLOW_PLUS_in_constraint125); 
 
             match(input, Token.DOWN, null); 
-            pushFollow(FOLLOW_number_in_constraint133);
+            pushFollow(FOLLOW_number_in_constraint129);
             n1=number();
 
             state._fsp--;
 
 
-            pushFollow(FOLLOW_number_in_constraint137);
+            pushFollow(FOLLOW_number_in_constraint133);
             n2=number();
 
             state._fsp--;
 
 
-            pushFollow(FOLLOW_number_in_constraint141);
+            pushFollow(FOLLOW_number_in_constraint137);
             n3=number();
 
             state._fsp--;
@@ -370,22 +370,9 @@ public static class STAttrMap extends HashMap {
             match(input, Token.UP, null); 
 
 
-            // TEMPLATE REWRITE
-            // 185:44: -> sum(number1=$n1.numbernumber2=$n2.numbernumber3=$n3.number)
-            {
-                retval.st = templateLib.getInstanceOf("sum",new STAttrMap().put("number1", (n1!=null?n1.number:null)).put("number2", (n2!=null?n2.number:null)).put("number3", (n3!=null?n3.number:null)));
             }
 
 
-
-            }
-
-
-            Constraint constraint = new Constraint();
-            constraint.numbers.add((n1!=null?n1.number:null));
-            constraint.numbers.add((n2!=null?n2.number:null));
-            constraint.numbers.add((n3!=null?n3.number:null));
-            constraint.prepare();
             sammelAllesAuf((n1!=null?n1.number:null),(n2!=null?n2.number:null),(n3!=null?n3.number:null));
 
         }
@@ -411,7 +398,7 @@ public static class STAttrMap extends HashMap {
 
 
     // $ANTLR start "number"
-    // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:187:1: number returns [Number number] : ^( ZAHL (syms+= LETTER )+ ) ;
+    // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:182:1: number returns [Number number] : ^( ZAHL (syms+= LETTER )+ ) ;
     public final number_return number() throws RecognitionException {
         number_return retval = new number_return();
         retval.start = input.LT(1);
@@ -421,13 +408,13 @@ public static class STAttrMap extends HashMap {
         List list_syms=null;
 
         try {
-            // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:192:3: ( ^( ZAHL (syms+= LETTER )+ ) )
-            // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:193:3: ^( ZAHL (syms+= LETTER )+ )
+            // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:187:3: ( ^( ZAHL (syms+= LETTER )+ ) )
+            // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:188:3: ^( ZAHL (syms+= LETTER )+ )
             {
-            match(input,ZAHL,FOLLOW_ZAHL_in_number184); 
+            match(input,ZAHL,FOLLOW_ZAHL_in_number160); 
 
             match(input, Token.DOWN, null); 
-            // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:193:14: (syms+= LETTER )+
+            // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:188:14: (syms+= LETTER )+
             int cnt2=0;
             loop2:
             do {
@@ -441,9 +428,9 @@ public static class STAttrMap extends HashMap {
 
                 switch (alt2) {
             	case 1 :
-            	    // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:193:14: syms+= LETTER
+            	    // Z:\\BAI-4\\CI\\SymbolraetselEmitter2.g:188:14: syms+= LETTER
             	    {
-            	    syms=(CommonTree)match(input,LETTER,FOLLOW_LETTER_in_number188); 
+            	    syms=(CommonTree)match(input,LETTER,FOLLOW_LETTER_in_number164); 
             	    if (list_syms==null) list_syms=new ArrayList();
             	    list_syms.add(syms);
 
@@ -490,11 +477,11 @@ public static class STAttrMap extends HashMap {
 
     public static final BitSet FOLLOW_RAETSEL_in_puzzle76 = new BitSet(new long[]{0x0000000000000004L});
     public static final BitSet FOLLOW_constraint_in_puzzle80 = new BitSet(new long[]{0x0000000000001008L});
-    public static final BitSet FOLLOW_PLUS_in_constraint129 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_PLUS_in_constraint125 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_number_in_constraint129 = new BitSet(new long[]{0x0000000000010000L});
     public static final BitSet FOLLOW_number_in_constraint133 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_number_in_constraint137 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_number_in_constraint141 = new BitSet(new long[]{0x0000000000000008L});
-    public static final BitSet FOLLOW_ZAHL_in_number184 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_LETTER_in_number188 = new BitSet(new long[]{0x0000000000000108L});
+    public static final BitSet FOLLOW_number_in_constraint137 = new BitSet(new long[]{0x0000000000000008L});
+    public static final BitSet FOLLOW_ZAHL_in_number160 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_LETTER_in_number164 = new BitSet(new long[]{0x0000000000000108L});
 
 }

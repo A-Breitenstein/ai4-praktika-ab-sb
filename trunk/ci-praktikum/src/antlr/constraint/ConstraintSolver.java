@@ -81,7 +81,6 @@ public class ConstraintSolver {
     }
 
     private Model model;
-    private int operationCounter;
 
     public ConstraintSolver() {
         model = new CPModel();
@@ -332,6 +331,92 @@ public class ConstraintSolver {
         }
 
     }
+
+
+    private  int operationCounter = 0;
+//    public List<String> addOperationSpaltenweise(String op1, String op2, String result) {
+//        List<String> codeString = new ArrayList<String>();
+//
+//        operationCounter++;
+//
+//        List<IntegerVariable> iv_op1_List = new ArrayList<IntegerVariable>();
+//        List<IntegerVariable> iv_op2_List = new ArrayList<IntegerVariable>();
+//        List<IntegerVariable> iv_result_List = new ArrayList<IntegerVariable>();
+//
+//        for (char c : op1.toCharArray()) {
+//            iv_op1_List.add(integerVariableMap.get(String.valueOf(c)));
+//        }
+//
+//        for (char c : op2.toCharArray()) {
+//            iv_op2_List.add(integerVariableMap.get(String.valueOf(c)));
+//        }
+//
+//        for (char c : result.toCharArray()) {
+//            iv_result_List.add(integerVariableMap.get(String.valueOf(c)));
+//        }
+//
+//        ListIterator<IntegerVariable> op1IT = iv_op1_List.listIterator(iv_op1_List.size());
+//        ListIterator<IntegerVariable> op2IT = iv_op2_List.listIterator(iv_op2_List.size());
+//        ListIterator<IntegerVariable> resultIT = iv_result_List.listIterator(iv_result_List.size());
+//
+//        List<IntegerVariable> uebertraege = new ArrayList<IntegerVariable>();
+//
+//        String name;
+//        for (int i = 0; i < iv_result_List.size(); i++) {
+//            name = "c" + operationCounter + "uebertrag" + i;
+//            codeString.add("IntegerVariable "+name+" = Choco.makeIntVar("+name+", 0, 1);");
+////            uebertraege.add(Choco.makeIntVar("c" + operationCounter + "uebertrag" + i, 0, 1));
+//        }
+//
+//        int indexOfUbertrag = 0;
+//
+////        model.addConstraint(Choco.eq(Choco.plus(op1IT.previous(), op2IT.previous()), Choco.plus(resultIT.previous(), Choco.mult(uebertraege.get(indexOfUbertrag), 10))));
+//        codeString.add("model.addConstraint(Choco.eq(Choco.plus("+op1IT.previous().getName()+","+op2IT.previous().getName()+"), Choco.plus("+resultIT.previous().getName()+", Choco.mult("+uebertraege.get(indexOfUbertrag).getName()+", 10))));");
+//
+//        indexOfUbertrag++;
+//        IntegerVariable resultVar, op1Var = null, op2Var = null;
+//        boolean op1HasPrevious, op2HasPrevious;
+//        while (resultIT.hasPrevious()) {
+//
+//            resultVar = resultIT.previous();
+//
+//            if (op1IT.hasPrevious()) {
+//                op1Var = op1IT.previous();
+//                op1HasPrevious = true;
+//            } else {
+//                op1HasPrevious = false;
+//            }
+//
+//            if (op2IT.hasPrevious()) {
+//                op2Var = op2IT.previous();
+//                op2HasPrevious = true;
+//            } else {
+//                op2HasPrevious = false;
+//            }
+//
+//
+//            if (op1HasPrevious && op2HasPrevious) {
+//                if (resultIT.hasPrevious()) {
+////                    model.addConstraint(Choco.eq(Choco.plus(Choco.plus(op1Var, op2Var), uebertraege.get(indexOfUbertrag - 1)), Choco.plus(resultVar, Choco.mult(uebertraege.get(indexOfUbertrag), 10))));
+//                    codeString.add("model.addConstraint(Choco.eq(Choco.plus(Choco.plus("+op1Var.getName()+","+ op2Var.getName()+"), "+uebertraege.get(indexOfUbertrag - 1).getName()+"), Choco.plus("+resultVar.getName()+", Choco.mult("+uebertraege.get(indexOfUbertrag).getName()+", 10))));");
+//                } else {
+////                    model.addConstraint(Choco.eq(Choco.plus(Choco.plus(op1Var, op2Var), uebertraege.get(indexOfUbertrag - 1)), resultVar));
+//                    codeString.add("model.addConstraint(Choco.eq(Choco.plus(Choco.plus("+op1Var.getName()+","+ op2Var.getName()+"),"+ uebertraege.get(indexOfUbertrag - 1).getName()+"),"+ resultVar.getName()+"));");
+//                }
+//            } else if (op1HasPrevious && !op2HasPrevious) {
+////                model.addConstraint(Choco.eq(Choco.plus(op1Var, uebertraege.get(indexOfUbertrag - 1)), Choco.plus(resultVar, Choco.mult(uebertraege.get(indexOfUbertrag), 10))));
+//                codeString.add("model.addConstraint(Choco.eq(Choco.plus("+op1Var.getName()+", "+uebertraege.get(indexOfUbertrag - 1).getName()+"), Choco.plus("+resultVar.getName()+", Choco.mult("+uebertraege.get(indexOfUbertrag).getName()+", 10))));");
+//            } else if (!op1HasPrevious && op2HasPrevious) {
+////                model.addConstraint(Choco.eq(Choco.plus(op2Var, uebertraege.get(indexOfUbertrag - 1)), Choco.plus(resultVar, Choco.mult(uebertraege.get(indexOfUbertrag), 10))));
+//                codeString.add("model.addConstraint(Choco.eq(Choco.plus("+op2Var.getName()+", "+uebertraege.get(indexOfUbertrag - 1).getName()+"), Choco.plus("+resultVar.getName()+", Choco.mult("+uebertraege.get(indexOfUbertrag).getName()+", 10))));");
+//            } else {
+//                codeString.add("model.addConstraint(Choco.eq("+resultVar.getName()+", "+uebertraege.get(indexOfUbertrag - 1).getName()+"));");
+//            }
+//
+//            indexOfUbertrag++;
+//        }
+//        return codeString;
+//    }
 
     void addAllIntegervariables(Number number1,Number number2,Number number3) {
 
